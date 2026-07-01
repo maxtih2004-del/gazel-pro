@@ -627,18 +627,21 @@
         '🗓 Когда нужна: ' + (fd.get('timing') || '—');
 
       try {
-        const resp = await fetch('https://api.telegram.org/bot' + TG_TOKEN + '/sendMessage', {
+        // no-cors: запрос доходит до Telegram (сообщение отправляется),
+        // ответ приходит "opaque" и не читается — нам это и не нужно.
+        await fetch('https://api.telegram.org/bot' + TG_TOKEN + '/sendMessage', {
           method: 'POST',
+          mode: 'no-cors',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
           body: new URLSearchParams({ chat_id: TG_CHAT, text }).toString()
         });
-        const data = await resp.json();
-        if (!data.ok) throw new Error('tg error');
+        // fetch не упал → заявка ушла
         leadForm.hidden = true;
         const ok = document.getElementById('form-success');
         ok.hidden = false;
         ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } catch (e2) {
+        // реальная сетевая ошибка (нет интернета / хост недоступен)
         btn.disabled = false;
         btn.style.opacity = '1';
         err.hidden = false;
