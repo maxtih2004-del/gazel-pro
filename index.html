@@ -548,10 +548,9 @@
       <h2>Нужна газель? Оставьте заявку</h2>
       <p>Подберём газель под ваши задачи и подскажем условия. Перезвоним и поможем — без спама.</p>
 
-      <!-- Netlify Forms: заявки приходят в дашборд Netlify → Forms -->
-      <form name="zayavka" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="lead-form" id="lead-form">
-        <input type="hidden" name="form-name" value="zayavka">
-        <p hidden><label>Не заполняйте это поле: <input name="bot-field"></label></p>
+      <!-- Заявки уходят в Telegram-бот «Газель Про» -->
+      <form class="lead-form" id="lead-form">
+        <p hidden><label>Не заполняйте это поле: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <div class="row">
           <input type="text" name="name" placeholder="Ваше имя" required>
           <input type="tel" name="phone" placeholder="Телефон" required>
@@ -571,6 +570,9 @@
         <div class="fs-ic"><svg class="icon"><use href="#i-check"></use></svg></div>
         <b>Спасибо! Заявка принята</b>
         Свяжемся с вами в ближайшее время и поможем подобрать газель.
+      </div>
+      <div class="form-note" id="form-err" hidden style="color:#FCA5A5; margin-top:16px;">
+        <svg class="icon"><use href="#i-alert"></use></svg> Не удалось отправить заявку. Проверьте интернет и попробуйте ещё раз.
       </div>
     </div>
   </div>
@@ -601,20 +603,46 @@
   });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // lead form → Netlify Forms (AJAX submit) + inline thank-you
+  // lead form → отправка заявки в Telegram-бот
+  const TG_TOKEN = '8236755512:AAFI0oGrGQAvSHbIdRlXPm0B67CUC4LbpQA';
+  const TG_CHAT  = '964349873';
   const leadForm = document.getElementById('lead-form');
   if (leadForm) {
-    leadForm.addEventListener('submit', (e) => {
+    leadForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const body = new URLSearchParams(new FormData(leadForm)).toString();
-      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body })
-        .then(() => {
-          leadForm.hidden = true;
-          const ok = document.getElementById('form-success');
-          ok.hidden = false;
-          ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        })
-        .catch(() => leadForm.submit());
+      // honeypot: если скрытое поле заполнено — это бот, тихо выходим
+      if (leadForm.elements['bot-field'] && leadForm.elements['bot-field'].value) return;
+
+      const btn = leadForm.querySelector('button[type=submit]');
+      const err = document.getElementById('form-err');
+      err.hidden = true;
+      btn.disabled = true;
+      btn.style.opacity = '.7';
+
+      const fd = new FormData(leadForm);
+      const text =
+        '🚚 Новая заявка — Газель Про\n\n' +
+        '👤 Имя: ' + (fd.get('name') || '—') + '\n' +
+        '📞 Телефон: ' + (fd.get('phone') || '—') + '\n' +
+        '🗓 Когда нужна: ' + (fd.get('timing') || '—');
+
+      try {
+        const resp = await fetch('https://api.telegram.org/bot' + TG_TOKEN + '/sendMessage', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({ chat_id: TG_CHAT, text }).toString()
+        });
+        const data = await resp.json();
+        if (!data.ok) throw new Error('tg error');
+        leadForm.hidden = true;
+        const ok = document.getElementById('form-success');
+        ok.hidden = false;
+        ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } catch (e2) {
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        err.hidden = false;
+      }
     });
   }
 </script>
