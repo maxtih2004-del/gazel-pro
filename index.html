@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Купить газель — просто и безопасно · Газель Про</title>
+<meta name="description" content="Газель Про — помогаем купить рабочую газель в нужный момент: проверенные машины, прозрачные условия и честная сделка без скрытых доплат.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ingo-blue:       #0057E7;
+    --ingo-blue-dark:  #0046B8;
+    --ingo-blue-deep:  #002E7A;
+    --ingo-blue-light: #E7F0FF;
+    --ingo-blue-pale:  #F4F8FF;
+    --ink:             #0B1730;
+    --ink-2:           #1F2A44;
+    --muted:           #55648A;
+    --muted-2:         #8A97B3;
+    --line:            #DCE3EF;
+    --line-2:          #ECEFF6;
+    --bg-soft:         #F5F7FC;
+    --green:           #1FAE6B;
+    --green-dark:      #0D7A48;
+    --green-pale:      #EDFBF4;
+    --red:             #E0455B;
+    --red-pale:        #FDF1F3;
+    --shadow-sm:       0 2px 8px rgba(11,23,48,.05);
+    --shadow-md:       0 18px 44px rgba(11,23,48,.10);
+    --shadow-blue:     0 12px 30px rgba(0,87,231,.32);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: #fff;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  a { text-decoration: none; color: inherit; }
+  svg { display: block; }
+  ::selection { background: rgba(0,87,231,.18); }
+  .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+  .icon { width: 1em; height: 1em; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+
+  /* ── buttons ── */
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: inherit; font-weight: 700; font-size: 16px; line-height: 1;
+    padding: 15px 26px; border-radius: 13px;
+    cursor: pointer; border: 1px solid transparent;
+    transition: transform .18s cubic-bezier(.2,.7,.3,1), box-shadow .18s ease, background .18s ease, border-color .18s ease;
+    white-space: nowrap;
+  }
+  .btn .icon { width: 18px; height: 18px; }
+  .btn-primary { background: var(--ingo-blue); color: #fff; box-shadow: var(--shadow-blue); }
+  .btn-primary:hover { background: var(--ingo-blue-dark); transform: translateY(-2px); box-shadow: 0 16px 36px rgba(0,87,231,.42); }
+  .btn-primary .arrow { transition: transform .2s ease; }
+  .btn-primary:hover .arrow { transform: translateX(3px); }
+  .btn-ghost { background: rgba(255,255,255,.06); color: #fff; border-color: rgba(255,255,255,.22); }
+  .btn-ghost:hover { background: rgba(255,255,255,.14); transform: translateY(-2px); border-color: rgba(255,255,255,.4); }
+  .btn-dark { background: var(--ink); color: #fff; }
+  .btn-dark:hover { background: var(--ink-2); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+  .btn-lg { padding: 18px 32px; font-size: 17px; border-radius: 14px; }
+
+  /* ── header ── */
+  header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(11,23,48,.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    transition: background .25s ease, border-color .25s ease;
+  }
+  header.scrolled { background: rgba(9,19,40,.92); border-bottom-color: rgba(255,255,255,.12); }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 70px; }
+  .logo { display: flex; align-items: center; gap: 11px; font-weight: 800; font-size: 20px; color: #fff; letter-spacing: -.3px; }
+  .logo .mark {
+    width: 36px; height: 36px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--ingo-blue), #3B82F6);
+    display: grid; place-items: center; color: #fff;
+    box-shadow: 0 4px 14px rgba(0,87,231,.5);
+  }
+  .logo .mark .icon { width: 20px; height: 20px; stroke-width: 2.2; }
+  .nav-links { display: flex; gap: 30px; align-items: center; }
+  .nav-links a:not(.btn) { color: rgba(255,255,255,.72); font-weight: 600; font-size: 15px; transition: color .15s; position: relative; }
+  .nav-links a:not(.btn)::after { content:""; position:absolute; left:0; bottom:-6px; width:0; height:2px; background:#6EA8FF; border-radius:2px; transition: width .22s ease; }
+  .nav-links a:not(.btn):hover { color: #fff; }
+  .nav-links a:not(.btn):hover::after { width:100%; }
+  .nav .btn { padding: 11px 20px; font-size: 15px; }
+  @media (max-width: 860px) { .nav-links a:not(.btn) { display: none; } .nav { height: 62px; } }
+
+  /* ── hero (dark) ── */
+  .hero {
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(1100px 560px at 88% -12%, rgba(0,87,231,.55), transparent 60%),
+      radial-gradient(760px 440px at -5% 18%, rgba(59,130,246,.22), transparent 55%),
+      linear-gradient(180deg, #0B1730, #0D1D3C);
+    color: #fff;
+    padding: 76px 0 90px;
+  }
+  .hero::after {
+    content: ""; position: absolute; inset: 0; z-index: 1;
+    background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size: 46px 46px; pointer-events: none;
+    -webkit-mask-image: radial-gradient(760px 460px at 78% 34%, #000, transparent 74%);
+            mask-image: radial-gradient(760px 460px at 78% 34%, #000, transparent 74%);
+  }
+  .hero .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+  @media (max-width: 940px) { .hero .wrap { grid-template-columns: 1fr; gap: 44px; } .hero { padding: 60px 0 72px; } }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 9px;
+    background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15);
+    color: #CFE1FF; font-weight: 700; font-size: 13px; letter-spacing: .2px;
+    padding: 8px 15px; border-radius: 100px; margin-bottom: 24px;
+  }
+  .eyebrow .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(31,174,107,.7); animation: pulse 2.4s infinite; }
+  @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(31,174,107,.6)} 70%{box-shadow:0 0 0 9px rgba(31,174,107,0)} 100%{box-shadow:0 0 0 0 rgba(31,174,107,0)} }
+  .hero h1 { font-size: clamp(34px, 4.8vw, 56px); line-height: 1.06; font-weight: 800; letter-spacing: -1.4px; }
+  .hero h1 .hl { color: #7DB0FF; }
+  .hero p.lead { margin-top: 22px; font-size: clamp(17px, 1.6vw, 20px); color: rgba(255,255,255,.78); max-width: 560px; }
+  .hero-cta { margin-top: 34px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-trust { margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,.1); display: flex; gap: 14px 32px; flex-wrap: wrap; }
+  .hero-trust .item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.86); font-weight: 600; font-size: 15px; }
+  .hero-trust .ic { width: 30px; height: 30px; border-radius: 9px; background: rgba(110,168,255,.14); color: #86B4FF; display: grid; place-items: center; }
+  .hero-trust .ic .icon { width: 17px; height: 17px; }
+
+  /* hero visual */
+  .hero-visual { position: relative; }
+  .hero-photo {
+    position: relative; aspect-ratio: 4 / 3.2; border-radius: 22px; overflow: hidden;
+    background:
+      repeating-linear-gradient(135deg, rgba(255,255,255,.05) 0 2px, transparent 2px 13px),
+      linear-gradient(160deg, #14264C, #0E1D3B);
+    border: 1px solid rgba(255,255,255,.12);
+    box-shadow: 0 40px 80px rgba(0,10,40,.5);
+    display: grid; place-items: center;
+  }
+  .hero-photo .hero-van { position: relative; z-index: 2; width: 86%; max-width: 430px; height: auto; }
+  .hero-photo .glow { position: absolute; inset: auto -20% -30% -20%; height: 60%; background: radial-gradient(ellipse at center, rgba(0,87,231,.4), transparent 70%); filter: blur(20px); }
+  @keyframes vanFloat { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-8px); } }
+  .hero-photo .hero-van { animation: vanFloat 5s ease-in-out infinite; }
+  @keyframes wheelSpin { to { transform: rotate(360deg); } }
+  .hero-van .wheel-spin { transform-box: fill-box; transform-origin: center; animation: wheelSpin 2.2s linear infinite; }
+  .hero-badge {
+    position: absolute; left: -18px; bottom: 28px; z-index: 3;
+    background: #fff; color: var(--ink); border-radius: 15px; padding: 15px 18px;
+    display: flex; align-items: center; gap: 13px; box-shadow: var(--shadow-md);
+  }
+  @media (max-width: 480px){ .hero-badge { left: 8px; } }
+  .hero-badge .hb-ic { width: 40px; height: 40px; border-radius: 11px; background: var(--green-pale); color: var(--green-dark); display: grid; place-items: center; flex: 0 0 auto; }
+  .hero-badge .hb-ic .icon { width: 21px; height: 21px; }
+  .hero-badge b { display: block; font-size: 15px; font-weight: 800; }
+  .hero-badge span { font-size: 13px; color: var(--muted); }
+
+  /* ── section shells ── */
+  section.block { padding: 92px 0; }
+  @media (max-width: 640px){ section.block { padding: 62px 0; } }
+  .section-head { max-width: 760px; margin: 0 auto 56px; text-align: center; }
+  .kicker { display:inline-flex; align-items:center; gap:8px; color: var(--ingo-blue); font-weight: 800; font-size: 13px; letter-spacing: 1.4px; text-transform: uppercase; }
+  .kicker::before { content:""; width:22px; height:2px; border-radius:2px; background: var(--ingo-blue); opacity:.5; }
+  .kicker::after { content:""; width:22px; height:2px; border-radius:2px; background: var(--ingo-blue); opacity:.5; }
+  .section-head h2 { font-size: clamp(27px, 3.3vw, 40px); font-weight: 800; letter-spacing: -1px; margin-top: 14px; line-height: 1.12; }
+  .section-head p { color: var(--muted); font-size: 18px; margin-top: 16px; text-wrap: pretty; }
+  .soft { background: var(--bg-soft); }
+
+  /* ── grids ── */
+  .grid { display: grid; gap: 22px; }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 980px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } .grid-3 { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) { .grid-4, .grid-2 { grid-template-columns: 1fr; } }
+
+  /* ── moment cards ── */
+  .card {
+    position: relative; background: #fff; border: 1px solid var(--line-2); border-radius: 20px; padding: 28px 26px;
+    transition: transform .2s cubic-bezier(.2,.7,.3,1), box-shadow .2s ease, border-color .2s ease;
+    overflow: hidden;
+  }
+  .card::before { content:""; position:absolute; left:0; top:0; height:3px; width:100%; background: var(--ingo-blue); transform: scaleX(0); transform-origin:left; transition: transform .28s ease; }
+  .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--line); }
+  .card:hover::before { transform: scaleX(1); }
+  .card .ic-box {
+    width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 20px;
+    background: var(--ingo-blue-pale); color: var(--ingo-blue);
+  }
+  .card .ic-box .icon { width: 26px; height: 26px; }
+  .card.urgent .ic-box { background: var(--red-pale); color: var(--red); }
+  .card h3 { font-size: 19px; font-weight: 800; letter-spacing: -.3px; }
+  .card p { color: var(--muted); font-size: 15px; margin-top: 9px; }
+  .card .badge {
+    display: inline-flex; align-items:center; gap:6px; font-size: 12px; font-weight: 700; padding: 5px 11px; border-radius: 100px; margin-top: 18px;
+  }
+  .badge-urgent { background: var(--red-pale); color: var(--red); }
+  .badge-plan { background: var(--ingo-blue-pale); color: var(--ingo-blue); }
+  .badge .dot { width:6px; height:6px; border-radius:50%; background: currentColor; }
+
+  /* ── steps ── */
+  .steps { position: relative; }
+  .step { position: relative; background: #fff; border: 1px solid var(--line-2); border-radius: 20px; padding: 34px 30px; transition: transform .2s ease, box-shadow .2s ease; }
+  .step:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+  .step .num {
+    width: 48px; height: 48px; border-radius: 14px; color: #fff; font-weight: 800; font-size: 21px; display: grid; place-items: center; margin-bottom: 20px;
+    box-shadow: 0 8px 20px rgba(11,23,48,.14);
+  }
+  .step:nth-child(1) .num { background: linear-gradient(135deg,#0057E7,#3B82F6); }
+  .step:nth-child(2) .num { background: linear-gradient(135deg,#4F46E5,#7C7CF0); }
+  .step:nth-child(3) .num { background: linear-gradient(135deg,#0D7A48,#1FAE6B); }
+  .step .connector { position: absolute; right: -22px; top: 58px; width: 22px; color: var(--line); z-index: 3; }
+  .step .connector .icon { width: 22px; height: 22px; stroke-width: 2.4; color: var(--ingo-blue); opacity:.35; }
+  @media (max-width: 980px){ .step .connector { display:none; } }
+  .step h3 { font-size: 20px; font-weight: 800; letter-spacing: -.3px; }
+  .step p { color: var(--muted); margin-top: 11px; font-size: 15px; }
+
+  /* ── comparison ── */
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: stretch; }
+  @media (max-width: 760px){ .compare { grid-template-columns: 1fr; } }
+  .col { border-radius: 22px; padding: 34px 32px; }
+  .col.bad { background: #fff; border: 1px solid var(--line); }
+  .col.good {
+    background: radial-gradient(600px 300px at 80% 0%, rgba(0,87,231,.35), transparent 60%), linear-gradient(160deg, #0B1730, #12274F);
+    color: #fff; box-shadow: 0 28px 64px rgba(11,23,48,.3); position: relative; overflow: hidden;
+  }
+  .col.good::after { content:"Рекомендуем"; position:absolute; top:20px; right:-34px; transform: rotate(45deg); background: var(--green); color:#fff; font-size:11px; font-weight:800; letter-spacing:.6px; padding:6px 40px; }
+  .col h3 { font-size: 20px; font-weight: 800; margin-bottom: 24px; display: flex; align-items: center; gap: 11px; letter-spacing:-.3px; }
+  .col.bad h3 { color: var(--ink-2); }
+  .col h3 .h-ic { width: 34px; height: 34px; border-radius: 10px; display:grid; place-items:center; flex:0 0 auto; }
+  .col.bad h3 .h-ic { background: var(--red-pale); color: var(--red); }
+  .col.good h3 .h-ic { background: rgba(110,168,255,.18); color:#86B4FF; }
+  .col h3 .h-ic .icon { width:18px; height:18px; }
+  .col ul { list-style: none; display: flex; flex-direction: column; gap: 15px; }
+  .col li { display: flex; gap: 13px; align-items: flex-start; font-size: 15.5px; }
+  .col li .tick { flex: 0 0 auto; width: 24px; height: 24px; border-radius: 8px; display: grid; place-items: center; margin-top: 1px; }
+  .col li .tick .icon { width: 13px; height: 13px; stroke-width: 2.6; }
+  .col.bad li { color: var(--muted); }
+  .col.bad .tick { background: var(--line-2); color: var(--muted-2); }
+  .col.good li { color: rgba(255,255,255,.9); }
+  .col.good .tick { background: rgba(31,174,107,.22); color: #4ADE80; }
+
+  /* ── segments ── */
+  .seg { display: flex; gap: 16px; align-items: flex-start; background: #fff; border: 1px solid var(--line-2); border-radius: 18px; padding: 26px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .seg:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--line); }
+  .seg .ic { flex: 0 0 auto; width: 52px; height: 52px; border-radius: 14px; background: var(--ingo-blue-pale); color: var(--ingo-blue); display: grid; place-items: center; }
+  .seg .ic .icon { width: 25px; height: 25px; }
+  .seg h3 { font-size: 17px; font-weight: 800; letter-spacing:-.2px; }
+  .seg p { color: var(--muted); font-size: 14.5px; margin-top: 6px; }
+
+  /* ── final CTA ── */
+  .cta {
+    background:
+      radial-gradient(820px 420px at 18% 0%, rgba(0,87,231,.5), transparent 60%),
+      radial-gradient(600px 400px at 100% 100%, rgba(31,174,107,.16), transparent 60%),
+      linear-gradient(160deg, #0B1730, #0E1E3E);
+    color: #fff; border-radius: 30px; padding: 66px 40px; text-align: center; position: relative; overflow: hidden;
+  }
+  .cta::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 44px 44px; -webkit-mask-image: radial-gradient(500px 300px at 50% 0%, #000, transparent 75%); mask-image: radial-gradient(500px 300px at 50% 0%, #000, transparent 75%); }
+  .cta > * { position: relative; z-index: 2; }
+  .cta h2 { font-size: clamp(28px, 3.8vw, 44px); font-weight: 800; letter-spacing: -1px; }
+  .cta p { color: rgba(255,255,255,.8); font-size: 18px; margin-top: 16px; max-width: 560px; margin-left: auto; margin-right: auto; }
+
+  /* ── lead form (Netlify Forms) ── */
+  .lead-form { max-width: 460px; margin: 34px auto 0; display: grid; gap: 12px; text-align: left; position: relative; z-index: 2; }
+  .lead-form .row { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
+  @media (max-width: 520px){ .lead-form .row { grid-template-columns: 1fr; } }
+  .lead-form input, .lead-form select {
+    width: 100%; font-family: inherit; font-size: 15px; color: var(--ink);
+    background: #fff; border: 1px solid rgba(255,255,255,.25); border-radius: 12px; padding: 15px 16px;
+    outline: none; transition: box-shadow .15s ease;
+  }
+  .lead-form select:invalid { color: var(--muted-2); }
+  .lead-form input:focus, .lead-form select:focus { box-shadow: 0 0 0 3px rgba(0,87,231,.45); }
+  .lead-form input::placeholder { color: var(--muted-2); }
+  .lead-form button { width: 100%; justify-content: center; margin-top: 4px; }
+  .form-note { margin-top: 6px; color: var(--muted-2); font-size: 13px; display:flex; align-items:center; justify-content:center; gap:8px; }
+  .form-note .icon { width:14px; height:14px; flex:0 0 auto; }
+  .form-success { max-width: 480px; margin: 30px auto 0; background: rgba(31,174,107,.14); border: 1px solid rgba(31,174,107,.4); color: rgba(255,255,255,.85); border-radius: 18px; padding: 30px 26px; position: relative; z-index: 2; }
+  .form-success .fs-ic { width: 54px; height: 54px; border-radius: 50%; background: rgba(31,174,107,.2); color:#4ADE80; display:grid; place-items:center; margin: 0 auto 14px; }
+  .form-success .fs-ic .icon { width: 28px; height: 28px; }
+  .form-success b { display:block; font-size: 20px; color:#fff; margin-bottom: 6px; }
+
+  /* ── footer ── */
+  footer { background: var(--ink); color: rgba(255,255,255,.55); padding: 44px 0; }
+  .foot { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 14px; }
+  footer .logo { font-size: 18px; }
+
+  /* ── reveal ── */
+  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .65s cubic-bezier(.2,.7,.3,1), transform .65s cubic-bezier(.2,.7,.3,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce){ .reveal { opacity:1; transform:none; transition:none; } .pulse{animation:none;} html{scroll-behavior:auto;} .btn, .card, .step, .seg { transition:none; } .hero-van, .hero-van .wheel-spin { animation:none; } }
+</style>
+</head>
+
+<body>
+
+<!-- ═══ ICON SPRITE ═══ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></symbol>
+    <symbol id="i-handshake" viewBox="0 0 24 24"><path d="M8 12l3-3 2.5 2.5a1.8 1.8 0 002.5 0L19 9"></path><path d="M3 8l3-1 5 5"></path><path d="M21 8l-3-1-3.5 3.5"></path><path d="M11 14l2 2M9 16l1.5 1.5"></path></symbol>
+    <symbol id="i-check-badge" viewBox="0 0 24 24"><path d="M12 3l2.1 1.6 2.6-.4 1 2.4 2.4 1-.4 2.6L21 12l-1.6 2.1.4 2.6-2.4 1-1 2.4-2.6-.4L12 21l-2.1-1.6-2.6.4-1-2.4-2.4-1 .4-2.6L3 12l1.6-2.1-.4-2.6 2.4-1 1-2.4 2.6.4z"></path><path d="M9 12l2 2 4-4"></path></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></symbol>
+    <symbol id="i-crash" viewBox="0 0 24 24"><path d="M13 2l-3 8h5l-3 12 9-14h-6l3-6z"></path></symbol>
+    <symbol id="i-unlock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 018 0"></path><circle cx="12" cy="16" r="1.4"></circle></symbol>
+    <symbol id="i-trending" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"></path><path d="M21 7v5h-5"></path></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v4h4"></path><path d="M9 12h6M9 16h6"></path></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"></circle><path d="M20 20l-4-4"></path></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="8" r="4"></circle><path d="M11 11l9 9M17 17l2-2M15 15l2-2"></path></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7"></path></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l9 16H3z"></path><path d="M12 9v5M12 17v.5"></path></symbol>
+    <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v9H3z"></path><path d="M14 9h4l3 3v3h-7z"></path><circle cx="7" cy="18" r="1.8"></circle><circle cx="17" cy="18" r="1.8"></circle></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"></path><path d="M4 7.5l8 4.5 8-4.5M12 12v9"></path></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M5 21V5a2 2 0 012-2h6a2 2 0 012 2v16"></path><path d="M15 10h3a2 2 0 012 2v9"></path><path d="M8 7h2M8 11h2M8 15h2"></path></symbol>
+    <symbol id="i-tools" viewBox="0 0 24 24"><path d="M14 6a3.5 3.5 0 004.9 3.2L21 11l-2 2-1.8-2.1A3.5 3.5 0 0114 6z"></path><path d="M13 11L5 19l-2-2 8-8"></path></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h3l1.5 4-2 1.5a12 12 0 006 6l1.5-2 4 1.5v3a2 2 0 01-2 2A16 16 0 014 5a2 2 0 012-2z"></path></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"></path><path d="M8 10h8M8 13h5"></path></symbol>
+  </defs>
+</svg>
+
+<!-- ═══ HEADER ═══ -->
+<header id="site-header">
+  <div class="wrap nav">
+    <a href="#" class="logo"><span class="mark"><svg class="icon"><use href="#i-truck"></use></svg></span>Газель&nbsp;Про</a>
+    <nav class="nav-links" aria-label="Основная навигация">
+      <a href="#moments">Когда</a>
+      <a href="#how">Как это работает</a>
+      <a href="#why">Почему мы</a>
+      <a href="#contact" class="btn btn-primary">Оставить заявку</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow"><span class="pulse"></span> Покупка коммерческого транспорта</span>
+      <h1>Новая газель для вашего дела — <span class="hl">надёжно и без лишних хлопот</span></h1>
+      <p class="lead">Проверенные машины, прозрачные условия и спокойствие за большую покупку — от выбора до ключей.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary btn-lg">Оставить заявку <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
+        <a href="#how" class="btn btn-ghost btn-lg">Как это работает</a>
+      </div>
+      <div class="hero-trust">
+        <div class="item"><span class="ic"><svg class="icon"><use href="#i-check-badge"></use></svg></span> Только проверенные машины</div>
+        <div class="item"><span class="ic"><svg class="icon"><use href="#i-handshake"></use></svg></span> Прозрачные условия</div>
+        <div class="item"><span class="ic"><svg class="icon"><use href="#i-shield"></use></svg></span> Сопровождение сделки</div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-photo">
+        <div class="glow"></div>
+        <!-- Иллюстрация фургона (SVG, без правовых рисков). Можно заменить на реальное фото позже. -->
+        <svg class="hero-van" viewBox="0 0 440 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иллюстрация грузового фургона Газель">
+          <!-- motion lines -->
+          <g stroke="#5E86C8" stroke-width="5" stroke-linecap="round" opacity=".5">
+            <path d="M8 150h40"></path>
+            <path d="M0 176h30"></path>
+            <path d="M14 202h34"></path>
+          </g>
+          <!-- ground shadow -->
+          <ellipse cx="230" cy="252" rx="182" ry="15" fill="#05102a" opacity=".55"></ellipse>
+          <!-- body -->
+          <path d="M70 214 L70 118 Q70 108 80 108 L258 108 L300 122 L392 150 Q402 153 402 164 L402 214 Z"
+                fill="#EDF3FF" stroke="#C7D6F2" stroke-width="2"></path>
+          <!-- blue lower belt -->
+          <path d="M70 214 L70 190 L402 190 L402 214 Z" fill="#0057E7"></path>
+          <path d="M70 190 L402 190" stroke="#0046B8" stroke-width="2"></path>
+          <!-- roof accent -->
+          <path d="M80 108 L258 108 L300 122 L80 122 Z" fill="#DCE7FA"></path>
+          <!-- rear cargo door seam + handle -->
+          <path d="M118 122 L118 190" stroke="#C7D6F2" stroke-width="2.5"></path>
+          <rect x="106" y="150" width="8" height="16" rx="2" fill="#B4C6E6"></rect>
+          <!-- side emblem (van) -->
+          <circle cx="176" cy="152" r="21" fill="#fff" stroke="#0057E7" stroke-width="2.5"></circle>
+          <g transform="translate(165,144)" fill="none" stroke="#0057E7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M0 6h11v9H0z"></path>
+            <path d="M11 9h4l3 3v3h-7z"></path>
+            <circle cx="4" cy="18" r="1.8"></circle>
+            <circle cx="14" cy="18" r="1.8"></circle>
+          </g>
+          <!-- cab window -->
+          <path d="M300 128 L328 150 L300 150 Z" fill="#8FB6F2"></path>
+          <rect x="266" y="130" width="28" height="20" rx="4" fill="#8FB6F2"></rect>
+          <path d="M280 130 L280 150" stroke="#EDF3FF" stroke-width="2"></path>
+          <!-- headlight + bumper -->
+          <rect x="388" y="168" width="14" height="12" rx="3" fill="#FFE49B"></rect>
+          <rect x="360" y="206" width="46" height="10" rx="4" fill="#1F2A44"></rect>
+          <!-- wheels -->
+          <g>
+            <circle cx="138" cy="214" r="34" fill="#141F38"></circle>
+            <circle cx="138" cy="214" r="33" fill="none" stroke="#2C3A5C" stroke-width="3"></circle>
+            <circle cx="138" cy="214" r="17" fill="#D5E0F3"></circle>
+            <g class="wheel-spin" style="transform-box:fill-box;transform-origin:center">
+              <g transform="translate(138 214)" stroke="#9DB2D6" stroke-width="3" stroke-linecap="round">
+                <path d="M0 -13 V13 M-13 0 H13 M-9 -9 L9 9 M-9 9 L9 -9"></path>
+              </g>
+            </g>
+            <circle cx="138" cy="214" r="5.5" fill="#0057E7"></circle>
+          </g>
+          <g>
+            <circle cx="330" cy="214" r="34" fill="#141F38"></circle>
+            <circle cx="330" cy="214" r="33" fill="none" stroke="#2C3A5C" stroke-width="3"></circle>
+            <circle cx="330" cy="214" r="17" fill="#D5E0F3"></circle>
+            <g class="wheel-spin" style="transform-box:fill-box;transform-origin:center">
+              <g transform="translate(330 214)" stroke="#9DB2D6" stroke-width="3" stroke-linecap="round">
+                <path d="M0 -13 V13 M-13 0 H13 M-9 -9 L9 9 M-9 9 L9 -9"></path>
+              </g>
+            </g>
+            <circle cx="330" cy="214" r="5.5" fill="#0057E7"></circle>
+          </g>
+        </svg>
+      </div>
+      <div class="hero-badge">
+        <span class="hb-ic"><svg class="icon"><use href="#i-check-badge"></use></svg></span>
+        <div><b>Честная сделка</b><span>без скрытых доплат</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MOMENTS ═══ -->
+<section class="block" id="moments">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Нужный момент</div>
+      <h2>Когда стоит задуматься о новой газели</h2>
+      <p>Помогаем решить вопрос быстро именно тогда, когда машина действительно нужна.</p>
+    </div>
+    <div class="grid grid-4">
+      <div class="card reveal">
+        <div class="ic-box"><svg class="icon"><use href="#i-clock"></use></svg></div>
+        <h3>Газель отслужила своё</h3>
+        <p>Машине много лет, ремонты всё чаще. Пора менять — пока старая ещё на ходу и в цене.</p>
+        <span class="badge badge-plan"><span class="dot"></span>Плановая замена</span>
+      </div>
+      <div class="card urgent reveal">
+        <div class="ic-box"><svg class="icon"><use href="#i-crash"></use></svg></div>
+        <h3>Серьёзная поломка или тотал</h3>
+        <p>Машина «встала» и бизнес простаивает. Нужна быстрая замена, чтобы не терять заказы.</p>
+        <span class="badge badge-urgent"><span class="dot"></span>Срочно</span>
+      </div>
+      <div class="card urgent reveal">
+        <div class="ic-box"><svg class="icon"><use href="#i-unlock"></use></svg></div>
+        <h3>Угнали рабочую машину</h3>
+        <p>Без транспорта дело стоит. Поможем оперативно подобрать замену и вернуться в строй.</p>
+        <span class="badge badge-urgent"><span class="dot"></span>Срочно</span>
+      </div>
+      <div class="card reveal">
+        <div class="ic-box"><svg class="icon"><use href="#i-trending"></use></svg></div>
+        <h3>Бизнес растёт</h3>
+        <p>Заказов больше, чем машин. Расширяете автопарк — добавим ещё одну газель под задачу.</p>
+        <span class="badge badge-plan"><span class="dot"></span>Расширение парка</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section class="block soft" id="how">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Как это работает</div>
+      <h2>Три шага — и вы за рулём</h2>
+      <p>Никаких обзвонов десятка салонов и сомнительных продавцов. Один разговор — и дальше мы ведём вас за руку.</p>
+    </div>
+    <div class="grid grid-3 steps">
+      <div class="step reveal">
+        <div class="num">1</div>
+        <span class="connector"><svg class="icon"><use href="#i-arrow-r"></use></svg></span>
+        <h3>Оставляете заявку</h3>
+        <p>Прямо здесь на странице. Расскажите, какая газель нужна и под какие задачи — остальное уточним при звонке.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">2</div>
+        <span class="connector"><svg class="icon"><use href="#i-arrow-r"></use></svg></span>
+        <h3>Подбираем машину</h3>
+        <p>Вместе с проверенным партнёром-поставщиком подбираем подходящую газель и озвучиваем прозрачные условия — без скрытых доплат.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">3</div>
+        <h3>Оформляем и передаём</h3>
+        <p>Помогаем с оформлением и передачей машины. Вы получаете проверенную газель и спокойствие за большую покупку.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WHY US / COMPARE ═══ -->
+<section class="block" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Почему через нас</div>
+      <h2>Покупка на 2,5 млн — это не про «повезёт»</h2>
+      <p>Газель — большие деньги и основа вашего заработка. Разница между случайным салоном и покупкой с нами видна сразу.</p>
+    </div>
+    <div class="compare">
+      <div class="col bad reveal">
+        <h3><span class="h-ic"><svg class="icon"><use href="#i-alert"></use></svg></span>Случайный салон в интернете</h3>
+        <ul>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Продавец, которого вы видите впервые — и, возможно, в последний раз</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Один на один с менеджером, чья задача — продать здесь и сейчас</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Скрытые доплаты и «сюрпризы» в договоре</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Обзвон десятка салонов, сравнение вслепую</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Если что-то пойдёт не так — разбираетесь сами</li>
+        </ul>
+      </div>
+      <div class="col good reveal">
+        <h3><span class="h-ic"><svg class="icon"><use href="#i-shield"></use></svg></span>С «Газель&nbsp;Про»</h3>
+        <ul>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Компания, которая дорожит своим именем и репутацией</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Мы на вашей стороне — сопровождаем сделку от начала до конца</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Прозрачные условия, проверенный партнёр-поставщик</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Один разговор вместо беготни — подбор берём на себя</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Есть к кому обратиться и после покупки</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SEGMENTS ═══ -->
+<section class="block soft">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Для кого</div>
+      <h2>Тем, для кого газель — это работа</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="seg reveal"><div class="ic"><svg class="icon"><use href="#i-truck"></use></svg></div><div><h3>Водителям-частникам</h3><p>ИП и самозанятым, для кого одна машина — основной источник дохода.</p></div></div>
+      <div class="seg reveal"><div class="ic"><svg class="icon"><use href="#i-box"></use></svg></div><div><h3>Небольшим логистам</h3><p>У кого 2–5 машин и парк, который нужно вовремя обновлять и расширять.</p></div></div>
+      <div class="seg reveal"><div class="ic"><svg class="icon"><use href="#i-building"></use></svg></div><div><h3>Компаниям с автопарком</h3><p>Бизнесу, где транспорт — часть операционки, а простой стоит денег.</p></div></div>
+      <div class="seg reveal"><div class="ic"><svg class="icon"><use href="#i-tools"></use></svg></div><div><h3>Мастерам и предпринимателям</h3><p>Стройке, доставке, торговле, сервису — всем, кому газель нужна для дела.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FINAL CTA + FORM ═══ -->
+<section class="block" id="contact">
+  <div class="wrap">
+    <div class="cta reveal">
+      <h2>Нужна газель? Оставьте заявку</h2>
+      <p>Подберём газель под ваши задачи и подскажем условия. Перезвоним и поможем — без спама.</p>
+
+      <!-- Netlify Forms: заявки приходят в дашборд Netlify → Forms -->
+      <form name="zayavka" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="lead-form" id="lead-form">
+        <input type="hidden" name="form-name" value="zayavka">
+        <p hidden><label>Не заполняйте это поле: <input name="bot-field"></label></p>
+        <div class="row">
+          <input type="text" name="name" placeholder="Ваше имя" required>
+          <input type="tel" name="phone" placeholder="Телефон" required>
+        </div>
+        <select name="timing" required>
+          <option value="" disabled selected>Когда нужна газель?</option>
+          <option>Уже сейчас</option>
+          <option>В ближайший месяц</option>
+          <option>В течение 2–3 месяцев</option>
+          <option>Пока просто интересуюсь</option>
+        </select>
+        <button type="submit" class="btn btn-primary btn-lg"><svg class="icon"><use href="#i-check"></use></svg> Оставить заявку</button>
+        <div class="form-note"><svg class="icon"><use href="#i-shield"></use></svg> Перезвоним в рабочее время. Данные не передаём третьим лицам.</div>
+      </form>
+
+      <div class="form-success" id="form-success" hidden>
+        <div class="fs-ic"><svg class="icon"><use href="#i-check"></use></svg></div>
+        <b>Спасибо! Заявка принята</b>
+        Свяжемся с вами в ближайшее время и поможем подобрать газель.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="wrap foot">
+    <div class="logo"><span class="mark" style="width:32px;height:32px;border-radius:9px"><svg class="icon" style="width:18px;height:18px"><use href="#i-truck"></use></svg></span>Газель&nbsp;Про</div>
+    <div>© 2026 · Газель Про — покупка газелей для бизнеса</div>
+  </div>
+</footer>
+
+<script>
+  // sticky header state
+  const header = document.getElementById('site-header');
+  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // soft reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.grid').forEach(grid => {
+    [...grid.children].forEach((el, i) => { if (el.classList.contains('reveal')) el.style.transitionDelay = (i % 4 * 70) + 'ms'; });
+  });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // lead form → Netlify Forms (AJAX submit) + inline thank-you
+  const leadForm = document.getElementById('lead-form');
+  if (leadForm) {
+    leadForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const body = new URLSearchParams(new FormData(leadForm)).toString();
+      fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body })
+        .then(() => {
+          leadForm.hidden = true;
+          const ok = document.getElementById('form-success');
+          ok.hidden = false;
+          ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        })
+        .catch(() => leadForm.submit());
+    });
+  }
+</script>
+
+</body></html>
