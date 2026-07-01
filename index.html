@@ -44,6 +44,7 @@
   a { text-decoration: none; color: inherit; }
   svg { display: block; }
   ::selection { background: rgba(0,87,231,.18); }
+  [hidden] { display: none !important; }
   .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
   .icon { width: 1em; height: 1em; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; fill: none; }
 
@@ -603,37 +604,46 @@
   });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // lead form → отправка заявки в Telegram-бот
-  const TG_TOKEN = '8236755512:AAFI0oGrGQAvSHbIdRlXPm0B67CUC4LbpQA';
-  const TG_CHAT  = '964349873';
+  // lead form → заявка уходит через серверную функцию /api/lead (она шлёт в Telegram)
   const leadForm = document.getElementById('lead-form');
   if (leadForm) {
-    leadForm.addEventListener('submit', (e) => {
+    leadForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       // honeypot: если скрытое поле заполнено — это бот, тихо выходим
       if (leadForm.elements['bot-field'] && leadForm.elements['bot-field'].value) return;
 
+      const btn = leadForm.querySelector('button[type=submit]');
+      const err = document.getElementById('form-err');
+      if (err) err.hidden = true;
+      btn.disabled = true;
+      btn.style.opacity = '.7';
+
       const fd = new FormData(leadForm);
-      const text =
-        '🚚 Новая заявка — Газель Про\n\n' +
-        '👤 Имя: ' + (fd.get('name') || '—') + '\n' +
-        '📞 Телефон: ' + (fd.get('phone') || '—') + '\n' +
-        '🗓 Когда нужна: ' + (fd.get('timing') || '—');
+      const payload = {
+        name: fd.get('name') || '',
+        phone: fd.get('phone') || '',
+        timing: fd.get('timing') || ''
+      };
 
-      // Отправляем заявку. Ответ Telegram из браузера прочитать нельзя (CORS),
-      // поэтому НЕ зависим от него: fire-and-forget, любую ошибку чтения глушим.
-      fetch('https://api.telegram.org/bot' + TG_TOKEN + '/sendMessage', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({ chat_id: TG_CHAT, text }).toString()
-      }).catch(function () {});
-
-      // Показываем «Спасибо» сразу — заявка ушла.
-      leadForm.hidden = true;
-      const ok = document.getElementById('form-success');
-      ok.hidden = false;
-      ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      try {
+        const resp = await fetch('/api/lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const data = await resp.json().catch(function () { return {}; });
+        if (!resp.ok || !data.ok) throw new Error('fail');
+        // Успех — показываем «Спасибо» ТОЛЬКО после реальной отправки
+        leadForm.hidden = true;
+        const ok = document.getElementById('form-success');
+        ok.hidden = false;
+        ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } catch (e2) {
+        // Заявка реально не ушла — показываем плашку ошибки, форму оставляем
+        btn.disabled = false;
+        btn.style.opacity = '1';
+        if (err) err.hidden = false;
+      }
     });
   }
 </script>
