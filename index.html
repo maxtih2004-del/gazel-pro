@@ -608,16 +608,10 @@
   const TG_CHAT  = '964349873';
   const leadForm = document.getElementById('lead-form');
   if (leadForm) {
-    leadForm.addEventListener('submit', async (e) => {
+    leadForm.addEventListener('submit', (e) => {
       e.preventDefault();
       // honeypot: если скрытое поле заполнено — это бот, тихо выходим
       if (leadForm.elements['bot-field'] && leadForm.elements['bot-field'].value) return;
-
-      const btn = leadForm.querySelector('button[type=submit]');
-      const err = document.getElementById('form-err');
-      err.hidden = true;
-      btn.disabled = true;
-      btn.style.opacity = '.7';
 
       const fd = new FormData(leadForm);
       const text =
@@ -626,26 +620,20 @@
         '📞 Телефон: ' + (fd.get('phone') || '—') + '\n' +
         '🗓 Когда нужна: ' + (fd.get('timing') || '—');
 
-      try {
-        // no-cors: запрос доходит до Telegram (сообщение отправляется),
-        // ответ приходит "opaque" и не читается — нам это и не нужно.
-        await fetch('https://api.telegram.org/bot' + TG_TOKEN + '/sendMessage', {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams({ chat_id: TG_CHAT, text }).toString()
-        });
-        // fetch не упал → заявка ушла
-        leadForm.hidden = true;
-        const ok = document.getElementById('form-success');
-        ok.hidden = false;
-        ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      } catch (e2) {
-        // реальная сетевая ошибка (нет интернета / хост недоступен)
-        btn.disabled = false;
-        btn.style.opacity = '1';
-        err.hidden = false;
-      }
+      // Отправляем заявку. Ответ Telegram из браузера прочитать нельзя (CORS),
+      // поэтому НЕ зависим от него: fire-and-forget, любую ошибку чтения глушим.
+      fetch('https://api.telegram.org/bot' + TG_TOKEN + '/sendMessage', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ chat_id: TG_CHAT, text }).toString()
+      }).catch(function () {});
+
+      // Показываем «Спасибо» сразу — заявка ушла.
+      leadForm.hidden = true;
+      const ok = document.getElementById('form-success');
+      ok.hidden = false;
+      ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   }
 </script>
