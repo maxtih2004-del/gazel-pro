@@ -2,299 +2,306 @@
 <html lang="ru"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Обновление парка «Газелей»: транспорт, лизинг и страхование в одном окне · Газель Про</title>
-<meta name="description" content="Газель Про — единое окно для транспортных компаний, арендных парков и корпоративных флотов: подбор «Газелей», лизинг и страхование по понятным условиям, без переплат дилеру.">
+<title>Новые «Газели» в парк: машины, лизинг и страховка одним пакетом · Газель Про</title>
+<meta name="description" content="Обновление и расширение парка «Газелей» для транспортных компаний, арендных парков и корпоративных флотов. Машины, финансирование и страхование в одном пакете документов.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ingo-blue:       #0057E7;
-    --ingo-blue-dark:  #0046B8;
-    --ingo-blue-pale:  #F4F8FF;
-    --ink:             #0B1730;
-    --ink-2:           #1F2A44;
-    --muted:           #55648A;
-    --muted-2:         #8A97B3;
-    --line:            #DCE3EF;
-    --line-2:          #ECEFF6;
-    --bg-soft:         #F5F7FC;
-    --green:           #1FAE6B;
-    --green-dark:      #0D7A48;
-    --green-pale:      #EDFBF4;
-    --red:             #E0455B;
-    --red-pale:        #FDF1F3;
-    --shadow-sm:       0 2px 8px rgba(11,23,48,.05);
-    --shadow-md:       0 18px 44px rgba(11,23,48,.10);
-    --shadow-blue:     0 12px 30px rgba(0,87,231,.32);
+    --blue:#0057E7; --blue-dark:#0046B8; --blue-pale:#F4F8FF;
+    --ink:#0B1730; --ink-2:#1F2A44; --muted:#55648A; --muted-2:#8A97B3;
+    --line:#DCE3EF; --line-2:#ECEFF6; --bg-soft:#F5F7FC;
+    --green:#1FAE6B; --green-dark:#0D7A48; --green-pale:#EDFBF4;
+    --red:#E0455B; --red-pale:#FDF1F3;
+    --shadow-sm:0 2px 8px rgba(11,23,48,.05);
+    --shadow-md:0 18px 44px rgba(11,23,48,.10);
+    --shadow-blue:0 12px 30px rgba(0,87,231,.32);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body {
-    font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    color: var(--ink); background: #fff; line-height: 1.55;
-    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: hidden;
+    font-family:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    color:var(--ink); background:#fff; line-height:1.55;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; overflow-x:hidden;
   }
-  a { text-decoration: none; color: inherit; }
-  svg { display: block; }
-  ::selection { background: rgba(0,87,231,.18); }
-  [hidden] { display: none !important; }
-  .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
-  .icon { width: 1em; height: 1em; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+  a { text-decoration:none; color:inherit; }
+  svg { display:block; }
+  ::selection { background:rgba(0,87,231,.18); }
+  [hidden] { display:none !important; }
+  .wrap { width:100%; max-width:1180px; margin:0 auto; padding:0 24px; }
+  .icon { width:1em; height:1em; stroke:currentColor; stroke-width:1.9; stroke-linecap:round; stroke-linejoin:round; fill:none; }
 
   /* ── buttons ── */
   .btn {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-family: inherit; font-weight: 700; font-size: 16px; line-height: 1.2;
-    padding: 15px 26px; border-radius: 13px; cursor: pointer; border: 1px solid transparent;
-    transition: transform .18s cubic-bezier(.2,.7,.3,1), box-shadow .18s ease, background .18s ease, border-color .18s ease;
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:inherit; font-weight:700; font-size:16px; line-height:1.2;
+    padding:15px 26px; border-radius:13px; cursor:pointer; border:1px solid transparent;
+    transition:transform .18s cubic-bezier(.2,.7,.3,1), box-shadow .18s ease, background .18s ease, border-color .18s ease;
   }
-  .btn .icon { width: 18px; height: 18px; flex: 0 0 auto; }
-  .btn-primary { background: var(--ingo-blue); color: #fff; box-shadow: var(--shadow-blue); }
-  .btn-primary:hover { background: var(--ingo-blue-dark); transform: translateY(-2px); box-shadow: 0 16px 36px rgba(0,87,231,.42); }
-  .btn-primary .arrow { transition: transform .2s ease; }
-  .btn-primary:hover .arrow { transform: translateX(3px); }
-  .btn-ghost { background: rgba(255,255,255,.06); color: #fff; border-color: rgba(255,255,255,.22); }
-  .btn-ghost:hover { background: rgba(255,255,255,.14); transform: translateY(-2px); border-color: rgba(255,255,255,.4); }
-  .btn-lg { padding: 18px 30px; font-size: 17px; border-radius: 14px; }
-  .btn-block { width: 100%; justify-content: center; }
+  .btn .icon { width:18px; height:18px; flex:0 0 auto; }
+  .btn-primary { background:var(--blue); color:#fff; box-shadow:var(--shadow-blue); }
+  .btn-primary:hover { background:var(--blue-dark); transform:translateY(-2px); box-shadow:0 16px 36px rgba(0,87,231,.42); }
+  .btn-primary .arrow { transition:transform .2s ease; }
+  .btn-primary:hover .arrow { transform:translateX(3px); }
+  .btn-ghost { background:rgba(255,255,255,.06); color:#fff; border-color:rgba(255,255,255,.22); }
+  .btn-ghost:hover { background:rgba(255,255,255,.14); transform:translateY(-2px); border-color:rgba(255,255,255,.4); }
+  .btn-lg { padding:18px 30px; font-size:17px; border-radius:14px; }
+  .btn-block { width:100%; justify-content:center; }
 
   /* ── header ── */
   header {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(11,23,48,.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(255,255,255,.08); transition: background .25s ease, border-color .25s ease;
+    position:sticky; top:0; z-index:50;
+    background:rgba(11,23,48,.72); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(255,255,255,.08); transition:background .25s ease, border-color .25s ease;
   }
-  header.scrolled { background: rgba(9,19,40,.94); border-bottom-color: rgba(255,255,255,.12); }
-  .nav { display: flex; align-items: center; justify-content: space-between; height: 70px; }
-  .logo { display: flex; align-items: center; gap: 11px; font-weight: 800; font-size: 20px; color: #fff; letter-spacing: -.3px; }
-  .logo .mark { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--ingo-blue), #3B82F6); display: grid; place-items: center; color: #fff; box-shadow: 0 4px 14px rgba(0,87,231,.5); }
-  .logo .mark .icon { width: 20px; height: 20px; stroke-width: 2.2; }
-  .nav-links { display: flex; gap: 26px; align-items: center; }
-  .nav-links a:not(.btn) { color: rgba(255,255,255,.72); font-weight: 600; font-size: 15px; transition: color .15s; position: relative; }
-  .nav-links a:not(.btn)::after { content:""; position:absolute; left:0; bottom:-6px; width:0; height:2px; background:#6EA8FF; border-radius:2px; transition: width .22s ease; }
-  .nav-links a:not(.btn):hover { color: #fff; }
+  header.scrolled { background:rgba(9,19,40,.94); border-bottom-color:rgba(255,255,255,.12); }
+  .nav { display:flex; align-items:center; justify-content:space-between; height:70px; }
+  .logo { display:flex; align-items:center; gap:11px; font-weight:800; font-size:20px; color:#fff; letter-spacing:-.3px; }
+  .logo .mark { width:36px; height:36px; border-radius:10px; background:linear-gradient(135deg,var(--blue),#3B82F6); display:grid; place-items:center; color:#fff; box-shadow:0 4px 14px rgba(0,87,231,.5); }
+  .logo .mark .icon { width:20px; height:20px; stroke-width:2.2; }
+  .nav-links { display:flex; gap:26px; align-items:center; }
+  .nav-links a:not(.btn) { color:rgba(255,255,255,.72); font-weight:600; font-size:15px; transition:color .15s; position:relative; }
+  .nav-links a:not(.btn)::after { content:""; position:absolute; left:0; bottom:-6px; width:0; height:2px; background:#6EA8FF; border-radius:2px; transition:width .22s ease; }
+  .nav-links a:not(.btn):hover { color:#fff; }
   .nav-links a:not(.btn):hover::after { width:100%; }
-  .nav .btn { padding: 11px 20px; font-size: 15px; }
-  @media (max-width: 980px) { .nav-links a:not(.btn) { display: none; } .nav { height: 62px; } }
+  .nav .btn { padding:11px 20px; font-size:15px; }
+  @media (max-width:980px) { .nav-links a:not(.btn) { display:none; } .nav { height:62px; } }
 
   /* ── hero ── */
   .hero {
-    position: relative; overflow: hidden; color: #fff; padding: 72px 0 86px;
+    position:relative; overflow:hidden; color:#fff; padding:72px 0 86px;
     background:
       radial-gradient(1100px 560px at 88% -12%, rgba(0,87,231,.55), transparent 60%),
       radial-gradient(760px 440px at -5% 18%, rgba(59,130,246,.22), transparent 55%),
-      linear-gradient(180deg, #0B1730, #0D1D3C);
+      linear-gradient(180deg,#0B1730,#0D1D3C);
   }
   .hero::after {
-    content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
-    background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
-    background-size: 46px 46px;
-    -webkit-mask-image: radial-gradient(760px 460px at 78% 34%, #000, transparent 74%);
-            mask-image: radial-gradient(760px 460px at 78% 34%, #000, transparent 74%);
+    content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+    background-image:linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size:46px 46px;
+    -webkit-mask-image:radial-gradient(760px 460px at 78% 34%, #000, transparent 74%);
+            mask-image:radial-gradient(760px 460px at 78% 34%, #000, transparent 74%);
   }
-  .hero .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
-  @media (max-width: 940px) { .hero .wrap { grid-template-columns: 1fr; gap: 40px; } .hero { padding: 54px 0 70px; } }
+  .hero .wrap { position:relative; z-index:2; display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; }
+  @media (max-width:940px) { .hero .wrap { grid-template-columns:1fr; gap:40px; } .hero { padding:54px 0 70px; } }
   .eyebrow {
-    display: inline-flex; align-items: center; gap: 9px; background: rgba(255,255,255,.07);
-    border: 1px solid rgba(255,255,255,.15); color: #CFE1FF; font-weight: 700; font-size: 13px;
-    padding: 8px 15px; border-radius: 100px; margin-bottom: 22px;
+    display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.15); color:#CFE1FF; font-weight:700; font-size:13px;
+    padding:8px 15px; border-radius:100px; margin-bottom:22px;
   }
-  .eyebrow .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(31,174,107,.7); animation: pulse 2.4s infinite; }
+  .eyebrow .pulse { width:8px; height:8px; border-radius:50%; background:var(--green); box-shadow:0 0 0 0 rgba(31,174,107,.7); animation:pulse 2.4s infinite; }
   @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(31,174,107,.6)} 70%{box-shadow:0 0 0 9px rgba(31,174,107,0)} 100%{box-shadow:0 0 0 0 rgba(31,174,107,0)} }
-  .hero h1 { font-size: clamp(32px, 4.4vw, 52px); line-height: 1.08; font-weight: 800; letter-spacing: -1.4px; }
-  .hero h1 .hl { color: #7DB0FF; }
-  .hero p.lead { margin-top: 20px; font-size: clamp(17px, 1.6vw, 20px); color: rgba(255,255,255,.8); max-width: 580px; }
-  .hero-cta { margin-top: 30px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
-  .under-btn { margin-top: 14px; font-size: 14px; color: rgba(255,255,255,.6); display: flex; align-items: flex-start; gap: 8px; }
-  .under-btn .icon { width: 15px; height: 15px; flex: 0 0 auto; margin-top: 3px; }
-  .hero-trust { margin-top: 34px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.1); display: flex; gap: 12px 30px; flex-wrap: wrap; }
-  .hero-trust .item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.86); font-weight: 600; font-size: 15px; }
-  .hero-trust .ic { width: 30px; height: 30px; border-radius: 9px; background: rgba(110,168,255,.14); color: #86B4FF; display: grid; place-items: center; }
-  .hero-trust .ic .icon { width: 17px; height: 17px; }
+  .hero h1 { font-size:clamp(32px,4.4vw,52px); line-height:1.08; font-weight:800; letter-spacing:-1.4px; }
+  .hero h1 .hl { color:#7DB0FF; }
+  .hero p.lead { margin-top:20px; font-size:clamp(17px,1.6vw,20px); color:rgba(255,255,255,.8); max-width:580px; }
+  .hero-cta { margin-top:30px; display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
+  .under-btn { margin-top:14px; font-size:14px; color:rgba(255,255,255,.6); display:flex; align-items:flex-start; gap:8px; }
+  .under-btn .icon { width:15px; height:15px; flex:0 0 auto; margin-top:3px; }
+  .hero-trust { margin-top:34px; padding-top:28px; border-top:1px solid rgba(255,255,255,.1); display:flex; gap:12px 30px; flex-wrap:wrap; }
+  .hero-trust .item { display:flex; align-items:center; gap:10px; color:rgba(255,255,255,.86); font-weight:600; font-size:15px; }
+  .hero-trust .ic { width:30px; height:30px; border-radius:9px; background:rgba(110,168,255,.14); color:#86B4FF; display:grid; place-items:center; }
+  .hero-trust .ic .icon { width:17px; height:17px; }
 
-  .hero-visual { position: relative; }
+  .hero-visual { position:relative; }
   .hero-photo {
-    position: relative; aspect-ratio: 4 / 3.2; border-radius: 22px; overflow: hidden;
-    background: repeating-linear-gradient(135deg, rgba(255,255,255,.05) 0 2px, transparent 2px 13px), linear-gradient(160deg, #14264C, #0E1D3B);
-    border: 1px solid rgba(255,255,255,.12); box-shadow: 0 40px 80px rgba(0,10,40,.5); display: grid; place-items: center;
+    position:relative; aspect-ratio:4/3.2; border-radius:22px; overflow:hidden;
+    background:repeating-linear-gradient(135deg, rgba(255,255,255,.05) 0 2px, transparent 2px 13px), linear-gradient(160deg,#14264C,#0E1D3B);
+    border:1px solid rgba(255,255,255,.12); box-shadow:0 40px 80px rgba(0,10,40,.5); display:grid; place-items:center;
   }
-  .hero-photo .hero-van { position: relative; z-index: 2; width: 86%; max-width: 430px; height: auto; animation: vanFloat 5s ease-in-out infinite; }
-  .hero-photo .glow { position: absolute; inset: auto -20% -30% -20%; height: 60%; background: radial-gradient(ellipse at center, rgba(0,87,231,.4), transparent 70%); filter: blur(20px); }
-  @keyframes vanFloat { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-8px); } }
-  @keyframes wheelSpin { to { transform: rotate(360deg); } }
-  .hero-van .wheel-spin { transform-box: fill-box; transform-origin: center; animation: wheelSpin 2.2s linear infinite; }
+  .hero-photo .hero-van { position:relative; z-index:2; width:86%; max-width:430px; height:auto; animation:vanFloat 5s ease-in-out infinite; }
+  .hero-photo .glow { position:absolute; inset:auto -20% -30% -20%; height:60%; background:radial-gradient(ellipse at center, rgba(0,87,231,.4), transparent 70%); filter:blur(20px); }
+  @keyframes vanFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+  @keyframes wheelSpin { to { transform:rotate(360deg); } }
+  .hero-van .wheel-spin { transform-box:fill-box; transform-origin:center; animation:wheelSpin 2.2s linear infinite; }
   .hero-badge {
-    position: absolute; left: -18px; bottom: 26px; z-index: 3; background: #fff; color: var(--ink);
-    border-radius: 15px; padding: 14px 18px; display: flex; align-items: center; gap: 13px; box-shadow: var(--shadow-md);
+    position:absolute; left:-18px; bottom:26px; z-index:3; background:#fff; color:var(--ink);
+    border-radius:15px; padding:14px 18px; display:flex; align-items:center; gap:13px; box-shadow:var(--shadow-md);
   }
-  @media (max-width: 480px){ .hero-badge { left: 8px; } }
-  .hero-badge .hb-ic { width: 40px; height: 40px; border-radius: 11px; background: var(--green-pale); color: var(--green-dark); display: grid; place-items: center; flex: 0 0 auto; }
-  .hero-badge .hb-ic .icon { width: 21px; height: 21px; }
-  .hero-badge b { display: block; font-size: 15px; font-weight: 800; }
-  .hero-badge span { font-size: 13px; color: var(--muted); }
+  @media (max-width:480px){ .hero-badge { left:8px; } }
+  .hero-badge .hb-ic { width:40px; height:40px; border-radius:11px; background:var(--green-pale); color:var(--green-dark); display:grid; place-items:center; flex:0 0 auto; }
+  .hero-badge .hb-ic .icon { width:21px; height:21px; }
+  .hero-badge b { display:block; font-size:15px; font-weight:800; }
+  .hero-badge span { font-size:13px; color:var(--muted); }
 
   /* ── sections ── */
-  section.block { padding: 88px 0; }
-  @media (max-width: 640px){ section.block { padding: 58px 0; } }
-  .section-head { max-width: 800px; margin: 0 auto 50px; text-align: center; }
-  .kicker { display:inline-flex; align-items:center; gap:8px; color: var(--ingo-blue); font-weight: 800; font-size: 13px; letter-spacing: 1.4px; text-transform: uppercase; }
-  .kicker::before, .kicker::after { content:""; width:22px; height:2px; border-radius:2px; background: var(--ingo-blue); opacity:.5; }
-  .section-head h2 { font-size: clamp(27px, 3.3vw, 40px); font-weight: 800; letter-spacing: -1px; margin-top: 14px; line-height: 1.12; }
-  .section-head p { color: var(--muted); font-size: 18px; margin-top: 16px; text-wrap: pretty; }
-  .soft { background: var(--bg-soft); }
+  section.block { padding:88px 0; }
+  @media (max-width:640px){ section.block { padding:58px 0; } }
+  .section-head { max-width:800px; margin:0 auto 50px; text-align:center; }
+  .kicker { display:inline-flex; align-items:center; gap:8px; color:var(--blue); font-weight:800; font-size:13px; letter-spacing:1.4px; text-transform:uppercase; }
+  .kicker::before, .kicker::after { content:""; width:22px; height:2px; border-radius:2px; background:var(--blue); opacity:.5; }
+  .section-head h2 { font-size:clamp(27px,3.3vw,40px); font-weight:800; letter-spacing:-1px; margin-top:14px; line-height:1.12; }
+  .section-head p { color:var(--muted); font-size:18px; margin-top:16px; text-wrap:pretty; }
+  .soft { background:var(--bg-soft); }
 
-  .grid { display: grid; gap: 22px; }
-  .grid-3 { grid-template-columns: repeat(3, 1fr); }
-  .grid-2 { grid-template-columns: repeat(2, 1fr); }
-  @media (max-width: 980px) { .grid-3 { grid-template-columns: 1fr; } }
-  @media (max-width: 620px) { .grid-2 { grid-template-columns: 1fr; } }
+  .grid { display:grid; gap:22px; }
+  .grid-3 { grid-template-columns:repeat(3,1fr); }
+  .grid-2 { grid-template-columns:repeat(2,1fr); }
+  @media (max-width:980px) { .grid-3 { grid-template-columns:1fr; } }
+  @media (max-width:620px) { .grid-2 { grid-template-columns:1fr; } }
 
   /* ── problem ── */
-  .problem { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-  @media (max-width: 880px){ .problem { grid-template-columns: 1fr; gap: 34px; } }
+  .problem { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
+  @media (max-width:880px){ .problem { grid-template-columns:1fr; gap:34px; } }
   .problem h2 { font-size:clamp(26px,3.2vw,38px); font-weight:800; letter-spacing:-1px; margin-top:14px; line-height:1.14; }
-  .sym-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
-  .sym-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 16.5px; color: var(--ink-2); }
-  .sym-list .bul { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 8px; background: var(--red-pale); color: var(--red); display: grid; place-items: center; margin-top: 1px; }
-  .sym-list .bul .icon { width: 15px; height: 15px; stroke-width: 2.4; }
-  .problem-note { margin-top: 26px; padding: 20px 22px; border-left: 3px solid var(--ingo-blue); background: var(--ingo-blue-pale); border-radius: 0 14px 14px 0; color: var(--ink-2); font-size: 16px; }
+  .sym-list { list-style:none; display:flex; flex-direction:column; gap:14px; }
+  .sym-list li { display:flex; gap:14px; align-items:flex-start; font-size:16.5px; color:var(--ink-2); }
+  .sym-list .bul { flex:0 0 auto; width:26px; height:26px; border-radius:8px; background:var(--red-pale); color:var(--red); display:grid; place-items:center; margin-top:1px; }
+  .sym-list .bul .icon { width:15px; height:15px; stroke-width:2.4; }
+  .problem-note { margin-top:26px; padding:20px 22px; border-left:3px solid var(--blue); background:var(--blue-pale); border-radius:0 14px 14px 0; color:var(--ink-2); font-size:16px; }
 
   /* ── segment cards ── */
-  .seg-card { position: relative; background:#fff; border:1px solid var(--line-2); border-radius: 22px; padding: 32px 28px; display:flex; flex-direction:column; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; overflow:hidden; }
-  .seg-card::before { content:""; position:absolute; left:0; top:0; height:4px; width:100%; background: linear-gradient(90deg, var(--ingo-blue), #3B82F6); transform: scaleX(0); transform-origin:left; transition: transform .3s ease; }
-  .seg-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--line); }
-  .seg-card:hover::before { transform: scaleX(1); }
-  .seg-card .s-ic { width: 56px; height: 56px; border-radius: 16px; display:grid; place-items:center; background: linear-gradient(135deg, var(--ingo-blue), #3B82F6); color:#fff; box-shadow: 0 10px 22px rgba(0,87,231,.26); margin-bottom: 20px; }
-  .seg-card .s-ic .icon { width: 27px; height: 27px; stroke-width: 2; }
-  .seg-card h3 { font-size: 20px; font-weight: 800; letter-spacing: -.3px; }
-  .seg-card .quote { margin-top: 16px; padding: 16px 18px; background: var(--bg-soft); border-radius: 14px; color: var(--ink-2); font-size: 15px; font-style: italic; position: relative; }
-  .seg-card .quote::before { content:"«"; color: var(--ingo-blue); font-size: 26px; font-weight: 800; font-style: normal; line-height: 0; position: relative; top: 6px; margin-right: 2px; }
-  .seg-card .val-label { margin-top: 22px; font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--green-dark); }
-  .seg-card ul { list-style:none; margin-top: 12px; display:flex; flex-direction:column; gap: 11px; }
-  .seg-card ul li { display:flex; gap:11px; align-items:flex-start; font-size: 15px; color: var(--ink-2); }
-  .seg-card ul li .tk { flex:0 0 auto; width:22px; height:22px; border-radius:7px; background: var(--green-pale); color: var(--green-dark); display:grid; place-items:center; margin-top:1px; }
+  .seg-card { position:relative; background:#fff; border:1px solid var(--line-2); border-radius:22px; padding:32px 28px; display:flex; flex-direction:column; transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease; overflow:hidden; }
+  .seg-card::before { content:""; position:absolute; left:0; top:0; height:4px; width:100%; background:linear-gradient(90deg,var(--blue),#3B82F6); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
+  .seg-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); border-color:var(--line); }
+  .seg-card:hover::before { transform:scaleX(1); }
+  .seg-card .s-ic { width:56px; height:56px; border-radius:16px; display:grid; place-items:center; background:linear-gradient(135deg,var(--blue),#3B82F6); color:#fff; box-shadow:0 10px 22px rgba(0,87,231,.26); margin-bottom:20px; }
+  .seg-card .s-ic .icon { width:27px; height:27px; stroke-width:2; }
+  .seg-card h3 { font-size:20px; font-weight:800; letter-spacing:-.3px; }
+  .seg-card .quote { margin-top:16px; padding:16px 18px; background:var(--bg-soft); border-radius:14px; color:var(--ink-2); font-size:15px; font-style:italic; }
+  .seg-card .val-label { margin-top:22px; font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--green-dark); }
+  .seg-card ul { list-style:none; margin-top:12px; display:flex; flex-direction:column; gap:11px; }
+  .seg-card ul li { display:flex; gap:11px; align-items:flex-start; font-size:15px; color:var(--ink-2); }
+  .seg-card ul li .tk { flex:0 0 auto; width:22px; height:22px; border-radius:7px; background:var(--green-pale); color:var(--green-dark); display:grid; place-items:center; margin-top:1px; }
   .seg-card ul li .tk .icon { width:12px; height:12px; stroke-width:2.8; }
-  .seg-card .s-cta { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line-2); }
-  .seg-card .s-cta a { color: var(--ingo-blue); font-weight: 700; font-size: 15px; display:inline-flex; align-items:center; gap:8px; }
-  .seg-card .s-cta a .icon { width:16px; height:16px; transition: transform .2s ease; }
-  .seg-card .s-cta a:hover .icon { transform: translateX(4px); }
+  .seg-card .s-cta { margin-top:24px; padding-top:20px; border-top:1px solid var(--line-2); }
+  .seg-card .s-cta a { color:var(--blue); font-weight:700; font-size:15px; display:inline-flex; align-items:center; gap:8px; }
+  .seg-card .s-cta a .icon { width:16px; height:16px; transition:transform .2s ease; }
+  .seg-card .s-cta a:hover .icon { transform:translateX(4px); }
 
   /* ── benefits ── */
-  .benefit { background: #fff; border: 1px solid var(--line-2); border-radius: 20px; padding: 30px 28px; transition: transform .2s ease, box-shadow .2s ease; }
-  .benefit:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
-  .benefit .b-ic { width: 54px; height: 54px; border-radius: 15px; display: grid; place-items: center; margin-bottom: 18px; background: var(--ingo-blue-pale); color: var(--ingo-blue); }
-  .benefit .b-ic .icon { width: 26px; height: 26px; stroke-width: 2; }
-  .benefit h3 { font-size: 19px; font-weight: 800; letter-spacing: -.3px; }
-  .benefit p { color: var(--muted); font-size: 15px; margin-top: 9px; }
+  .benefit { background:#fff; border:1px solid var(--line-2); border-radius:20px; padding:30px 28px; transition:transform .2s ease, box-shadow .2s ease; }
+  .benefit:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
+  .benefit .b-ic { width:54px; height:54px; border-radius:15px; display:grid; place-items:center; margin-bottom:18px; background:var(--blue-pale); color:var(--blue); }
+  .benefit .b-ic .icon { width:26px; height:26px; stroke-width:2; }
+  .benefit h3 { font-size:19px; font-weight:800; letter-spacing:-.3px; }
+  .benefit p { color:var(--muted); font-size:15px; margin-top:9px; }
 
   /* ── steps ── */
-  .step { position: relative; background: #fff; border: 1px solid var(--line-2); border-radius: 20px; padding: 32px 28px; transition: transform .2s ease, box-shadow .2s ease; }
-  .step:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
-  .step .num { width: 48px; height: 48px; border-radius: 14px; color: #fff; font-weight: 800; font-size: 21px; display: grid; place-items: center; margin-bottom: 18px; box-shadow: 0 8px 20px rgba(11,23,48,.14); }
-  .step:nth-child(1) .num { background: linear-gradient(135deg,#0057E7,#3B82F6); }
-  .step:nth-child(2) .num { background: linear-gradient(135deg,#4F46E5,#7C7CF0); }
-  .step:nth-child(3) .num { background: linear-gradient(135deg,#0D7A48,#1FAE6B); }
-  .step .connector { position: absolute; right: -22px; top: 56px; width: 22px; z-index: 3; }
-  .step .connector .icon { width: 22px; height: 22px; stroke-width: 2.4; color: var(--ingo-blue); opacity:.35; }
-  @media (max-width: 980px){ .step .connector { display:none; } }
-  .step h3 { font-size: 20px; font-weight: 800; letter-spacing: -.3px; }
-  .step p { color: var(--muted); margin-top: 10px; font-size: 15px; }
-  .after-steps { margin-top: 34px; text-align: center; font-size: 18px; color: var(--ink-2); font-weight: 600; }
-  .after-steps b { color: var(--ingo-blue); }
+  .step { position:relative; background:#fff; border:1px solid var(--line-2); border-radius:20px; padding:32px 28px; transition:transform .2s ease, box-shadow .2s ease; }
+  .step:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+  .step .num { width:48px; height:48px; border-radius:14px; color:#fff; font-weight:800; font-size:21px; display:grid; place-items:center; margin-bottom:18px; box-shadow:0 8px 20px rgba(11,23,48,.14); }
+  .step:nth-child(1) .num { background:linear-gradient(135deg,#0057E7,#3B82F6); }
+  .step:nth-child(2) .num { background:linear-gradient(135deg,#4F46E5,#7C7CF0); }
+  .step:nth-child(3) .num { background:linear-gradient(135deg,#0D7A48,#1FAE6B); }
+  .step .connector { position:absolute; right:-22px; top:56px; width:22px; z-index:3; }
+  .step .connector .icon { width:22px; height:22px; stroke-width:2.4; color:var(--blue); opacity:.35; }
+  @media (max-width:980px){ .step .connector { display:none; } }
+  .step h3 { font-size:20px; font-weight:800; letter-spacing:-.3px; }
+  .step p { color:var(--muted); margin-top:10px; font-size:15px; }
+  .after-steps { margin-top:34px; text-align:center; font-size:18px; color:var(--ink-2); font-weight:600; }
+  .after-steps b { color:var(--blue); }
 
   /* ── comparison ── */
-  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: stretch; }
-  @media (max-width: 760px){ .compare { grid-template-columns: 1fr; } }
-  .col { border-radius: 22px; padding: 34px 32px; }
-  .col.bad { background: #fff; border: 1px solid var(--line); }
-  .col.good { background: radial-gradient(600px 300px at 80% 0%, rgba(0,87,231,.35), transparent 60%), linear-gradient(160deg, #0B1730, #12274F); color: #fff; box-shadow: 0 28px 64px rgba(11,23,48,.3); position: relative; overflow: hidden; }
-  .col.good::after { content:"Наш подход"; position:absolute; top:20px; right:-34px; transform: rotate(45deg); background: var(--green); color:#fff; font-size:11px; font-weight:800; letter-spacing:.6px; padding:6px 40px; }
-  .col h3 { font-size: 20px; font-weight: 800; margin-bottom: 10px; display: flex; align-items: center; gap: 11px; letter-spacing:-.3px; }
-  .col.bad h3 { color: var(--ink-2); }
-  .col .col-sub { font-size: 14px; margin-bottom: 22px; }
-  .col.bad .col-sub { color: var(--muted-2); }
-  .col.good .col-sub { color: rgba(255,255,255,.6); }
-  .col h3 .h-ic { width: 34px; height: 34px; border-radius: 10px; display:grid; place-items:center; flex:0 0 auto; }
-  .col.bad h3 .h-ic { background: var(--red-pale); color: var(--red); }
-  .col.good h3 .h-ic { background: rgba(110,168,255,.18); color:#86B4FF; }
+  .compare { display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:stretch; }
+  @media (max-width:760px){ .compare { grid-template-columns:1fr; } }
+  .col { border-radius:22px; padding:34px 32px; }
+  .col.bad { background:#fff; border:1px solid var(--line); }
+  .col.good { background:radial-gradient(600px 300px at 80% 0%, rgba(0,87,231,.35), transparent 60%), linear-gradient(160deg,#0B1730,#12274F); color:#fff; box-shadow:0 28px 64px rgba(11,23,48,.3); position:relative; overflow:hidden; }
+  .col.good::after { content:"Наш подход"; position:absolute; top:20px; right:-34px; transform:rotate(45deg); background:var(--green); color:#fff; font-size:11px; font-weight:800; letter-spacing:.6px; padding:6px 40px; }
+  .col h3 { font-size:20px; font-weight:800; margin-bottom:10px; display:flex; align-items:center; gap:11px; letter-spacing:-.3px; }
+  .col.bad h3 { color:var(--ink-2); }
+  .col .col-sub { font-size:14px; margin-bottom:22px; }
+  .col.bad .col-sub { color:var(--muted-2); }
+  .col.good .col-sub { color:rgba(255,255,255,.6); }
+  .col h3 .h-ic { width:34px; height:34px; border-radius:10px; display:grid; place-items:center; flex:0 0 auto; }
+  .col.bad h3 .h-ic { background:var(--red-pale); color:var(--red); }
+  .col.good h3 .h-ic { background:rgba(110,168,255,.18); color:#86B4FF; }
   .col h3 .h-ic .icon { width:18px; height:18px; }
-  .col ul { list-style: none; display: flex; flex-direction: column; gap: 15px; }
-  .col li { display: flex; gap: 13px; align-items: flex-start; font-size: 15.5px; }
-  .col li .tick { flex: 0 0 auto; width: 24px; height: 24px; border-radius: 8px; display: grid; place-items: center; margin-top: 1px; }
-  .col li .tick .icon { width: 13px; height: 13px; stroke-width: 2.6; }
-  .col.bad li { color: var(--muted); }
-  .col.bad .tick { background: var(--line-2); color: var(--muted-2); }
-  .col.bad li.plus .tick { background: var(--green-pale); color: var(--green-dark); }
-  .col.bad li.plus { color: var(--ink-2); }
-  .col.good li { color: rgba(255,255,255,.9); }
-  .col.good .tick { background: rgba(31,174,107,.22); color: #4ADE80; }
+  .col ul { list-style:none; display:flex; flex-direction:column; gap:15px; }
+  .col li { display:flex; gap:13px; align-items:flex-start; font-size:15.5px; }
+  .col li .tick { flex:0 0 auto; width:24px; height:24px; border-radius:8px; display:grid; place-items:center; margin-top:1px; }
+  .col li .tick .icon { width:13px; height:13px; stroke-width:2.6; }
+  .col.bad li { color:var(--muted); }
+  .col.bad .tick { background:var(--line-2); color:var(--muted-2); }
+  .col.bad li.plus .tick { background:var(--green-pale); color:var(--green-dark); }
+  .col.bad li.plus { color:var(--ink-2); }
+  .col.good li { color:rgba(255,255,255,.9); }
+  .col.good .tick { background:rgba(31,174,107,.22); color:#4ADE80; }
+
+  /* ── lead magnet ── */
+  .magnet { display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:center; background:#fff; border:1px solid var(--line-2); border-radius:26px; padding:44px 42px; box-shadow:var(--shadow-md); }
+  @media (max-width:880px){ .magnet { grid-template-columns:1fr; gap:30px; padding:34px 26px; } }
+  .magnet h2 { font-size:clamp(24px,2.9vw,34px); font-weight:800; letter-spacing:-.8px; line-height:1.15; margin-top:12px; }
+  .magnet p.m-lead { color:var(--muted); font-size:16.5px; margin-top:14px; }
+  .magnet ul { list-style:none; margin-top:20px; display:flex; flex-direction:column; gap:10px; }
+  .magnet ul li { display:flex; gap:11px; align-items:flex-start; font-size:15.5px; color:var(--ink-2); }
+  .magnet ul li .tk { flex:0 0 auto; width:22px; height:22px; border-radius:7px; background:var(--blue-pale); color:var(--blue); display:grid; place-items:center; margin-top:1px; }
+  .magnet ul li .tk .icon { width:12px; height:12px; stroke-width:2.8; }
+  .magnet-form { background:var(--bg-soft); border-radius:18px; padding:28px 24px; display:grid; gap:11px; }
+  .magnet-form input { width:100%; font-family:inherit; font-size:15px; color:var(--ink); background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 16px; outline:none; transition:box-shadow .15s ease, border-color .15s ease; }
+  .magnet-form input:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(0,87,231,.15); }
+  .magnet-form input::placeholder { color:var(--muted-2); }
+  .magnet-form .m-note { color:var(--muted-2); font-size:12.5px; text-align:center; margin-top:2px; }
+  .magnet-ok { background:var(--green-pale); border:1px solid rgba(31,174,107,.35); border-radius:18px; padding:26px 22px; text-align:center; }
+  .magnet-ok b { display:block; font-size:18px; font-weight:800; margin-bottom:6px; }
+  .magnet-ok p { color:var(--muted); font-size:14.5px; margin-bottom:16px; }
 
   /* ── FAQ ── */
-  .faq { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
-  .faq details { background:#fff; border:1px solid var(--line-2); border-radius: 16px; padding: 0 24px; transition: border-color .2s ease, box-shadow .2s ease; }
-  .faq details[open] { border-color: var(--line); box-shadow: var(--shadow-sm); }
-  .faq summary { list-style: none; cursor: pointer; padding: 22px 0; font-weight: 700; font-size: 17px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+  .faq { max-width:820px; margin:0 auto; display:flex; flex-direction:column; gap:12px; }
+  .faq details { background:#fff; border:1px solid var(--line-2); border-radius:16px; padding:0 24px; transition:border-color .2s ease, box-shadow .2s ease; }
+  .faq details[open] { border-color:var(--line); box-shadow:var(--shadow-sm); }
+  .faq summary { list-style:none; cursor:pointer; padding:22px 0; font-weight:700; font-size:17px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
   .faq summary::-webkit-details-marker { display:none; }
-  .faq summary .chev { flex:0 0 auto; width: 28px; height: 28px; border-radius: 8px; background: var(--ingo-blue-pale); color: var(--ingo-blue); display:grid; place-items:center; transition: transform .22s ease; }
+  .faq summary .chev { flex:0 0 auto; width:28px; height:28px; border-radius:8px; background:var(--blue-pale); color:var(--blue); display:grid; place-items:center; transition:transform .22s ease; }
   .faq summary .chev .icon { width:16px; height:16px; stroke-width:2.4; }
-  .faq details[open] summary .chev { transform: rotate(180deg); }
-  .faq .answer { padding: 0 0 22px; color: var(--muted); font-size: 15.5px; max-width: 92%; }
+  .faq details[open] summary .chev { transform:rotate(180deg); }
+  .faq .answer { padding:0 0 22px; color:var(--muted); font-size:15.5px; max-width:92%; }
 
-  .cta-inline { margin-top: 46px; text-align: center; }
-  .cta-inline .under-btn { justify-content: center; color: var(--muted); margin-top: 12px; }
+  .cta-inline { margin-top:46px; text-align:center; }
+  .cta-inline .under-btn { justify-content:center; color:var(--muted); margin-top:12px; }
 
   /* ── final CTA ── */
   .cta {
-    color: #fff; border-radius: 30px; padding: 64px 40px; text-align: center; position: relative; overflow: hidden;
+    color:#fff; border-radius:30px; padding:64px 40px; text-align:center; position:relative; overflow:hidden;
     background:
       radial-gradient(820px 420px at 18% 0%, rgba(0,87,231,.5), transparent 60%),
       radial-gradient(600px 400px at 100% 100%, rgba(31,174,107,.16), transparent 60%),
-      linear-gradient(160deg, #0B1730, #0E1E3E);
+      linear-gradient(160deg,#0B1730,#0E1E3E);
   }
-  @media (max-width: 640px){ .cta { padding: 48px 22px; border-radius: 24px; } }
-  .cta::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 44px 44px; -webkit-mask-image: radial-gradient(500px 300px at 50% 0%, #000, transparent 75%); mask-image: radial-gradient(500px 300px at 50% 0%, #000, transparent 75%); }
-  .cta > * { position: relative; z-index: 2; }
-  .cta h2 { font-size: clamp(27px, 3.6vw, 42px); font-weight: 800; letter-spacing: -1px; }
-  .cta p { color: rgba(255,255,255,.8); font-size: 18px; margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; }
+  @media (max-width:640px){ .cta { padding:48px 22px; border-radius:24px; } }
+  .cta::before { content:""; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size:44px 44px; -webkit-mask-image:radial-gradient(500px 300px at 50% 0%, #000, transparent 75%); mask-image:radial-gradient(500px 300px at 50% 0%, #000, transparent 75%); }
+  .cta > * { position:relative; z-index:2; }
+  .cta h2 { font-size:clamp(27px,3.6vw,42px); font-weight:800; letter-spacing:-1px; }
+  .cta p { color:rgba(255,255,255,.8); font-size:18px; margin-top:16px; max-width:600px; margin-left:auto; margin-right:auto; }
 
   /* ── lead form ── */
-  .lead-form { max-width: 480px; margin: 32px auto 0; display: grid; gap: 12px; text-align: left; position: relative; z-index: 2; }
-  .lead-form .row { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
-  @media (max-width: 520px){ .lead-form .row { grid-template-columns: 1fr; } }
+  .lead-form { max-width:480px; margin:32px auto 0; display:grid; gap:12px; text-align:left; position:relative; z-index:2; }
+  .lead-form .row { display:grid; gap:12px; grid-template-columns:1fr 1fr; }
+  @media (max-width:520px){ .lead-form .row { grid-template-columns:1fr; } }
   .lead-form input, .lead-form select {
-    width: 100%; font-family: inherit; font-size: 15px; color: var(--ink); background: #fff;
-    border: 1px solid rgba(255,255,255,.25); border-radius: 12px; padding: 15px 16px; outline: none; transition: box-shadow .15s ease;
+    width:100%; font-family:inherit; font-size:15px; color:var(--ink); background:#fff;
+    border:1px solid rgba(255,255,255,.25); border-radius:12px; padding:15px 16px; outline:none; transition:box-shadow .15s ease;
   }
-  .lead-form select:invalid { color: var(--muted-2); }
-  .lead-form input:focus, .lead-form select:focus { box-shadow: 0 0 0 3px rgba(0,87,231,.45); }
-  .lead-form input::placeholder { color: var(--muted-2); }
-  .lead-form button { width: 100%; justify-content: center; margin-top: 4px; }
-  .form-note { margin-top: 8px; color: var(--muted-2); font-size: 13px; display:flex; align-items:center; justify-content:center; gap:8px; text-align:center; }
+  .lead-form select:invalid { color:var(--muted-2); }
+  .lead-form input:focus, .lead-form select:focus { box-shadow:0 0 0 3px rgba(0,87,231,.45); }
+  .lead-form input::placeholder { color:var(--muted-2); }
+  .lead-form button { width:100%; justify-content:center; margin-top:4px; }
+  .form-note { margin-top:8px; color:var(--muted-2); font-size:13px; display:flex; align-items:center; justify-content:center; gap:8px; text-align:center; }
   .form-note .icon { width:14px; height:14px; flex:0 0 auto; }
-  .form-success { max-width: 480px; margin: 30px auto 0; background: rgba(31,174,107,.14); border: 1px solid rgba(31,174,107,.4); color: rgba(255,255,255,.85); border-radius: 18px; padding: 30px 26px; position: relative; z-index: 2; }
-  .form-success .fs-ic { width: 54px; height: 54px; border-radius: 50%; background: rgba(31,174,107,.2); color:#4ADE80; display:grid; place-items:center; margin: 0 auto 14px; }
-  .form-success .fs-ic .icon { width: 28px; height: 28px; }
-  .form-success b { display:block; font-size: 20px; color:#fff; margin-bottom: 6px; }
+  .form-success { max-width:480px; margin:30px auto 0; background:rgba(31,174,107,.14); border:1px solid rgba(31,174,107,.4); color:rgba(255,255,255,.85); border-radius:18px; padding:30px 26px; position:relative; z-index:2; }
+  .form-success .fs-ic { width:54px; height:54px; border-radius:50%; background:rgba(31,174,107,.2); color:#4ADE80; display:grid; place-items:center; margin:0 auto 14px; }
+  .form-success .fs-ic .icon { width:28px; height:28px; }
+  .form-success b { display:block; font-size:20px; color:#fff; margin-bottom:6px; }
 
   /* ── footer ── */
-  footer { background: var(--ink); color: rgba(255,255,255,.55); padding: 40px 0 34px; }
-  .foot { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 14px; }
-  footer .logo { font-size: 18px; }
-  .disclaimer { margin-top: 26px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.1); font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,.42); max-width: 900px; }
+  footer { background:var(--ink); color:rgba(255,255,255,.55); padding:40px 0 34px; }
+  .foot { display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; font-size:14px; }
+  footer .logo { font-size:18px; }
+  .disclaimer { margin-top:26px; padding-top:22px; border-top:1px solid rgba(255,255,255,.1); font-size:12.5px; line-height:1.6; color:rgba(255,255,255,.42); max-width:900px; }
 
   /* ── mobile sticky CTA ── */
   .mobile-cta {
-    position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
-    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-    background: rgba(11,23,48,.92); backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(255,255,255,.1); display: none;
+    position:fixed; left:0; right:0; bottom:0; z-index:60;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    background:rgba(11,23,48,.92); backdrop-filter:blur(12px);
+    border-top:1px solid rgba(255,255,255,.1); display:none;
   }
-  @media (max-width: 700px){ .mobile-cta { display: block; } body { padding-bottom: 76px; } }
+  @media (max-width:700px){ .mobile-cta { display:block; } body { padding-bottom:76px; } }
 
-  .reveal { opacity: 0; transform: translateY(26px); transition: opacity .65s cubic-bezier(.2,.7,.3,1), transform .65s cubic-bezier(.2,.7,.3,1); }
-  .reveal.in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce){ .reveal { opacity:1; transform:none; transition:none; } .pulse{animation:none;} html{scroll-behavior:auto;} .btn, .step, .seg-card, .benefit { transition:none; } .hero-van, .hero-van .wheel-spin { animation:none; } }
+  .reveal { opacity:0; transform:translateY(26px); transition:opacity .65s cubic-bezier(.2,.7,.3,1), transform .65s cubic-bezier(.2,.7,.3,1); }
+  .reveal.in { opacity:1; transform:none; }
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none} .pulse{animation:none} html{scroll-behavior:auto} .btn,.step,.seg-card,.benefit{transition:none} .hero-van,.hero-van .wheel-spin{animation:none} }
 </style>
 </head>
 
@@ -304,8 +311,6 @@
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 7.8-7 9-4-1.2-7-4.5-7-9V6l7-3z"></path><path d="M9 12l2 2 4-4"></path></symbol>
-    <symbol id="i-handshake" viewBox="0 0 24 24"><path d="M8 12l3-3 2.5 2.5a1.8 1.8 0 002.5 0L19 9"></path><path d="M3 8l3-1 5 5"></path><path d="M21 8l-3-1-3.5 3.5"></path><path d="M11 14l2 2M9 16l1.5 1.5"></path></symbol>
-    <symbol id="i-check-badge" viewBox="0 0 24 24"><path d="M12 3l2.1 1.6 2.6-.4 1 2.4 2.4 1-.4 2.6L21 12l-1.6 2.1.4 2.6-2.4 1-1 2.4-2.6-.4L12 21l-2.1-1.6-2.6.4-1-2.4-2.4-1 .4-2.6L3 12l1.6-2.1-.4-2.6 2.4-1 1-2.4 2.6.4z"></path><path d="M9 12l2 2 4-4"></path></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></symbol>
     <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></symbol>
@@ -316,7 +321,6 @@
     <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></symbol>
     <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l9 16H3z"></path><path d="M12 9v5M12 17v.5"></path></symbol>
     <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v9H3z"></path><path d="M14 9h4l3 3v3h-7z"></path><circle cx="7" cy="18" r="1.8"></circle><circle cx="17" cy="18" r="1.8"></circle></symbol>
-    <symbol id="i-fleet" viewBox="0 0 24 24"><path d="M2 8h8v6H2z"></path><path d="M10 10h3l2 2v2h-5z"></path><circle cx="5" cy="16.5" r="1.4"></circle><circle cx="12.5" cy="16.5" r="1.4"></circle><path d="M15 5h5v4h-5z" opacity=".55"></path><path d="M20 6.5h1.5L23 8v1.5h-3z" opacity=".55"></path></symbol>
     <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M4 9a8 8 0 0114-3l2 2"></path><path d="M20 4v4h-4"></path><path d="M20 15a8 8 0 01-14 3l-2-2"></path><path d="M4 20v-4h4"></path></symbol>
     <symbol id="i-building" viewBox="0 0 24 24"><path d="M5 21V5a2 2 0 012-2h6a2 2 0 012 2v16"></path><path d="M15 10h3a2 2 0 012 2v9"></path><path d="M8 7h2M8 11h2M8 15h2"></path></symbol>
     <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h12v4"></path><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2H5"></path><circle cx="17" cy="14" r="1.2"></circle></symbol>
@@ -326,6 +330,7 @@
     <symbol id="i-window" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18"></path><path d="M8 14h8"></path></symbol>
     <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h13l-3-3"></path><path d="M20 16H7l3 3"></path></symbol>
     <symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5L5 19"></path><circle cx="7.5" cy="7.5" r="2.5"></circle><circle cx="16.5" cy="16.5" r="2.5"></circle></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"></path><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></symbol>
   </defs>
 </svg>
 
@@ -337,7 +342,7 @@
       <a href="#problem">Проблема</a>
       <a href="#segments">Кому подходит</a>
       <a href="#benefits">Что получаете</a>
-      <a href="#how">Как это работает</a>
+      <a href="#magnet">Чек-лист</a>
       <a href="#faq">Вопросы</a>
       <a href="#contact" class="btn btn-primary">Рассчитать</a>
     </nav>
@@ -349,17 +354,17 @@
   <div class="wrap">
     <div class="hero-copy">
       <span class="eyebrow"><span class="pulse"></span> Обновление и расширение парка</span>
-      <h1>Обновите парк «Газелей» — <span class="hl">без месяца согласований и переплат дилеру</span></h1>
-      <p class="lead">Единое окно для транспортных компаний, арендных парков и корпоративных флотов: подбор машин, лизинг и страхование — в одном месте, одним пакетом документов и с понятными условиями.</p>
+      <h1>Новые «Газели» в парк: машины, лизинг и страховка <span class="hl">одним пакетом</span></h1>
+      <p class="lead">Пока банк рассматривает заявку, а дилер торгуется за допы, ваши машины не выезжают. Мы собираем сделку целиком и по одному комплекту документов.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary btn-lg">Хочу условия для своего парка <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
-        <a href="#how" class="btn btn-ghost btn-lg">Как это работает</a>
+        <a href="#contact" class="btn btn-primary btn-lg">Рассчитать условия для парка <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
+        <a href="#magnet" class="btn btn-ghost btn-lg">Забрать чек-лист</a>
       </div>
-      <div class="under-btn"><svg class="icon"><use href="#i-lock"></use></svg> Расчёт бесплатный и ни к чему не обязывает — сначала просто посчитаем вашу задачу</div>
+      <div class="under-btn"><svg class="icon"><use href="#i-lock"></use></svg> Расчёт бесплатный. Позвоним, уточним задачу, вернёмся с цифрами.</div>
       <div class="hero-trust">
-        <div class="item"><span class="ic"><svg class="icon"><use href="#i-window"></use></svg></span> Транспорт + лизинг + страхование в одном окне</div>
-        <div class="item"><span class="ic"><svg class="icon"><use href="#i-timer"></use></svg></span> Быстрое решение по лизингу</div>
-        <div class="item"><span class="ic"><svg class="icon"><use href="#i-doc"></use></svg></span> Минимальный пакет документов</div>
+        <div class="item"><span class="ic"><svg class="icon"><use href="#i-window"></use></svg></span> Одно окно вместо трёх переговоров</div>
+        <div class="item"><span class="ic"><svg class="icon"><use href="#i-doc"></use></svg></span> Один комплект документов</div>
+        <div class="item"><span class="ic"><svg class="icon"><use href="#i-percent"></use></svg></span> Условия под ваш объём</div>
       </div>
     </div>
     <div class="hero-visual">
@@ -419,20 +424,20 @@
   <div class="wrap">
     <div class="problem">
       <div class="reveal">
-        <div class="kicker">Знакомая ситуация</div>
-        <h2>Машины нужны сейчас, а решение тянется неделями</h2>
-        <p style="color:var(--muted);font-size:17px;margin-top:16px;">Обновление парка упирается не в выбор машины, а в согласования, деньги и бумаги. Знакомо?</p>
+        <div class="kicker">Знакомо?</div>
+        <h2>Машины нужны вчера. Согласования идут неделями.</h2>
+        <p style="color:var(--muted);font-size:17px;margin-top:16px;">Сложность обновления парка редко в самих машинах. Она в согласованиях, деньгах и бумагах.</p>
         <div class="problem-note">
-          Дело не в вас. Транспорт, финансирование и страхование традиционно живут в трёх разных местах — и каждый раз их приходится сводить вручную.
+          Так устроен рынок: транспорт, финансирование и страхование живут в трёх разных местах. Сводить их приходится вам.
         </div>
       </div>
       <ul class="sym-list reveal">
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Лизинг согласовывают неделями, а машины нужны под заказы уже сейчас</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Дилер навязывает дорогой кредит и допы, без которых «машину не отдадут»</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Парк изношен: ремонты и простои съедают маржу быстрее, чем приносят рейсы</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Иностранные фургоны ушли — заменить нечем, логистика встала</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Страхование парка — отдельный круг: ещё одни переговоры и ещё один пакет документов</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> На партию машин обычные условия не гнутся: типовой агент не может предложить ничего гибкого</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Заявку на лизинг рассматривают неделями. Заказы столько не ждут.</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Дилер добавляет допы, без которых «машину не отдадут».</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Изношенный парк ест деньги: ремонты, простои, эвакуатор.</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Иностранные фургоны ушли, замены нет, логистика буксует.</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Страхование парка — ещё один круг переговоров и ещё один пакет бумаг.</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> На партию типовые условия не гнутся: обычный посредник разводит руками.</li>
       </ul>
     </div>
   </div>
@@ -442,30 +447,30 @@
 <section class="block soft">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="kicker">Решение</div>
-      <h2>Транспорт, лизинг и страхование — в одном окне</h2>
-      <p>Мы собираем сделку целиком: подбираем «Газели» под ваши задачи, готовим финансирование и страховую защиту одним пакетом. Вам не нужно вести три отдельных переговора и трижды собирать документы.</p>
+      <div class="kicker">Как мы работаем</div>
+      <h2>Собираем сделку целиком</h2>
+      <p>Вы называете задачу. Мы приносим готовый пакет: подходящие машины, финансирование и полис в одном расчёте.</p>
     </div>
     <div class="grid grid-3">
       <div class="benefit reveal">
         <div class="b-ic"><svg class="icon"><use href="#i-truck"></use></svg></div>
-        <h3>1. Транспорт под задачу</h3>
-        <p>Подбираем машины под ваши маршруты, грузы и объёмы — от одной единицы до партии.</p>
+        <h3>Подбираем машины</h3>
+        <p>Под ваши маршруты, грузы и режим работы. От одной единицы до партии.</p>
       </div>
       <div class="benefit reveal">
         <div class="b-ic"><svg class="icon"><use href="#i-wallet"></use></svg></div>
-        <h3>2. Лизинг без месяца ожидания</h3>
-        <p>Готовим финансирование параллельно с подбором, по минимальному пакету документов.</p>
+        <h3>Готовим финансирование</h3>
+        <p>Параллельно с подбором, по минимальному комплекту документов.</p>
       </div>
       <div class="benefit reveal">
         <div class="b-ic"><svg class="icon"><use href="#i-shield"></use></svg></div>
-        <h3>3. Страхование сразу в пакете</h3>
-        <p>Полис оформляется вместе со сделкой, а не отдельным кругом переговоров после неё.</p>
+        <h3>Оформляем страхование</h3>
+        <p>В том же пакете. Второй круг переговоров не понадобится.</p>
       </div>
     </div>
     <div class="cta-inline reveal">
-      <a href="#contact" class="btn btn-primary btn-lg">Хочу расчёт по своему парку <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
-      <div class="under-btn" style="color:var(--muted)"><svg class="icon"><use href="#i-lock"></use></svg> Ни к чему не обязывает — можно просто узнать условия</div>
+      <a href="#contact" class="btn btn-primary btn-lg">Рассчитать условия для парка <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
+      <div class="under-btn" style="color:var(--muted)"><svg class="icon"><use href="#i-lock"></use></svg> Ни к чему не обязывает. Можно просто узнать цифры.</div>
     </div>
   </div>
 </section>
@@ -476,50 +481,50 @@
     <div class="section-head reveal">
       <div class="kicker">Кому подходит</div>
       <h2>Найдите свою ситуацию</h2>
-      <p>Мы работаем с компаниями, для которых транспорт — это операционка, а не покупка «для себя». Вот три ситуации, с которыми к нам приходят чаще всего.</p>
+      <p>К нам приходят компании, для которых транспорт — рабочий инструмент. Вот три частых случая.</p>
     </div>
     <div class="grid grid-3">
 
       <div class="seg-card reveal">
         <div class="s-ic"><svg class="icon"><use href="#i-truck"></use></svg></div>
         <h3>Транспортная компания, 2–5 машин</h3>
-        <div class="quote">Нам срочно нужно обновить изношенный парк развозных машин, но банки долго одобряют лизинг, а дилеры навязывают дорогие кредиты и допы».</div>
+        <div class="quote">«Парк изношен, обновлять надо срочно. Но банки одобряют лизинг неделями, а дилеры навязывают дорогие кредиты и допы».</div>
         <div class="val-label">Что предлагаем</div>
         <ul>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Быстрое оформление лизинга — без месяца ожидания решения</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Минимальный пакет документов</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Страхование парка сразу вместе со сделкой</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Понятная цена без навязанных допов</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Решение по лизингу без месяца ожидания</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Минимальный комплект документов</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Страхование парка в том же пакете</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Цена без навязанных допов</li>
         </ul>
-        <div class="s-cta"><a href="#contact">Это про нас — рассчитать <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
+        <div class="s-cta"><a href="#contact">Это про нас, рассчитайте <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
       </div>
 
       <div class="seg-card reveal">
         <div class="s-ic"><svg class="icon"><use href="#i-refresh"></use></svg></div>
-        <h3>Аренда и раскат транспорта</h3>
-        <div class="quote">Клиенты убивают машины за год, а купить новые «Газели» партией без переплаты и с нормальной страховкой сложно — обычные агенты не дают гибких условий».</div>
+        <h3>Аренда и раскат техники</h3>
+        <div class="quote">«Клиенты убивают машины за год. Купить новые партией без переплаты и с нормальной страховкой сложно, обычные посредники гибких условий не дают».</div>
         <div class="val-label">Что предлагаем</div>
         <ul>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Специальные условия на покупку партии машин</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Страховой полис на льготных условиях в пакете</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Помощь с выкупом изношенной техники при обновлении</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Гибкость под интенсивную эксплуатацию</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Условия на покупку партии машин</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Полис с учётом интенсивной эксплуатации</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Помощь с выкупом изношенной техники</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Гибкость под быструю оборачиваемость парка</li>
         </ul>
-        <div class="s-cta"><a href="#contact">Это про нас — рассчитать <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
+        <div class="s-cta"><a href="#contact">Это про нас, рассчитайте <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
       </div>
 
       <div class="seg-card reveal">
         <div class="s-ic"><svg class="icon"><use href="#i-building"></use></svg></div>
         <h3>Корпоративный флот дистрибьютора</h3>
-        <div class="quote">Иностранные фургоны ушли, логистика встала, обслуживание остатков парка стоит слишком дорого, и нет единого окна для покупки и страхования нового флота».</div>
+        <div class="quote">«Иностранные фургоны ушли, логистика встала. Обслуживание остатков парка дорожает, а единого окна для покупки и страхования флота нет».</div>
         <div class="val-label">Что предлагаем</div>
         <ul>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Единый договор поставки на обновление флота</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Единый договор на обновление флота</li>
           <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Условия за объём при закупке партии</li>
           <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Решения для непрерывности логистики</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Полное покрытие рисков по парку</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Покрытие рисков по всему парку</li>
         </ul>
-        <div class="s-cta"><a href="#contact">Это про нас — рассчитать <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
+        <div class="s-cta"><a href="#contact">Это про нас, рассчитайте <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
       </div>
 
     </div>
@@ -531,39 +536,39 @@
   <div class="wrap">
     <div class="section-head reveal">
       <div class="kicker">Что вы получаете</div>
-      <h2>Не «услугу», а работающий парк и закрытый вопрос</h2>
-      <p>Что меняется для компании, когда транспорт, деньги и страхование собираются в одну сделку.</p>
+      <h2>Парк на линии и закрытый вопрос</h2>
+      <p>Что меняется, когда машины, деньги и страховка собираются в одну сделку.</p>
     </div>
     <div class="grid grid-3">
       <div class="benefit reveal">
         <div class="b-ic"><svg class="icon"><use href="#i-timer"></use></svg></div>
         <h3>Машины выходят на линию раньше</h3>
-        <p>Финансирование готовится параллельно с подбором, а не после него. Меньше ожидания — быстрее рейсы.</p>
+        <p>Финансирование готовим параллельно с подбором. Экономия измеряется неделями.</p>
       </div>
       <div class="benefit reveal">
         <div class="b-ic"><svg class="icon"><use href="#i-doc"></use></svg></div>
-        <h3>Один пакет документов</h3>
-        <p>Не нужно собирать комплект отдельно для дилера, отдельно для банка и отдельно для страховой.</p>
+        <h3>Один комплект документов</h3>
+        <p>Собираете бумаги один раз. Остальное берём на себя.</p>
       </div>
       <div class="benefit reveal">
         <div class="b-ic"><svg class="icon"><use href="#i-percent"></use></svg></div>
         <h3>Условия под объём</h3>
-        <p>Чем больше машин в сделке, тем гибче условия. Партия считается не так, как одна единица.</p>
+        <p>Партию считают по другим правилам. Чем больше машин, тем гибче разговор.</p>
       </div>
       <div class="benefit reveal">
         <div class="b-ic"><svg class="icon"><use href="#i-wallet"></use></svg></div>
-        <h3>Прозрачная стоимость</h3>
-        <p>Все составляющие сделки видно заранее: без навязанных допов и «вскрывшихся» платежей в договоре.</p>
+        <h3>Цена без сюрпризов</h3>
+        <p>Все составляющие сделки видно до подписания. Допы не всплывают в договоре.</p>
       </div>
       <div class="benefit reveal">
         <div class="b-ic"><svg class="icon"><use href="#i-swap"></use></svg></div>
-        <h3>Что делать со старой техникой</h3>
-        <p>Помогаем закрыть вопрос с изношенными машинами при обновлении парка, а не оставляем его вам.</p>
+        <h3>Старый парк не повиснет</h3>
+        <p>Поможем закрыть вопрос с изношенной техникой при обновлении.</p>
       </div>
       <div class="benefit reveal">
         <div class="b-ic"><svg class="icon"><use href="#i-headset"></use></svg></div>
         <h3>Один ответственный контакт</h3>
-        <p>Всю сделку ведёт один человек: не нужно пересказывать задачу трём разным менеджерам.</p>
+        <p>Сделку ведёт один человек. Пересказывать задачу трижды не придётся.</p>
       </div>
     </div>
   </div>
@@ -574,30 +579,30 @@
   <div class="wrap">
     <div class="section-head reveal">
       <div class="kicker">Чем мы отличаемся</div>
-      <h2>Собирать сделку самому или получить её готовой</h2>
-      <p>Честно: собрать всё самостоятельно можно, и у этого есть плюсы. Вот как выглядит разница.</p>
+      <h2>Два пути к новому парку</h2>
+      <p>Собрать всё самостоятельно реально, и иногда это оправдано. Вот честная разница.</p>
     </div>
     <div class="compare">
       <div class="col bad reveal">
-        <h3><span class="h-ic"><svg class="icon"><use href="#i-search"></use></svg></span>Дилер + банк + страховая по отдельности</h3>
-        <div class="col-sub">Классический путь — и иногда он оправдан</div>
+        <h3><span class="h-ic"><svg class="icon"><use href="#i-search"></use></svg></span>Дилер, банк и страховая по отдельности</h3>
+        <div class="col-sub">Классический путь</div>
         <ul>
-          <li class="plus"><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Полный контроль: вы сами выбираете каждого контрагента</li>
-          <li class="plus"><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Можно поторговаться с каждым отдельно</li>
+          <li class="plus"><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Полный контроль над выбором каждого контрагента</li>
+          <li class="plus"><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> С каждым можно торговаться отдельно</li>
           <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Три переговорных процесса и три пакета документов</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Решение по финансированию тянется, машины ждут</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Дилер заинтересован продать то, что стоит у него, и добавить допы</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> На стыках всё рассыпается — и сводить приходится вам</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Финансирование ждёт своей очереди, машины стоят</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Дилер продаёт то, что стоит у него, и добавляет допы</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> На стыках всё рассыпается, сводить приходится вам</li>
         </ul>
       </div>
       <div class="col good reveal">
-        <h3><span class="h-ic"><svg class="icon"><use href="#i-window"></use></svg></span>С «Газель&nbsp;Про»</h3>
-        <div class="col-sub">Сделка собирается целиком, одним окном</div>
+        <h3><span class="h-ic"><svg class="icon"><use href="#i-window"></use></svg></span>Одно окно с «Газель&nbsp;Про»</h3>
+        <div class="col-sub">Сделка собирается целиком</div>
         <ul>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Транспорт, лизинг и страхование в одном пакете</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Машины, финансирование и полис в одном расчёте</li>
           <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Один комплект документов вместо трёх</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Финансирование готовится параллельно с подбором</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Подбор под вашу работу, а не под чью-то площадку</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Деньги готовятся, пока идёт подбор машин</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Машины подбираем под вашу работу и маршруты</li>
           <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Условия гнутся под объём и режим эксплуатации</li>
           <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Один ответственный за всю сделку</li>
         </ul>
@@ -611,108 +616,137 @@
   <div class="wrap">
     <div class="section-head reveal">
       <div class="kicker">План действий</div>
-      <h2>Три шага — и парк обновлён</h2>
-      <p>Никаких сложных схем. Вот что будет происходить дальше, шаг за шагом.</p>
+      <h2>Три шага до новых машин</h2>
+      <p>Никаких сложных схем. Вот что будет происходить дальше.</p>
     </div>
     <div class="grid grid-3 steps">
       <div class="step reveal">
         <div class="num">1</div>
         <span class="connector"><svg class="icon"><use href="#i-arrow-r"></use></svg></span>
         <h3>Оставляете заявку</h3>
-        <p>Минута времени: контакт, тип компании и сколько машин нужно. Мы связываемся и уточняем задачу.</p>
+        <p>Минута времени: контакт, профиль компании и сколько машин нужно. Дальше звоним и уточняем задачу.</p>
       </div>
       <div class="step reveal">
         <div class="num">2</div>
         <span class="connector"><svg class="icon"><use href="#i-arrow-r"></use></svg></span>
-        <h3>Считаем пакет под ваш парк</h3>
-        <p>Подбираем машины, готовим варианты финансирования и страхования — и показываем условия одним расчётом.</p>
+        <h3>Получаете расчёт</h3>
+        <p>Подбираем машины, считаем финансирование и страхование. Показываем одним документом.</p>
       </div>
       <div class="step reveal">
         <div class="num">3</div>
-        <h3>Оформляем и передаём</h3>
-        <p>Собираем документы одним пакетом, оформляем сделку и передаём машины. Вы возвращаетесь к рейсам.</p>
+        <h3>Забираете машины</h3>
+        <p>Оформляем сделку по одному комплекту документов и передаём транспорт. Вы возвращаетесь к рейсам.</p>
       </div>
     </div>
-    <div class="after-steps reveal">Вопрос с транспортом закрыт — <b>парк работает, а не стоит в ожидании согласований.</b></div>
-    <div class="cta-inline reveal">
-      <a href="#contact" class="btn btn-primary btn-lg">Начать с расчёта <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
-      <div class="under-btn" style="color:var(--muted)"><svg class="icon"><use href="#i-lock"></use></svg> Бесплатно и без обязательств</div>
+    <div class="after-steps reveal">Вопрос с транспортом закрыт: <b>парк на линии и зарабатывает.</b></div>
+  </div>
+</section>
+
+<!-- ═══ ЛИД-МАГНИТ ═══ -->
+<section class="block" id="magnet">
+  <div class="wrap">
+    <div class="magnet reveal">
+      <div>
+        <div class="kicker">Бесплатно</div>
+        <h2>Чек-лист: 12 пунктов перед обновлением парка</h2>
+        <p class="m-lead">Собрали места, где чаще всего теряют деньги при покупке партии транспорта. Забирайте — пригодится, даже если работать будете не с нами.</p>
+        <ul>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Какие допы дилера можно убрать из счёта</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Как сравнивать лизинг по переплате, а ставку оставить в стороне</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Что спросить про страховку, если машины идут в наём</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Когда обсуждать оценку старой техники, чтобы её не срезали</li>
+        </ul>
+      </div>
+      <div>
+        <form class="magnet-form" id="magnet-form">
+          <p hidden><label>Не заполняйте: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+          <input type="text" name="name" placeholder="Имя" required>
+          <input type="tel" name="phone" placeholder="Телефон" required>
+          <button type="submit" class="btn btn-primary btn-block"><svg class="icon"><use href="#i-list"></use></svg> Получить чек-лист</button>
+          <div class="m-note">Откроется сразу. Позвоним только если попросите.</div>
+        </form>
+        <div class="magnet-ok" id="magnet-ok" hidden>
+          <b>Готово, чек-лист открыт</b>
+          <p>Сохраните страницу в закладки или распечатайте — пригодится на переговорах.</p>
+          <a class="btn btn-primary btn-block" href="/checklist.html" target="_blank" rel="noopener">Открыть чек-лист <svg class="icon"><use href="#i-arrow"></use></svg></a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ FAQ ═══ -->
-<section class="block" id="faq">
+<section class="block soft" id="faq">
   <div class="wrap">
     <div class="section-head reveal">
       <div class="kicker">Вопросы</div>
       <h2>Что обычно спрашивают</h2>
-      <p>Если вашего вопроса тут нет — задайте его в заявке, ответим лично.</p>
+      <p>Если вашего вопроса тут нет, задайте его в заявке. Ответим лично.</p>
     </div>
     <div class="faq reveal">
       <details>
         <summary>Сколько стоят ваши услуги? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Расчёт и подбор для вас бесплатны. Вы видите стоимость самой сделки — машин, финансирования и страхования — до того, как что-то подписываете.</div>
+        <div class="answer">Расчёт и подбор бесплатны. Стоимость самой сделки — машин, финансирования и страхования — вы видите до того, как что-то подписываете.</div>
       </details>
       <details>
-        <summary>От скольких машин вы работаете? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Работаем и с одной единицей, и с партией. Но чем больше объём, тем гибче получаются условия — для парка от 2–3 машин разница уже заметна.</div>
+        <summary>От скольких машин работаете? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Возьмёмся и за одну единицу, и за партию. Но чем больше объём, тем гибче условия: от 2–3 машин разница уже заметна.</div>
       </details>
       <details>
-        <summary>Насколько быстро можно получить решение по лизингу? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Мы готовим финансирование параллельно с подбором машин и работаем по минимальному пакету документов — это заметно быстрее, чем последовательный путь «сначала дилер, потом банк». Конкретный срок назовём по вашей ситуации.</div>
+        <summary>Как быстро будет решение по лизингу? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Финансирование готовим параллельно с подбором машин и по минимальному комплекту документов. Это заметно быстрее последовательного пути «сначала дилер, потом банк». Конкретный срок назовём по вашей ситуации.</div>
       </details>
       <details>
         <summary>Что делать со старым парком? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Расскажите, что у вас на балансе — поможем закрыть вопрос с изношенной техникой в рамках обновления, чтобы она не висела мёртвым грузом.</div>
+        <div class="answer">Расскажите, что у вас на балансе. Поможем закрыть вопрос с изношенной техникой в рамках обновления, чтобы она не висела мёртвым грузом.</div>
       </details>
       <details>
-        <summary>Мы пока только планируем, бюджет не утверждён. Есть смысл обращаться? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Да — как раз на этом этапе расчёт полезнее всего: будет с чем идти к собственнику или на бюджетный комитет. Никто не будет давить и названивать.</div>
+        <summary>Бюджет ещё не утверждён. Есть смысл обращаться? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Как раз на этом этапе расчёт полезнее всего: будет с чем идти к собственнику или на бюджетный комитет. Давить и названивать никто не станет.</div>
       </details>
       <details>
         <summary>Обязательно оформлять страхование через вас? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Нет. Пакетом обычно выходит удобнее и быстрее, но вы вправе оставить страхование там, где вам привычнее — на подбор машин и финансирование это не влияет.</div>
+        <div class="answer">Нет. Пакетом обычно выходит быстрее и удобнее, но вы вправе оставить страхование там, где привыкли. На подбор машин и финансирование это не влияет.</div>
       </details>
       <details>
         <summary>Что вы сделаете с нашими контактами? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Свяжемся только по вашей заявке. Никаких рассылок и передачи контактов третьим лицам.</div>
+        <div class="answer">Свяжемся только по вашей заявке. Рассылок нет, контакты третьим лицам не передаём.</div>
       </details>
     </div>
   </div>
 </section>
 
 <!-- ═══ ФИНАЛЬНЫЙ CTA + ФОРМА ═══ -->
-<section class="block soft" id="contact">
+<section class="block" id="contact">
   <div class="wrap">
     <div class="cta reveal">
-      <h2>Расскажите про свой парк — посчитаем условия</h2>
-      <p>Оставьте заявку: свяжемся, уточним задачу и подготовим расчёт по машинам, финансированию и страхованию. Бесплатно и ни к чему не обязывает.</p>
+      <h2>Расскажите про парк — вернёмся с цифрами</h2>
+      <p>Оставьте заявку. Свяжемся, уточним задачу и подготовим расчёт по машинам, финансированию и страхованию. Бесплатно и без обязательств.</p>
 
       <!-- Заявки уходят через серверную функцию /api/lead в Telegram -->
       <form class="lead-form" id="lead-form">
-        <p hidden><label>Не заполняйте это поле: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <p hidden><label>Не заполняйте: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <div class="row">
           <input type="text" name="name" placeholder="Имя" required>
           <input type="tel" name="phone" placeholder="Телефон" required>
         </div>
         <select name="segment" required>
-          <option value="" disabled selected>Что про вас?</option>
-          <option>Транспортная компания (2–5 машин)</option>
-          <option>Аренда / раскат транспорта</option>
-          <option>Корпоративный флот, дистрибуция</option>
+          <option value="" disabled selected>Чем занимается компания</option>
+          <option>Перевозки, свой парк 2–5 машин</option>
+          <option>Аренда и раскат техники</option>
+          <option>Дистрибуция, корпоративный парк</option>
           <option>Другое</option>
         </select>
         <div class="row">
           <select name="fleet" required>
-            <option value="" disabled selected>Сколько машин</option>
+            <option value="" disabled selected>Сколько машин нужно</option>
             <option>1–2</option>
             <option>3–5</option>
             <option>6–10</option>
             <option>Больше 10</option>
           </select>
           <select name="timing" required>
-            <option value="" disabled selected>Когда нужны</option>
+            <option value="" disabled selected>Когда нужны машины</option>
             <option>Уже сейчас</option>
             <option>В ближайший месяц</option>
             <option>В течение квартала</option>
@@ -725,8 +759,8 @@
 
       <div class="form-success" id="form-success" hidden>
         <div class="fs-ic"><svg class="icon"><use href="#i-check"></use></svg></div>
-        <b>Спасибо! Заявка принята</b>
-        Свяжемся с вами в ближайшее время и подготовим расчёт по вашему парку.
+        <b>Заявка принята</b>
+        Свяжемся в ближайшее время и подготовим расчёт по вашему парку.
       </div>
       <div class="form-note" id="form-err" hidden style="color:#FCA5A5; margin-top:16px;">
         <svg class="icon"><use href="#i-alert"></use></svg> Не удалось отправить заявку. Проверьте интернет и попробуйте ещё раз.
@@ -766,51 +800,75 @@
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
   document.querySelectorAll('.grid').forEach(grid => {
     [...grid.children].forEach((el, i) => { if (el.classList.contains('reveal')) el.style.transitionDelay = (i % 3 * 80) + 'ms'; });
   });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  // lead form → заявка уходит через серверную функцию /api/lead (она шлёт в Telegram)
+  // отправка заявки через серверную функцию /api/lead (она шлёт в Telegram)
+  async function sendLead(payload) {
+    const resp = await fetch('/api/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    const data = await resp.json().catch(function () { return {}; });
+    if (!resp.ok || !data.ok) throw new Error('fail');
+  }
+
+  // основная форма — расчёт по парку
   const leadForm = document.getElementById('lead-form');
   if (leadForm) {
     leadForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       if (leadForm.elements['bot-field'] && leadForm.elements['bot-field'].value) return;
-
       const btn = leadForm.querySelector('button[type=submit]');
       const err = document.getElementById('form-err');
       if (err) err.hidden = true;
-      btn.disabled = true;
-      btn.style.opacity = '.7';
-
+      btn.disabled = true; btn.style.opacity = '.7';
       const fd = new FormData(leadForm);
-      const payload = {
-        name: fd.get('name') || '',
-        phone: fd.get('phone') || '',
-        segment: fd.get('segment') || '',
-        fleet: fd.get('fleet') || '',
-        timing: fd.get('timing') || ''
-      };
-
       try {
-        const resp = await fetch('/api/lead', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload)
+        await sendLead({
+          type: 'Расчёт по парку',
+          name: fd.get('name') || '',
+          phone: fd.get('phone') || '',
+          segment: fd.get('segment') || '',
+          fleet: fd.get('fleet') || '',
+          timing: fd.get('timing') || ''
         });
-        const data = await resp.json().catch(function () { return {}; });
-        if (!resp.ok || !data.ok) throw new Error('fail');
         leadForm.hidden = true;
         const ok = document.getElementById('form-success');
         ok.hidden = false;
         ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } catch (e2) {
-        btn.disabled = false;
-        btn.style.opacity = '1';
+        btn.disabled = false; btn.style.opacity = '1';
         if (err) err.hidden = false;
       }
+    });
+  }
+
+  // форма лид-магнита — чек-лист
+  const magnetForm = document.getElementById('magnet-form');
+  if (magnetForm) {
+    magnetForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (magnetForm.elements['bot-field'] && magnetForm.elements['bot-field'].value) return;
+      const btn = magnetForm.querySelector('button[type=submit]');
+      btn.disabled = true; btn.style.opacity = '.7';
+      const fd = new FormData(magnetForm);
+      try {
+        await sendLead({
+          type: 'Чек-лист',
+          name: fd.get('name') || '',
+          phone: fd.get('phone') || ''
+        });
+      } catch (e2) {
+        // материал отдаём в любом случае — человек своё уже сделал
+      }
+      magnetForm.hidden = true;
+      const ok = document.getElementById('magnet-ok');
+      ok.hidden = false;
+      window.open('/checklist.html', '_blank', 'noopener');
     });
   }
 </script>

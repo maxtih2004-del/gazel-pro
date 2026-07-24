@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Чек-лист: 12 пунктов перед обновлением парка · Газель Про</title>
+<meta name="description" content="Что проверить до подписания договора на партию коммерческого транспорта: допы, лизинг, страхование, старый парк, сроки поставки.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#0057E7; --blue-dark:#0046B8; --blue-pale:#F4F8FF;
+    --ink:#0B1730; --ink-2:#1F2A44; --muted:#55648A; --muted-2:#8A97B3;
+    --line:#DCE3EF; --line-2:#ECEFF6; --soft:#F5F7FC;
+    --green:#1FAE6B; --green-dark:#0D7A48; --green-pale:#EDFBF4;
+    --amber-pale:#FFF7ED; --amber-dark:#B45309;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--soft);line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:var(--blue);text-decoration:none}
+  svg{display:block}
+  .icon{width:1em;height:1em;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none}
+
+  .sheet{max-width:820px;margin:0 auto;background:#fff;min-height:100vh;box-shadow:0 0 60px rgba(11,23,48,.08)}
+  .pad{padding:0 56px}
+  @media(max-width:640px){.pad{padding:0 22px}}
+
+  .top{background:linear-gradient(160deg,#0B1730,#12274F);color:#fff;padding:40px 56px 44px}
+  @media(max-width:640px){.top{padding:32px 22px 36px}}
+  .logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:18px;color:#fff;margin-bottom:26px}
+  .logo .mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(135deg,var(--blue),#3B82F6);display:grid;place-items:center}
+  .logo .mark .icon{width:18px;height:18px}
+  .top .tag{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#CFE1FF;font-size:12px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:6px 13px;border-radius:100px;margin-bottom:16px}
+  .top h1{font-size:clamp(26px,4vw,38px);font-weight:800;letter-spacing:-1px;line-height:1.12}
+  .top p{margin-top:14px;color:rgba(255,255,255,.75);font-size:16.5px;max-width:600px}
+
+  .intro{padding:34px 0 8px}
+  .intro p{color:var(--muted);font-size:16px}
+
+  .item{display:flex;gap:18px;padding:24px 0;border-bottom:1px solid var(--line-2)}
+  .item:last-of-type{border-bottom:none}
+  .num{flex:0 0 auto;width:36px;height:36px;border-radius:10px;background:var(--blue-pale);color:var(--blue);font-weight:800;font-size:15px;display:grid;place-items:center}
+  .item h3{font-size:18px;font-weight:800;letter-spacing:-.2px}
+  .item p{color:var(--muted);font-size:15.5px;margin-top:7px}
+  .item .tip{margin-top:10px;padding:12px 15px;background:var(--amber-pale);border-radius:10px;font-size:14.5px;color:var(--amber-dark)}
+  .item .tip b{font-weight:800}
+
+  .group{margin-top:38px;margin-bottom:6px;display:flex;align-items:center;gap:12px}
+  .group span{font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--blue)}
+  .group i{flex:1;height:1px;background:var(--line-2)}
+
+  .cta-box{margin:44px 0 0;background:linear-gradient(160deg,#0B1730,#12274F);color:#fff;border-radius:20px;padding:34px 30px;text-align:center}
+  .cta-box h2{font-size:23px;font-weight:800;letter-spacing:-.5px}
+  .cta-box p{color:rgba(255,255,255,.75);font-size:15.5px;margin-top:10px;max-width:460px;margin-left:auto;margin-right:auto}
+  .cta-box a.btn{display:inline-flex;align-items:center;gap:9px;margin-top:20px;background:var(--blue);color:#fff;font-weight:700;font-size:16px;padding:15px 26px;border-radius:13px;box-shadow:0 10px 26px rgba(0,87,231,.35);transition:transform .18s ease,background .18s ease}
+  .cta-box a.btn:hover{background:var(--blue-dark);transform:translateY(-2px)}
+  .cta-box a.btn .icon{width:17px;height:17px}
+
+  .foot{padding:30px 0 44px;color:var(--muted-2);font-size:12.5px;line-height:1.6}
+  .foot .back{display:inline-flex;align-items:center;gap:7px;font-weight:600;font-size:14px;margin-bottom:18px}
+  .foot .back .icon{width:15px;height:15px}
+
+  @media print{
+    body{background:#fff}
+    .sheet{box-shadow:none;max-width:100%}
+    .cta-box{background:#fff;color:var(--ink);border:1px solid var(--line)}
+    .cta-box p{color:var(--muted)}
+    .cta-box a.btn{display:none}
+    .top{background:#fff;color:var(--ink);border-bottom:2px solid var(--blue)}
+    .top p{color:var(--muted)}
+    .top .tag{background:#fff;color:var(--blue);border-color:var(--blue)}
+    .item{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v9H3z"></path><path d="M14 9h4l3 3v3h-7z"></path><circle cx="7" cy="18" r="1.8"></circle><circle cx="17" cy="18" r="1.8"></circle></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5"></path><path d="M11 6l-6 6 6 6"></path></symbol>
+</defs></svg>
+
+<div class="sheet">
+
+  <div class="top">
+    <div class="logo"><span class="mark"><svg class="icon"><use href="#i-truck"></use></svg></span>Газель&nbsp;Про</div>
+    <span class="tag">Чек-лист</span>
+    <h1>12 пунктов, которые стоит проверить до подписания договора</h1>
+    <p>Короткий разбор мест, где чаще всего теряют деньги при обновлении парка. Пройдитесь по списку перед разговором с продавцом — вопросов к вам будет меньше, а условий в вашу пользу больше.</p>
+  </div>
+
+  <div class="pad">
+    <div class="intro">
+      <p>Список собран из типичных ситуаций при покупке коммерческого транспорта партией. Пользуйтесь свободно — он пригодится, даже если работать будете не с нами.</p>
+    </div>
+
+    <div class="group"><span>До разговора с продавцом</span><i></i></div>
+
+    <div class="item">
+      <div class="num">1</div>
+      <div>
+        <h3>Посчитайте, сколько стоит день простоя</h3>
+        <p>Возьмите средний доход с машины за день и умножьте на срок, который вы готовы ждать поставку. Это ваша реальная цена промедления — и главный аргумент в переговорах о сроках.</p>
+        <div class="tip"><b>Зачем:</b> когда знаете цифру, легче решать, стоит ли ждать «более выгодное» предложение ещё три недели.</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="num">2</div>
+      <div>
+        <h3>Зафиксируйте требования к машине письменно</h3>
+        <p>Тип кузова, объём, грузоподъёмность, надстройка, режим эксплуатации, маршруты. Одна страница текста до звонка экономит недели переписки после.</p>
+        <div class="tip"><b>Частая ошибка:</b> ехать «посмотреть, что есть» и брать то, что стоит на площадке, а потом дорабатывать под себя за свой счёт.</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="num">3</div>
+      <div>
+        <h3>Решите, что делаете со старым парком</h3>
+        <p>Продажа, трейд-ин, оставляете в резерве. Если техника пойдёт в зачёт — узнайте оценку заранее, до того как обсуждаете цену новых машин.</p>
+        <div class="tip"><b>Почему заранее:</b> оценку старой техники часто «корректируют» в конце сделки, когда отказываться уже неудобно.</div>
+      </div>
+    </div>
+
+    <div class="group"><span>Цена и комплектация</span><i></i></div>
+
+    <div class="item">
+      <div class="num">4</div>
+      <div>
+        <h3>Требуйте итоговую цену «на ключи»</h3>
+        <p>С учётом всех платежей: подготовка, доставка, оформление, дополнительное оборудование. Цена из объявления и цена в договоре часто отличаются.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="num">5</div>
+      <div>
+        <h3>Разберите допы по списку</h3>
+        <p>Попросите перечень дополнительного оборудования и услуг с ценой каждой позиции. Отметьте, что действительно нужно вам, а что добавлено «в пакете».</p>
+        <div class="tip"><b>Вопрос продавцу:</b> «Какая цена без этого пункта?» Если ответа нет — это повод торговаться.</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="num">6</div>
+      <div>
+        <h3>Сверьте комплектацию в договоре с обещанной</h3>
+        <p>То, что показывали на встрече, и то, что вписано в спецификацию, должно совпадать до пункта. Проверяйте спецификацию, а не рекламный буклет.</p>
+      </div>
+    </div>
+
+    <div class="group"><span>Финансирование</span><i></i></div>
+
+    <div class="item">
+      <div class="num">7</div>
+      <div>
+        <h3>Сравнивайте по итоговой переплате, а не по ставке</h3>
+        <p>Ставка сама по себе ничего не говорит. Считайте сумму всех платежей за весь срок плюс аванс и комиссии — и сравнивайте именно эти числа.</p>
+        <div class="tip"><b>Просите:</b> полный график платежей до подписания. Отказ показать график — плохой знак.</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="num">8</div>
+      <div>
+        <h3>Уточните аванс и структуру платежей</h3>
+        <p>Размер первоначального взноса, равномерный график или убывающий, есть ли сезонность. Платёж должен ложиться на вашу выручку, а не наоборот.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="num">9</div>
+      <div>
+        <h3>Проверьте условия досрочного выкупа</h3>
+        <p>Через какой срок можно закрыть договор, с какой комиссией, что происходит с машиной. Планы меняются — лучше знать цену выхода заранее.</p>
+      </div>
+    </div>
+
+    <div class="group"><span>Страхование, сроки, сервис</span><i></i></div>
+
+    <div class="item">
+      <div class="num">10</div>
+      <div>
+        <h3>Разберитесь, что именно покрывает полис</h3>
+        <p>Какие риски входят, размер франшизы, что считается страховым случаем при коммерческой эксплуатации, кто выгодоприобретатель. Для машин под наём условия отличаются.</p>
+        <div class="tip"><b>Важно для аренды:</b> уточните, покрывается ли ущерб, если за рулём был не ваш сотрудник, а арендатор.</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="num">11</div>
+      <div>
+        <h3>Пропишите срок поставки с ответственностью</h3>
+        <p>«Ориентировочно месяц» в переписке ничего не значит. В договоре должна быть дата и последствия её нарушения.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="num">12</div>
+      <div>
+        <h3>Уточните, где обслуживать парк</h3>
+        <p>Ближайший сервис, сроки поставки запчастей, что входит в гарантию и что её аннулирует. Для парка стоимость обслуживания часто важнее цены покупки.</p>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h2>Хотите, посчитаем вашу задачу?</h2>
+      <p>Расскажите, сколько машин нужно и под какую работу. Подготовим расчёт по машинам, финансированию и страхованию. Бесплатно, без обязательств.</p>
+      <a class="btn" href="/#contact">Получить расчёт по парку <svg class="icon"><use href="#i-arrow"></use></svg></a>
+    </div>
+
+    <div class="foot">
+      <a class="back" href="/"><svg class="icon"><use href="#i-back"></use></svg> Вернуться на сайт</a>
+      <div>
+        Материал подготовлен в рамках учебной инициативы и носит информационный характер.
+        Не является индивидуальной финансовой, юридической или налоговой рекомендацией
+        и <b>не является публичной офертой</b> (ст. 437 ГК РФ). Условия сделок, финансирования
+        и страхования определяются договором с соответствующей организацией.
+      </div>
+    </div>
+  </div>
+
+</div>
+</body></html>
