@@ -24,15 +24,19 @@ module.exports = async (req, res) => {
       return;
     }
 
-    const name   = String(body.name   || '—').slice(0, 200);
-    const phone  = String(body.phone  || '—').slice(0, 100);
-    const timing = String(body.timing || '—').slice(0, 100);
+    const name    = String(body.name    || '—').slice(0, 200);
+    const phone   = String(body.phone   || '—').slice(0, 100);
+    const segment = String(body.segment || '—').slice(0, 120);
+    const fleet   = String(body.fleet   || '—').slice(0, 60);
+    const timing  = String(body.timing  || '—').slice(0, 100);
 
     const text =
       '🚚 Новая заявка — Газель Про\n\n' +
       '👤 Имя: ' + name + '\n' +
       '📞 Телефон: ' + phone + '\n' +
-      '🗓 Когда нужна: ' + timing;
+      '🏢 Сегмент: ' + segment + '\n' +
+      '🚐 Машин: ' + fleet + '\n' +
+      '🗓 Когда нужны: ' + timing;
 
     const tg = await fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
       method: 'POST',

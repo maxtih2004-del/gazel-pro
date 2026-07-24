@@ -2,8 +2,8 @@
 <html lang="ru"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Газель под ваши задачи — подберём и оформим за вас · Газель Про</title>
-<meta name="description" content="Газель Про — подбираем и помогаем оформить рабочую газель под ваши задачи. Проверенные машины, прозрачные условия, без беготни по салонам.">
+<title>Обновление парка «Газелей»: транспорт, лизинг и страхование в одном окне · Газель Про</title>
+<meta name="description" content="Газель Про — единое окно для транспортных компаний, арендных парков и корпоративных флотов: подбор «Газелей», лизинг и страхование по понятным условиям, без переплат дилеру.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -11,8 +11,6 @@
   :root {
     --ingo-blue:       #0057E7;
     --ingo-blue-dark:  #0046B8;
-    --ingo-blue-deep:  #002E7A;
-    --ingo-blue-light: #E7F0FF;
     --ingo-blue-pale:  #F4F8FF;
     --ink:             #0B1730;
     --ink-2:           #1F2A44;
@@ -26,7 +24,6 @@
     --green-pale:      #EDFBF4;
     --red:             #E0455B;
     --red-pale:        #FDF1F3;
-    --amber:           #F3A53C;
     --shadow-sm:       0 2px 8px rgba(11,23,48,.05);
     --shadow-md:       0 18px 44px rgba(11,23,48,.10);
     --shadow-blue:     0 12px 30px rgba(0,87,231,.32);
@@ -35,12 +32,8 @@
   html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
   body {
     font-family: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    color: var(--ink);
-    background: #fff;
-    line-height: 1.55;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    overflow-x: hidden;
+    color: var(--ink); background: #fff; line-height: 1.55;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: hidden;
   }
   a { text-decoration: none; color: inherit; }
   svg { display: block; }
@@ -52,80 +45,69 @@
   /* ── buttons ── */
   .btn {
     display: inline-flex; align-items: center; gap: 10px;
-    font-family: inherit; font-weight: 700; font-size: 16px; line-height: 1;
-    padding: 15px 26px; border-radius: 13px;
-    cursor: pointer; border: 1px solid transparent;
+    font-family: inherit; font-weight: 700; font-size: 16px; line-height: 1.2;
+    padding: 15px 26px; border-radius: 13px; cursor: pointer; border: 1px solid transparent;
     transition: transform .18s cubic-bezier(.2,.7,.3,1), box-shadow .18s ease, background .18s ease, border-color .18s ease;
-    white-space: nowrap;
   }
-  .btn .icon { width: 18px; height: 18px; }
+  .btn .icon { width: 18px; height: 18px; flex: 0 0 auto; }
   .btn-primary { background: var(--ingo-blue); color: #fff; box-shadow: var(--shadow-blue); }
   .btn-primary:hover { background: var(--ingo-blue-dark); transform: translateY(-2px); box-shadow: 0 16px 36px rgba(0,87,231,.42); }
   .btn-primary .arrow { transition: transform .2s ease; }
   .btn-primary:hover .arrow { transform: translateX(3px); }
   .btn-ghost { background: rgba(255,255,255,.06); color: #fff; border-color: rgba(255,255,255,.22); }
   .btn-ghost:hover { background: rgba(255,255,255,.14); transform: translateY(-2px); border-color: rgba(255,255,255,.4); }
-  .btn-lg { padding: 18px 32px; font-size: 17px; border-radius: 14px; }
+  .btn-lg { padding: 18px 30px; font-size: 17px; border-radius: 14px; }
   .btn-block { width: 100%; justify-content: center; }
 
   /* ── header ── */
   header {
     position: sticky; top: 0; z-index: 50;
     background: rgba(11,23,48,.72); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(255,255,255,.08);
-    transition: background .25s ease, border-color .25s ease;
+    border-bottom: 1px solid rgba(255,255,255,.08); transition: background .25s ease, border-color .25s ease;
   }
   header.scrolled { background: rgba(9,19,40,.94); border-bottom-color: rgba(255,255,255,.12); }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 70px; }
   .logo { display: flex; align-items: center; gap: 11px; font-weight: 800; font-size: 20px; color: #fff; letter-spacing: -.3px; }
-  .logo .mark {
-    width: 36px; height: 36px; border-radius: 10px;
-    background: linear-gradient(135deg, var(--ingo-blue), #3B82F6);
-    display: grid; place-items: center; color: #fff;
-    box-shadow: 0 4px 14px rgba(0,87,231,.5);
-  }
+  .logo .mark { width: 36px; height: 36px; border-radius: 10px; background: linear-gradient(135deg, var(--ingo-blue), #3B82F6); display: grid; place-items: center; color: #fff; box-shadow: 0 4px 14px rgba(0,87,231,.5); }
   .logo .mark .icon { width: 20px; height: 20px; stroke-width: 2.2; }
-  .nav-links { display: flex; gap: 28px; align-items: center; }
+  .nav-links { display: flex; gap: 26px; align-items: center; }
   .nav-links a:not(.btn) { color: rgba(255,255,255,.72); font-weight: 600; font-size: 15px; transition: color .15s; position: relative; }
   .nav-links a:not(.btn)::after { content:""; position:absolute; left:0; bottom:-6px; width:0; height:2px; background:#6EA8FF; border-radius:2px; transition: width .22s ease; }
   .nav-links a:not(.btn):hover { color: #fff; }
   .nav-links a:not(.btn):hover::after { width:100%; }
   .nav .btn { padding: 11px 20px; font-size: 15px; }
-  @media (max-width: 900px) { .nav-links a:not(.btn) { display: none; } .nav { height: 62px; } }
+  @media (max-width: 980px) { .nav-links a:not(.btn) { display: none; } .nav { height: 62px; } }
 
   /* ── hero ── */
   .hero {
-    position: relative; overflow: hidden;
+    position: relative; overflow: hidden; color: #fff; padding: 72px 0 86px;
     background:
       radial-gradient(1100px 560px at 88% -12%, rgba(0,87,231,.55), transparent 60%),
       radial-gradient(760px 440px at -5% 18%, rgba(59,130,246,.22), transparent 55%),
       linear-gradient(180deg, #0B1730, #0D1D3C);
-    color: #fff;
-    padding: 72px 0 86px;
   }
   .hero::after {
-    content: ""; position: absolute; inset: 0; z-index: 1;
+    content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
     background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
-    background-size: 46px 46px; pointer-events: none;
+    background-size: 46px 46px;
     -webkit-mask-image: radial-gradient(760px 460px at 78% 34%, #000, transparent 74%);
             mask-image: radial-gradient(760px 460px at 78% 34%, #000, transparent 74%);
   }
   .hero .wrap { position: relative; z-index: 2; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
   @media (max-width: 940px) { .hero .wrap { grid-template-columns: 1fr; gap: 40px; } .hero { padding: 54px 0 70px; } }
   .eyebrow {
-    display: inline-flex; align-items: center; gap: 9px;
-    background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.15);
-    color: #CFE1FF; font-weight: 700; font-size: 13px; letter-spacing: .2px;
+    display: inline-flex; align-items: center; gap: 9px; background: rgba(255,255,255,.07);
+    border: 1px solid rgba(255,255,255,.15); color: #CFE1FF; font-weight: 700; font-size: 13px;
     padding: 8px 15px; border-radius: 100px; margin-bottom: 22px;
   }
   .eyebrow .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(31,174,107,.7); animation: pulse 2.4s infinite; }
   @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(31,174,107,.6)} 70%{box-shadow:0 0 0 9px rgba(31,174,107,0)} 100%{box-shadow:0 0 0 0 rgba(31,174,107,0)} }
-  .hero h1 { font-size: clamp(33px, 4.6vw, 54px); line-height: 1.07; font-weight: 800; letter-spacing: -1.4px; }
+  .hero h1 { font-size: clamp(32px, 4.4vw, 52px); line-height: 1.08; font-weight: 800; letter-spacing: -1.4px; }
   .hero h1 .hl { color: #7DB0FF; }
-  .hero p.lead { margin-top: 20px; font-size: clamp(17px, 1.6vw, 20px); color: rgba(255,255,255,.8); max-width: 560px; }
+  .hero p.lead { margin-top: 20px; font-size: clamp(17px, 1.6vw, 20px); color: rgba(255,255,255,.8); max-width: 580px; }
   .hero-cta { margin-top: 30px; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
-  .under-btn { margin-top: 14px; font-size: 14px; color: rgba(255,255,255,.6); display: flex; align-items: center; gap: 8px; }
-  .under-btn .icon { width: 15px; height: 15px; flex: 0 0 auto; }
+  .under-btn { margin-top: 14px; font-size: 14px; color: rgba(255,255,255,.6); display: flex; align-items: flex-start; gap: 8px; }
+  .under-btn .icon { width: 15px; height: 15px; flex: 0 0 auto; margin-top: 3px; }
   .hero-trust { margin-top: 34px; padding-top: 28px; border-top: 1px solid rgba(255,255,255,.1); display: flex; gap: 12px 30px; flex-wrap: wrap; }
   .hero-trust .item { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,.86); font-weight: 600; font-size: 15px; }
   .hero-trust .ic { width: 30px; height: 30px; border-radius: 9px; background: rgba(110,168,255,.14); color: #86B4FF; display: grid; place-items: center; }
@@ -134,12 +116,8 @@
   .hero-visual { position: relative; }
   .hero-photo {
     position: relative; aspect-ratio: 4 / 3.2; border-radius: 22px; overflow: hidden;
-    background:
-      repeating-linear-gradient(135deg, rgba(255,255,255,.05) 0 2px, transparent 2px 13px),
-      linear-gradient(160deg, #14264C, #0E1D3B);
-    border: 1px solid rgba(255,255,255,.12);
-    box-shadow: 0 40px 80px rgba(0,10,40,.5);
-    display: grid; place-items: center;
+    background: repeating-linear-gradient(135deg, rgba(255,255,255,.05) 0 2px, transparent 2px 13px), linear-gradient(160deg, #14264C, #0E1D3B);
+    border: 1px solid rgba(255,255,255,.12); box-shadow: 0 40px 80px rgba(0,10,40,.5); display: grid; place-items: center;
   }
   .hero-photo .hero-van { position: relative; z-index: 2; width: 86%; max-width: 430px; height: auto; animation: vanFloat 5s ease-in-out infinite; }
   .hero-photo .glow { position: absolute; inset: auto -20% -30% -20%; height: 60%; background: radial-gradient(ellipse at center, rgba(0,87,231,.4), transparent 70%); filter: blur(20px); }
@@ -147,9 +125,8 @@
   @keyframes wheelSpin { to { transform: rotate(360deg); } }
   .hero-van .wheel-spin { transform-box: fill-box; transform-origin: center; animation: wheelSpin 2.2s linear infinite; }
   .hero-badge {
-    position: absolute; left: -18px; bottom: 26px; z-index: 3;
-    background: #fff; color: var(--ink); border-radius: 15px; padding: 14px 18px;
-    display: flex; align-items: center; gap: 13px; box-shadow: var(--shadow-md);
+    position: absolute; left: -18px; bottom: 26px; z-index: 3; background: #fff; color: var(--ink);
+    border-radius: 15px; padding: 14px 18px; display: flex; align-items: center; gap: 13px; box-shadow: var(--shadow-md);
   }
   @media (max-width: 480px){ .hero-badge { left: 8px; } }
   .hero-badge .hb-ic { width: 40px; height: 40px; border-radius: 11px; background: var(--green-pale); color: var(--green-dark); display: grid; place-items: center; flex: 0 0 auto; }
@@ -157,58 +134,56 @@
   .hero-badge b { display: block; font-size: 15px; font-weight: 800; }
   .hero-badge span { font-size: 13px; color: var(--muted); }
 
-  /* ── section shells ── */
+  /* ── sections ── */
   section.block { padding: 88px 0; }
   @media (max-width: 640px){ section.block { padding: 58px 0; } }
-  .section-head { max-width: 780px; margin: 0 auto 50px; text-align: center; }
-  .section-head.left { margin-left: 0; text-align: left; }
+  .section-head { max-width: 800px; margin: 0 auto 50px; text-align: center; }
   .kicker { display:inline-flex; align-items:center; gap:8px; color: var(--ingo-blue); font-weight: 800; font-size: 13px; letter-spacing: 1.4px; text-transform: uppercase; }
   .kicker::before, .kicker::after { content:""; width:22px; height:2px; border-radius:2px; background: var(--ingo-blue); opacity:.5; }
-  .section-head.left .kicker::after { display: none; }
   .section-head h2 { font-size: clamp(27px, 3.3vw, 40px); font-weight: 800; letter-spacing: -1px; margin-top: 14px; line-height: 1.12; }
   .section-head p { color: var(--muted); font-size: 18px; margin-top: 16px; text-wrap: pretty; }
   .soft { background: var(--bg-soft); }
 
-  /* ── grids ── */
   .grid { display: grid; gap: 22px; }
-  .grid-4 { grid-template-columns: repeat(4, 1fr); }
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
   .grid-2 { grid-template-columns: repeat(2, 1fr); }
-  @media (max-width: 980px) { .grid-4 { grid-template-columns: repeat(2, 1fr); } .grid-3 { grid-template-columns: 1fr; } }
-  @media (max-width: 620px) { .grid-4, .grid-2 { grid-template-columns: 1fr; } }
+  @media (max-width: 980px) { .grid-3 { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) { .grid-2 { grid-template-columns: 1fr; } }
 
   /* ── problem ── */
   .problem { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
   @media (max-width: 880px){ .problem { grid-template-columns: 1fr; gap: 34px; } }
+  .problem h2 { font-size:clamp(26px,3.2vw,38px); font-weight:800; letter-spacing:-1px; margin-top:14px; line-height:1.14; }
   .sym-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
   .sym-list li { display: flex; gap: 14px; align-items: flex-start; font-size: 16.5px; color: var(--ink-2); }
   .sym-list .bul { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 8px; background: var(--red-pale); color: var(--red); display: grid; place-items: center; margin-top: 1px; }
   .sym-list .bul .icon { width: 15px; height: 15px; stroke-width: 2.4; }
   .problem-note { margin-top: 26px; padding: 20px 22px; border-left: 3px solid var(--ingo-blue); background: var(--ingo-blue-pale); border-radius: 0 14px 14px 0; color: var(--ink-2); font-size: 16px; }
 
-  /* ── moment cards ── */
-  .card {
-    position: relative; background: #fff; border: 1px solid var(--line-2); border-radius: 20px; padding: 28px 26px;
-    transition: transform .2s cubic-bezier(.2,.7,.3,1), box-shadow .2s ease, border-color .2s ease;
-    overflow: hidden;
-  }
-  .card::before { content:""; position:absolute; left:0; top:0; height:3px; width:100%; background: var(--ingo-blue); transform: scaleX(0); transform-origin:left; transition: transform .28s ease; }
-  .card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--line); }
-  .card:hover::before { transform: scaleX(1); }
-  .card .ic-box { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; margin-bottom: 18px; background: var(--ingo-blue-pale); color: var(--ingo-blue); }
-  .card .ic-box .icon { width: 26px; height: 26px; }
-  .card.urgent .ic-box { background: var(--red-pale); color: var(--red); }
-  .card h3 { font-size: 19px; font-weight: 800; letter-spacing: -.3px; }
-  .card p { color: var(--muted); font-size: 15px; margin-top: 9px; }
-  .card .badge { display: inline-flex; align-items:center; gap:6px; font-size: 12px; font-weight: 700; padding: 5px 11px; border-radius: 100px; margin-top: 16px; }
-  .badge-urgent { background: var(--red-pale); color: var(--red); }
-  .badge-plan { background: var(--ingo-blue-pale); color: var(--ingo-blue); }
-  .badge .dot { width:6px; height:6px; border-radius:50%; background: currentColor; }
+  /* ── segment cards ── */
+  .seg-card { position: relative; background:#fff; border:1px solid var(--line-2); border-radius: 22px; padding: 32px 28px; display:flex; flex-direction:column; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; overflow:hidden; }
+  .seg-card::before { content:""; position:absolute; left:0; top:0; height:4px; width:100%; background: linear-gradient(90deg, var(--ingo-blue), #3B82F6); transform: scaleX(0); transform-origin:left; transition: transform .3s ease; }
+  .seg-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); border-color: var(--line); }
+  .seg-card:hover::before { transform: scaleX(1); }
+  .seg-card .s-ic { width: 56px; height: 56px; border-radius: 16px; display:grid; place-items:center; background: linear-gradient(135deg, var(--ingo-blue), #3B82F6); color:#fff; box-shadow: 0 10px 22px rgba(0,87,231,.26); margin-bottom: 20px; }
+  .seg-card .s-ic .icon { width: 27px; height: 27px; stroke-width: 2; }
+  .seg-card h3 { font-size: 20px; font-weight: 800; letter-spacing: -.3px; }
+  .seg-card .quote { margin-top: 16px; padding: 16px 18px; background: var(--bg-soft); border-radius: 14px; color: var(--ink-2); font-size: 15px; font-style: italic; position: relative; }
+  .seg-card .quote::before { content:"«"; color: var(--ingo-blue); font-size: 26px; font-weight: 800; font-style: normal; line-height: 0; position: relative; top: 6px; margin-right: 2px; }
+  .seg-card .val-label { margin-top: 22px; font-size: 12px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--green-dark); }
+  .seg-card ul { list-style:none; margin-top: 12px; display:flex; flex-direction:column; gap: 11px; }
+  .seg-card ul li { display:flex; gap:11px; align-items:flex-start; font-size: 15px; color: var(--ink-2); }
+  .seg-card ul li .tk { flex:0 0 auto; width:22px; height:22px; border-radius:7px; background: var(--green-pale); color: var(--green-dark); display:grid; place-items:center; margin-top:1px; }
+  .seg-card ul li .tk .icon { width:12px; height:12px; stroke-width:2.8; }
+  .seg-card .s-cta { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line-2); }
+  .seg-card .s-cta a { color: var(--ingo-blue); font-weight: 700; font-size: 15px; display:inline-flex; align-items:center; gap:8px; }
+  .seg-card .s-cta a .icon { width:16px; height:16px; transition: transform .2s ease; }
+  .seg-card .s-cta a:hover .icon { transform: translateX(4px); }
 
   /* ── benefits ── */
   .benefit { background: #fff; border: 1px solid var(--line-2); border-radius: 20px; padding: 30px 28px; transition: transform .2s ease, box-shadow .2s ease; }
   .benefit:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
-  .benefit .b-ic { width: 54px; height: 54px; border-radius: 15px; display: grid; place-items: center; margin-bottom: 18px; background: linear-gradient(135deg, var(--ingo-blue), #3B82F6); color: #fff; box-shadow: 0 10px 22px rgba(0,87,231,.28); }
+  .benefit .b-ic { width: 54px; height: 54px; border-radius: 15px; display: grid; place-items: center; margin-bottom: 18px; background: var(--ingo-blue-pale); color: var(--ingo-blue); }
   .benefit .b-ic .icon { width: 26px; height: 26px; stroke-width: 2; }
   .benefit h3 { font-size: 19px; font-weight: 800; letter-spacing: -.3px; }
   .benefit p { color: var(--muted); font-size: 15px; margin-top: 9px; }
@@ -233,12 +208,9 @@
   @media (max-width: 760px){ .compare { grid-template-columns: 1fr; } }
   .col { border-radius: 22px; padding: 34px 32px; }
   .col.bad { background: #fff; border: 1px solid var(--line); }
-  .col.good {
-    background: radial-gradient(600px 300px at 80% 0%, rgba(0,87,231,.35), transparent 60%), linear-gradient(160deg, #0B1730, #12274F);
-    color: #fff; box-shadow: 0 28px 64px rgba(11,23,48,.3); position: relative; overflow: hidden;
-  }
+  .col.good { background: radial-gradient(600px 300px at 80% 0%, rgba(0,87,231,.35), transparent 60%), linear-gradient(160deg, #0B1730, #12274F); color: #fff; box-shadow: 0 28px 64px rgba(11,23,48,.3); position: relative; overflow: hidden; }
   .col.good::after { content:"Наш подход"; position:absolute; top:20px; right:-34px; transform: rotate(45deg); background: var(--green); color:#fff; font-size:11px; font-weight:800; letter-spacing:.6px; padding:6px 40px; }
-  .col h3 { font-size: 20px; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 11px; letter-spacing:-.3px; }
+  .col h3 { font-size: 20px; font-weight: 800; margin-bottom: 10px; display: flex; align-items: center; gap: 11px; letter-spacing:-.3px; }
   .col.bad h3 { color: var(--ink-2); }
   .col .col-sub { font-size: 14px; margin-bottom: 22px; }
   .col.bad .col-sub { color: var(--muted-2); }
@@ -258,21 +230,6 @@
   .col.good li { color: rgba(255,255,255,.9); }
   .col.good .tick { background: rgba(31,174,107,.22); color: #4ADE80; }
 
-  /* ── segments ── */
-  .seg { display: flex; gap: 16px; align-items: flex-start; background: #fff; border: 1px solid var(--line-2); border-radius: 18px; padding: 24px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
-  .seg:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--line); }
-  .seg .ic { flex: 0 0 auto; width: 50px; height: 50px; border-radius: 14px; background: var(--ingo-blue-pale); color: var(--ingo-blue); display: grid; place-items: center; }
-  .seg .ic .icon { width: 24px; height: 24px; }
-  .seg h3 { font-size: 17px; font-weight: 800; letter-spacing:-.2px; }
-  .seg p { color: var(--muted); font-size: 14.5px; margin-top: 5px; }
-
-  /* ── trust ── */
-  .trust-card { background:#fff; border:1px solid var(--line-2); border-radius: 18px; padding: 26px 24px; display:flex; gap:16px; align-items:flex-start; }
-  .trust-card .t-ic { flex:0 0 auto; width:46px; height:46px; border-radius:13px; background: var(--green-pale); color: var(--green-dark); display:grid; place-items:center; }
-  .trust-card .t-ic .icon { width:23px; height:23px; }
-  .trust-card h3 { font-size:17px; font-weight:800; }
-  .trust-card p { color: var(--muted); font-size:14.5px; margin-top:6px; }
-
   /* ── FAQ ── */
   .faq { max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
   .faq details { background:#fff; border:1px solid var(--line-2); border-radius: 16px; padding: 0 24px; transition: border-color .2s ease, box-shadow .2s ease; }
@@ -284,32 +241,30 @@
   .faq details[open] summary .chev { transform: rotate(180deg); }
   .faq .answer { padding: 0 0 22px; color: var(--muted); font-size: 15.5px; max-width: 92%; }
 
-  /* ── inline CTA ── */
   .cta-inline { margin-top: 46px; text-align: center; }
   .cta-inline .under-btn { justify-content: center; color: var(--muted); margin-top: 12px; }
 
   /* ── final CTA ── */
   .cta {
+    color: #fff; border-radius: 30px; padding: 64px 40px; text-align: center; position: relative; overflow: hidden;
     background:
       radial-gradient(820px 420px at 18% 0%, rgba(0,87,231,.5), transparent 60%),
       radial-gradient(600px 400px at 100% 100%, rgba(31,174,107,.16), transparent 60%),
       linear-gradient(160deg, #0B1730, #0E1E3E);
-    color: #fff; border-radius: 30px; padding: 64px 40px; text-align: center; position: relative; overflow: hidden;
   }
   @media (max-width: 640px){ .cta { padding: 48px 22px; border-radius: 24px; } }
   .cta::before { content:""; position:absolute; inset:0; background-image: linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 44px 44px; -webkit-mask-image: radial-gradient(500px 300px at 50% 0%, #000, transparent 75%); mask-image: radial-gradient(500px 300px at 50% 0%, #000, transparent 75%); }
   .cta > * { position: relative; z-index: 2; }
-  .cta h2 { font-size: clamp(28px, 3.8vw, 44px); font-weight: 800; letter-spacing: -1px; }
-  .cta p { color: rgba(255,255,255,.8); font-size: 18px; margin-top: 16px; max-width: 580px; margin-left: auto; margin-right: auto; }
+  .cta h2 { font-size: clamp(27px, 3.6vw, 42px); font-weight: 800; letter-spacing: -1px; }
+  .cta p { color: rgba(255,255,255,.8); font-size: 18px; margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto; }
 
   /* ── lead form ── */
-  .lead-form { max-width: 460px; margin: 32px auto 0; display: grid; gap: 12px; text-align: left; position: relative; z-index: 2; }
+  .lead-form { max-width: 480px; margin: 32px auto 0; display: grid; gap: 12px; text-align: left; position: relative; z-index: 2; }
   .lead-form .row { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
   @media (max-width: 520px){ .lead-form .row { grid-template-columns: 1fr; } }
   .lead-form input, .lead-form select {
-    width: 100%; font-family: inherit; font-size: 15px; color: var(--ink);
-    background: #fff; border: 1px solid rgba(255,255,255,.25); border-radius: 12px; padding: 15px 16px;
-    outline: none; transition: box-shadow .15s ease;
+    width: 100%; font-family: inherit; font-size: 15px; color: var(--ink); background: #fff;
+    border: 1px solid rgba(255,255,255,.25); border-radius: 12px; padding: 15px 16px; outline: none; transition: box-shadow .15s ease;
   }
   .lead-form select:invalid { color: var(--muted-2); }
   .lead-form input:focus, .lead-form select:focus { box-shadow: 0 0 0 3px rgba(0,87,231,.45); }
@@ -326,25 +281,20 @@
   footer { background: var(--ink); color: rgba(255,255,255,.55); padding: 40px 0 34px; }
   .foot { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 14px; }
   footer .logo { font-size: 18px; }
-  .disclaimer {
-    margin-top: 26px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.1);
-    font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,.42); max-width: 900px;
-  }
+  .disclaimer { margin-top: 26px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.1); font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,.42); max-width: 900px; }
 
   /* ── mobile sticky CTA ── */
   .mobile-cta {
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
     padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
     background: rgba(11,23,48,.92); backdrop-filter: blur(12px);
-    border-top: 1px solid rgba(255,255,255,.1);
-    display: none;
+    border-top: 1px solid rgba(255,255,255,.1); display: none;
   }
   @media (max-width: 700px){ .mobile-cta { display: block; } body { padding-bottom: 76px; } }
 
-  /* ── reveal ── */
   .reveal { opacity: 0; transform: translateY(26px); transition: opacity .65s cubic-bezier(.2,.7,.3,1), transform .65s cubic-bezier(.2,.7,.3,1); }
   .reveal.in { opacity: 1; transform: none; }
-  @media (prefers-reduced-motion: reduce){ .reveal { opacity:1; transform:none; transition:none; } .pulse{animation:none;} html{scroll-behavior:auto;} .btn, .card, .step, .seg, .benefit { transition:none; } .hero-van, .hero-van .wheel-spin { animation:none; } }
+  @media (prefers-reduced-motion: reduce){ .reveal { opacity:1; transform:none; transition:none; } .pulse{animation:none;} html{scroll-behavior:auto;} .btn, .step, .seg-card, .benefit { transition:none; } .hero-van, .hero-van .wheel-spin { animation:none; } }
 </style>
 </head>
 
@@ -357,42 +307,39 @@
     <symbol id="i-handshake" viewBox="0 0 24 24"><path d="M8 12l3-3 2.5 2.5a1.8 1.8 0 002.5 0L19 9"></path><path d="M3 8l3-1 5 5"></path><path d="M21 8l-3-1-3.5 3.5"></path><path d="M11 14l2 2M9 16l1.5 1.5"></path></symbol>
     <symbol id="i-check-badge" viewBox="0 0 24 24"><path d="M12 3l2.1 1.6 2.6-.4 1 2.4 2.4 1-.4 2.6L21 12l-1.6 2.1.4 2.6-2.4 1-1 2.4-2.6-.4L12 21l-2.1-1.6-2.6.4-1-2.4-2.4-1 .4-2.6L3 12l1.6-2.1-.4-2.6 2.4-1 1-2.4 2.6.4z"></path><path d="M9 12l2 2 4-4"></path></symbol>
     <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></symbol>
-    <symbol id="i-crash" viewBox="0 0 24 24"><path d="M13 2l-3 8h5l-3 12 9-14h-6l3-6z"></path></symbol>
-    <symbol id="i-unlock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 018 0"></path><circle cx="12" cy="16" r="1.4"></circle></symbol>
-    <symbol id="i-trending" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"></path><path d="M21 7v5h-5"></path></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></symbol>
     <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"></path></symbol>
     <symbol id="i-chevron-d" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"></path></symbol>
     <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"></path><path d="M14 3v4h4"></path><path d="M9 12h6M9 16h6"></path></symbol>
     <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"></circle><path d="M20 20l-4-4"></path></symbol>
-    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="8" r="4"></circle><path d="M11 11l9 9M17 17l2-2M15 15l2-2"></path></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l4.5 4.5L19 7"></path></symbol>
     <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></symbol>
     <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l9 16H3z"></path><path d="M12 9v5M12 17v.5"></path></symbol>
     <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v9H3z"></path><path d="M14 9h4l3 3v3h-7z"></path><circle cx="7" cy="18" r="1.8"></circle><circle cx="17" cy="18" r="1.8"></circle></symbol>
-    <symbol id="i-box" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"></path><path d="M4 7.5l8 4.5 8-4.5M12 12v9"></path></symbol>
+    <symbol id="i-fleet" viewBox="0 0 24 24"><path d="M2 8h8v6H2z"></path><path d="M10 10h3l2 2v2h-5z"></path><circle cx="5" cy="16.5" r="1.4"></circle><circle cx="12.5" cy="16.5" r="1.4"></circle><path d="M15 5h5v4h-5z" opacity=".55"></path><path d="M20 6.5h1.5L23 8v1.5h-3z" opacity=".55"></path></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M4 9a8 8 0 0114-3l2 2"></path><path d="M20 4v4h-4"></path><path d="M20 15a8 8 0 01-14 3l-2-2"></path><path d="M4 20v-4h4"></path></symbol>
     <symbol id="i-building" viewBox="0 0 24 24"><path d="M5 21V5a2 2 0 012-2h6a2 2 0 012 2v16"></path><path d="M15 10h3a2 2 0 012 2v9"></path><path d="M8 7h2M8 11h2M8 15h2"></path></symbol>
-    <symbol id="i-tools" viewBox="0 0 24 24"><path d="M14 6a3.5 3.5 0 004.9 3.2L21 11l-2 2-1.8-2.1A3.5 3.5 0 0114 6z"></path><path d="M13 11L5 19l-2-2 8-8"></path></symbol>
-    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6 3h3l1.5 4-2 1.5a12 12 0 006 6l1.5-2 4 1.5v3a2 2 0 01-2 2A16 16 0 014 5a2 2 0 012-2z"></path></symbol>
-    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"></path><path d="M8 10h8M8 13h5"></path></symbol>
     <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h12v4"></path><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2H5"></path><circle cx="17" cy="14" r="1.2"></circle></symbol>
     <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2.5 1.5M9 2h6"></path></symbol>
     <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0116 0v2"></path><path d="M4 14h3v5H5.5A1.5 1.5 0 014 17.5zM20 14h-3v5h1.5a1.5 1.5 0 001.5-1.5z"></path></symbol>
-    <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13"></path><path d="M3.5 6h.01M3.5 12h.01M3.5 18h.01"></path></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 018 0v3"></path></symbol>
+    <symbol id="i-window" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18"></path><path d="M8 14h8"></path></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h13l-3-3"></path><path d="M20 16H7l3 3"></path></symbol>
+    <symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5L5 19"></path><circle cx="7.5" cy="7.5" r="2.5"></circle><circle cx="16.5" cy="16.5" r="2.5"></circle></symbol>
   </defs>
 </svg>
 
-<!-- ═══ HEADER (кнопка закреплена) ═══ -->
+<!-- ═══ HEADER ═══ -->
 <header id="site-header">
   <div class="wrap nav">
     <a href="#" class="logo"><span class="mark"><svg class="icon"><use href="#i-truck"></use></svg></span>Газель&nbsp;Про</a>
     <nav class="nav-links" aria-label="Основная навигация">
       <a href="#problem">Проблема</a>
-      <a href="#benefits">Что вы получите</a>
+      <a href="#segments">Кому подходит</a>
+      <a href="#benefits">Что получаете</a>
       <a href="#how">Как это работает</a>
       <a href="#faq">Вопросы</a>
-      <a href="#contact" class="btn btn-primary">Хочу газель</a>
+      <a href="#contact" class="btn btn-primary">Рассчитать</a>
     </nav>
   </div>
 </header>
@@ -401,24 +348,23 @@
 <section class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow"><span class="pulse"></span> Подбор коммерческого транспорта</span>
-      <h1>Получите рабочую газель под свои задачи — <span class="hl">без беготни по салонам</span></h1>
-      <p class="lead">Вы говорите, для чего нужна машина. Мы подбираем подходящие варианты у проверенных поставщиков, показываем честные условия и помогаем оформить — от первого звонка до ключей.</p>
+      <span class="eyebrow"><span class="pulse"></span> Обновление и расширение парка</span>
+      <h1>Обновите парк «Газелей» — <span class="hl">без месяца согласований и переплат дилеру</span></h1>
+      <p class="lead">Единое окно для транспортных компаний, арендных парков и корпоративных флотов: подбор машин, лизинг и страхование — в одном месте, одним пакетом документов и с понятными условиями.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary btn-lg">Хочу подобрать газель <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
+        <a href="#contact" class="btn btn-primary btn-lg">Хочу условия для своего парка <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
         <a href="#how" class="btn btn-ghost btn-lg">Как это работает</a>
       </div>
-      <div class="under-btn"><svg class="icon"><use href="#i-lock"></use></svg> Бесплатно и ни к чему не обязывает — сначала просто разберёмся в задаче</div>
+      <div class="under-btn"><svg class="icon"><use href="#i-lock"></use></svg> Расчёт бесплатный и ни к чему не обязывает — сначала просто посчитаем вашу задачу</div>
       <div class="hero-trust">
-        <div class="item"><span class="ic"><svg class="icon"><use href="#i-check-badge"></use></svg></span> Проверенные поставщики</div>
-        <div class="item"><span class="ic"><svg class="icon"><use href="#i-handshake"></use></svg></span> Условия сразу и без скрытых доплат</div>
-        <div class="item"><span class="ic"><svg class="icon"><use href="#i-headset"></use></svg></span> Сопровождение до конца сделки</div>
+        <div class="item"><span class="ic"><svg class="icon"><use href="#i-window"></use></svg></span> Транспорт + лизинг + страхование в одном окне</div>
+        <div class="item"><span class="ic"><svg class="icon"><use href="#i-timer"></use></svg></span> Быстрое решение по лизингу</div>
+        <div class="item"><span class="ic"><svg class="icon"><use href="#i-doc"></use></svg></span> Минимальный пакет документов</div>
       </div>
     </div>
     <div class="hero-visual">
       <div class="hero-photo">
         <div class="glow"></div>
-        <!-- Иллюстрация фургона (SVG). Можно заменить на реальное фото позже. -->
         <svg class="hero-van" viewBox="0 0 440 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иллюстрация грузового фургона">
           <g stroke="#5E86C8" stroke-width="5" stroke-linecap="round" opacity=".5">
             <path d="M8 150h40"></path><path d="M0 176h30"></path><path d="M14 202h34"></path>
@@ -461,8 +407,8 @@
         </svg>
       </div>
       <div class="hero-badge">
-        <span class="hb-ic"><svg class="icon"><use href="#i-check-badge"></use></svg></span>
-        <div><b>Честная сделка</b><span>условия известны заранее</span></div>
+        <span class="hb-ic"><svg class="icon"><use href="#i-window"></use></svg></span>
+        <div><b>Одно окно</b><span>вместо трёх переговоров</span></div>
       </div>
     </div>
   </div>
@@ -474,128 +420,150 @@
     <div class="problem">
       <div class="reveal">
         <div class="kicker">Знакомая ситуация</div>
-        <h2 style="font-size:clamp(26px,3.2vw,38px);font-weight:800;letter-spacing:-1px;margin-top:14px;line-height:1.14;">Выбрать газель — это неделя нервов вместо работы</h2>
-        <p style="color:var(--muted);font-size:17px;margin-top:16px;">Машина нужна для дела, а вместо дела приходится заниматься поиском. Знакомо?</p>
+        <h2>Машины нужны сейчас, а решение тянется неделями</h2>
+        <p style="color:var(--muted);font-size:17px;margin-top:16px;">Обновление парка упирается не в выбор машины, а в согласования, деньги и бумаги. Знакомо?</p>
         <div class="problem-note">
-          Это нормально. Покупка на 2,5 млн — не рутина: такое делают раз в несколько лет, и опыта тут просто неоткуда взяться.
+          Дело не в вас. Транспорт, финансирование и страхование традиционно живут в трёх разных местах — и каждый раз их приходится сводить вручную.
         </div>
       </div>
       <ul class="sym-list reveal">
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Десятки объявлений, и в каждом «звоните, уточняйте» — а цена в итоге другая</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Непонятно, что важно именно под вашу работу: длина кузова, тип, надстройка</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Менеджеры давят: «берите сейчас, завтра дороже»</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Скрытые доплаты всплывают уже на этапе договора</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Пока вы ищете — машина простаивает, заказы уходят</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> И главный страх: ошибиться на такую сумму и остаться с этим один на один</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Лизинг согласовывают неделями, а машины нужны под заказы уже сейчас</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Дилер навязывает дорогой кредит и допы, без которых «машину не отдадут»</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Парк изношен: ремонты и простои съедают маржу быстрее, чем приносят рейсы</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Иностранные фургоны ушли — заменить нечем, логистика встала</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Страхование парка — отдельный круг: ещё одни переговоры и ещё один пакет документов</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> На партию машин обычные условия не гнутся: типовой агент не может предложить ничего гибкого</li>
       </ul>
     </div>
   </div>
 </section>
 
-<!-- ═══ РЕШЕНИЕ (мы как гид) ═══ -->
+<!-- ═══ РЕШЕНИЕ ═══ -->
 <section class="block soft">
   <div class="wrap">
     <div class="section-head reveal">
       <div class="kicker">Решение</div>
-      <h2>Мы берём поиск и оформление на себя</h2>
-      <p>«Газель Про» — это не салон, который продаёт то, что стоит у него на площадке. Мы разбираемся в вашей задаче и подбираем машину под неё, а всю рутину — сравнение, условия, документы — забираем себе.</p>
+      <h2>Транспорт, лизинг и страхование — в одном окне</h2>
+      <p>Мы собираем сделку целиком: подбираем «Газели» под ваши задачи, готовим финансирование и страховую защиту одним пакетом. Вам не нужно вести три отдельных переговора и трижды собирать документы.</p>
     </div>
     <div class="grid grid-3">
-      <div class="trust-card reveal">
-        <span class="t-ic"><svg class="icon"><use href="#i-search"></use></svg></span>
-        <div><h3>Разбираемся в задаче</h3><p>Что возите, какие объёмы, куда ездите — от этого зависит, какая машина вам реально нужна.</p></div>
+      <div class="benefit reveal">
+        <div class="b-ic"><svg class="icon"><use href="#i-truck"></use></svg></div>
+        <h3>1. Транспорт под задачу</h3>
+        <p>Подбираем машины под ваши маршруты, грузы и объёмы — от одной единицы до партии.</p>
       </div>
-      <div class="trust-card reveal">
-        <span class="t-ic"><svg class="icon"><use href="#i-list"></use></svg></span>
-        <div><h3>Сравниваем за вас</h3><p>Подбираем подходящие варианты у проверенных поставщиков и показываем разницу простым языком.</p></div>
+      <div class="benefit reveal">
+        <div class="b-ic"><svg class="icon"><use href="#i-wallet"></use></svg></div>
+        <h3>2. Лизинг без месяца ожидания</h3>
+        <p>Готовим финансирование параллельно с подбором, по минимальному пакету документов.</p>
       </div>
-      <div class="trust-card reveal">
-        <span class="t-ic"><svg class="icon"><use href="#i-doc"></use></svg></span>
-        <div><h3>Доводим до конца</h3><p>Помогаем с условиями и оформлением, остаёмся на связи до передачи машины.</p></div>
+      <div class="benefit reveal">
+        <div class="b-ic"><svg class="icon"><use href="#i-shield"></use></svg></div>
+        <h3>3. Страхование сразу в пакете</h3>
+        <p>Полис оформляется вместе со сделкой, а не отдельным кругом переговоров после неё.</p>
       </div>
     </div>
     <div class="cta-inline reveal">
-      <a href="#contact" class="btn btn-primary btn-lg">Хочу, чтобы подобрали за меня <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
-      <div class="under-btn"><svg class="icon"><use href="#i-lock"></use></svg> Ни к чему не обязывает — можно просто спросить</div>
+      <a href="#contact" class="btn btn-primary btn-lg">Хочу расчёт по своему парку <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
+      <div class="under-btn" style="color:var(--muted)"><svg class="icon"><use href="#i-lock"></use></svg> Ни к чему не обязывает — можно просто узнать условия</div>
     </div>
   </div>
 </section>
 
-<!-- ═══ КОГДА ЭТО АКТУАЛЬНО ═══ -->
-<section class="block" id="moments">
+<!-- ═══ СЕГМЕНТЫ ═══ -->
+<section class="block" id="segments">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="kicker">Когда мы полезны</div>
-      <h2>Чаще всего к нам приходят в такие моменты</h2>
-      <p>Если узнали себя — самое время разобраться с машиной, пока ситуация не начала стоить вам денег.</p>
+      <div class="kicker">Кому подходит</div>
+      <h2>Найдите свою ситуацию</h2>
+      <p>Мы работаем с компаниями, для которых транспорт — это операционка, а не покупка «для себя». Вот три ситуации, с которыми к нам приходят чаще всего.</p>
     </div>
-    <div class="grid grid-4">
-      <div class="card reveal">
-        <div class="ic-box"><svg class="icon"><use href="#i-clock"></use></svg></div>
-        <h3>Газель отслужила своё</h3>
-        <p>Ремонты всё чаще и дороже. Пора менять — пока старая ещё на ходу и что-то стоит.</p>
-        <span class="badge badge-plan"><span class="dot"></span>Плановая замена</span>
+    <div class="grid grid-3">
+
+      <div class="seg-card reveal">
+        <div class="s-ic"><svg class="icon"><use href="#i-truck"></use></svg></div>
+        <h3>Транспортная компания, 2–5 машин</h3>
+        <div class="quote">Нам срочно нужно обновить изношенный парк развозных машин, но банки долго одобряют лизинг, а дилеры навязывают дорогие кредиты и допы».</div>
+        <div class="val-label">Что предлагаем</div>
+        <ul>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Быстрое оформление лизинга — без месяца ожидания решения</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Минимальный пакет документов</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Страхование парка сразу вместе со сделкой</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Понятная цена без навязанных допов</li>
+        </ul>
+        <div class="s-cta"><a href="#contact">Это про нас — рассчитать <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
       </div>
-      <div class="card urgent reveal">
-        <div class="ic-box"><svg class="icon"><use href="#i-crash"></use></svg></div>
-        <h3>Серьёзная поломка</h3>
-        <p>Машина встала, бизнес простаивает. Нужна быстрая замена, чтобы не терять заказы.</p>
-        <span class="badge badge-urgent"><span class="dot"></span>Срочно</span>
+
+      <div class="seg-card reveal">
+        <div class="s-ic"><svg class="icon"><use href="#i-refresh"></use></svg></div>
+        <h3>Аренда и раскат транспорта</h3>
+        <div class="quote">Клиенты убивают машины за год, а купить новые «Газели» партией без переплаты и с нормальной страховкой сложно — обычные агенты не дают гибких условий».</div>
+        <div class="val-label">Что предлагаем</div>
+        <ul>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Специальные условия на покупку партии машин</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Страховой полис на льготных условиях в пакете</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Помощь с выкупом изношенной техники при обновлении</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Гибкость под интенсивную эксплуатацию</li>
+        </ul>
+        <div class="s-cta"><a href="#contact">Это про нас — рассчитать <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
       </div>
-      <div class="card urgent reveal">
-        <div class="ic-box"><svg class="icon"><use href="#i-unlock"></use></svg></div>
-        <h3>Остались без машины</h3>
-        <p>Без транспорта дело стоит. Поможем оперативно подобрать замену и вернуться в строй.</p>
-        <span class="badge badge-urgent"><span class="dot"></span>Срочно</span>
+
+      <div class="seg-card reveal">
+        <div class="s-ic"><svg class="icon"><use href="#i-building"></use></svg></div>
+        <h3>Корпоративный флот дистрибьютора</h3>
+        <div class="quote">Иностранные фургоны ушли, логистика встала, обслуживание остатков парка стоит слишком дорого, и нет единого окна для покупки и страхования нового флота».</div>
+        <div class="val-label">Что предлагаем</div>
+        <ul>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Единый договор поставки на обновление флота</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Условия за объём при закупке партии</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Решения для непрерывности логистики</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Полное покрытие рисков по парку</li>
+        </ul>
+        <div class="s-cta"><a href="#contact">Это про нас — рассчитать <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
       </div>
-      <div class="card reveal">
-        <div class="ic-box"><svg class="icon"><use href="#i-trending"></use></svg></div>
-        <h3>Бизнес растёт</h3>
-        <p>Заказов больше, чем машин. Добавим ещё одну газель под конкретную задачу.</p>
-        <span class="badge badge-plan"><span class="dot"></span>Расширение парка</span>
-      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ═══ ПРЕИМУЩЕСТВА (результаты) ═══ -->
+<!-- ═══ ПРЕИМУЩЕСТВА ═══ -->
 <section class="block soft" id="benefits">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="kicker">Что вы получите</div>
-      <h2>Не «услугу подбора», а рабочую машину и спокойствие</h2>
-      <p>Вот что меняется для вас, когда поиском занимаемся мы.</p>
+      <div class="kicker">Что вы получаете</div>
+      <h2>Не «услугу», а работающий парк и закрытый вопрос</h2>
+      <p>Что меняется для компании, когда транспорт, деньги и страхование собираются в одну сделку.</p>
     </div>
     <div class="grid grid-3">
       <div class="benefit reveal">
         <div class="b-ic"><svg class="icon"><use href="#i-timer"></use></svg></div>
-        <h3>Время на работу, а не на поиск</h3>
-        <p>Вместо недели обзвонов — один разговор. Дальше мы приносим готовые варианты, вы выбираете.</p>
+        <h3>Машины выходят на линию раньше</h3>
+        <p>Финансирование готовится параллельно с подбором, а не после него. Меньше ожидания — быстрее рейсы.</p>
       </div>
       <div class="benefit reveal">
-        <div class="b-ic"><svg class="icon"><use href="#i-truck"></use></svg></div>
-        <h3>Машина под вашу задачу</h3>
-        <p>Не «что было на площадке», а то, что подходит под ваши грузы, маршруты и объёмы.</p>
+        <div class="b-ic"><svg class="icon"><use href="#i-doc"></use></svg></div>
+        <h3>Один пакет документов</h3>
+        <p>Не нужно собирать комплект отдельно для дилера, отдельно для банка и отдельно для страховой.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="b-ic"><svg class="icon"><use href="#i-percent"></use></svg></div>
+        <h3>Условия под объём</h3>
+        <p>Чем больше машин в сделке, тем гибче условия. Партия считается не так, как одна единица.</p>
       </div>
       <div class="benefit reveal">
         <div class="b-ic"><svg class="icon"><use href="#i-wallet"></use></svg></div>
-        <h3>Понятные условия без сюрпризов</h3>
-        <p>Стоимость и условия проговариваем заранее. Никаких «а вот это оплачивается отдельно» в конце.</p>
+        <h3>Прозрачная стоимость</h3>
+        <p>Все составляющие сделки видно заранее: без навязанных допов и «вскрывшихся» платежей в договоре.</p>
       </div>
       <div class="benefit reveal">
-        <div class="b-ic"><svg class="icon"><use href="#i-shield"></use></svg></div>
-        <h3>Меньше риска ошибиться</h3>
-        <p>Работаем с проверенными поставщиками — вы не остаётесь один на один с незнакомым продавцом.</p>
+        <div class="b-ic"><svg class="icon"><use href="#i-swap"></use></svg></div>
+        <h3>Что делать со старой техникой</h3>
+        <p>Помогаем закрыть вопрос с изношенными машинами при обновлении парка, а не оставляем его вам.</p>
       </div>
       <div class="benefit reveal">
         <div class="b-ic"><svg class="icon"><use href="#i-headset"></use></svg></div>
-        <h3>Есть с кем поговорить</h3>
-        <p>Один человек ведёт вас от первого вопроса до передачи ключей и отвечает на «а что дальше?».</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="b-ic"><svg class="icon"><use href="#i-trending"></use></svg></div>
-        <h3>Машина начинает зарабатывать раньше</h3>
-        <p>Чем быстрее решён вопрос с транспортом, тем быстрее вы возвращаетесь к заказам.</p>
+        <h3>Один ответственный контакт</h3>
+        <p>Всю сделку ведёт один человек: не нужно пересказывать задачу трём разным менеджерам.</p>
       </div>
     </div>
   </div>
@@ -606,32 +574,32 @@
   <div class="wrap">
     <div class="section-head reveal">
       <div class="kicker">Чем мы отличаемся</div>
-      <h2>Покупка на 2,5 млн — это не про «повезёт»</h2>
-      <p>Честно: искать самому — рабочий вариант, и у него есть плюсы. Вот как выглядит разница.</p>
+      <h2>Собирать сделку самому или получить её готовой</h2>
+      <p>Честно: собрать всё самостоятельно можно, и у этого есть плюсы. Вот как выглядит разница.</p>
     </div>
     <div class="compare">
       <div class="col bad reveal">
-        <h3><span class="h-ic"><svg class="icon"><use href="#i-search"></use></svg></span>Искать самому по объявлениям</h3>
-        <div class="col-sub">Так делают многие — и иногда это оправдано</div>
+        <h3><span class="h-ic"><svg class="icon"><use href="#i-search"></use></svg></span>Дилер + банк + страховая по отдельности</h3>
+        <div class="col-sub">Классический путь — и иногда он оправдан</div>
         <ul>
-          <li class="plus"><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Полный контроль: вы сами всё видите и решаете</li>
-          <li class="plus"><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Не нужно никому доверять поиск</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Уходит неделя и больше на обзвон и сравнение</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Продавец заинтересован продать то, что есть у него</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Скрытые доплаты видно только в договоре</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Если что-то пойдёт не так — разбираетесь сами</li>
+          <li class="plus"><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Полный контроль: вы сами выбираете каждого контрагента</li>
+          <li class="plus"><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Можно поторговаться с каждым отдельно</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Три переговорных процесса и три пакета документов</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Решение по финансированию тянется, машины ждут</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Дилер заинтересован продать то, что стоит у него, и добавить допы</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> На стыках всё рассыпается — и сводить приходится вам</li>
         </ul>
       </div>
       <div class="col good reveal">
-        <h3><span class="h-ic"><svg class="icon"><use href="#i-truck"></use></svg></span>С «Газель&nbsp;Про»</h3>
-        <div class="col-sub">Подбор под задачу вместо перебора объявлений</div>
+        <h3><span class="h-ic"><svg class="icon"><use href="#i-window"></use></svg></span>С «Газель&nbsp;Про»</h3>
+        <div class="col-sub">Сделка собирается целиком, одним окном</div>
         <ul>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Один разговор вместо недели обзвонов</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Подбираем под вашу работу, а не под чью-то площадку</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Условия проговариваем заранее, без сюрпризов в конце</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Работаем с проверенными поставщиками</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Сопровождаем сделку и помогаем с оформлением</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Есть к кому обратиться и после покупки</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Транспорт, лизинг и страхование в одном пакете</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Один комплект документов вместо трёх</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Финансирование готовится параллельно с подбором</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Подбор под вашу работу, а не под чью-то площадку</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Условия гнутся под объём и режим эксплуатации</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Один ответственный за всю сделку</li>
         </ul>
       </div>
     </div>
@@ -643,7 +611,7 @@
   <div class="wrap">
     <div class="section-head reveal">
       <div class="kicker">План действий</div>
-      <h2>Три шага — и вы за рулём</h2>
+      <h2>Три шага — и парк обновлён</h2>
       <p>Никаких сложных схем. Вот что будет происходить дальше, шаг за шагом.</p>
     </div>
     <div class="grid grid-3 steps">
@@ -651,51 +619,30 @@
         <div class="num">1</div>
         <span class="connector"><svg class="icon"><use href="#i-arrow-r"></use></svg></span>
         <h3>Оставляете заявку</h3>
-        <p>Занимает минуту: имя, телефон и когда нужна машина. Мы связываемся и коротко уточняем задачу.</p>
+        <p>Минута времени: контакт, тип компании и сколько машин нужно. Мы связываемся и уточняем задачу.</p>
       </div>
       <div class="step reveal">
         <div class="num">2</div>
         <span class="connector"><svg class="icon"><use href="#i-arrow-r"></use></svg></span>
-        <h3>Приносим варианты</h3>
-        <p>Подбираем подходящие машины у проверенных поставщиков и показываем условия. Вы просто выбираете.</p>
+        <h3>Считаем пакет под ваш парк</h3>
+        <p>Подбираем машины, готовим варианты финансирования и страхования — и показываем условия одним расчётом.</p>
       </div>
       <div class="step reveal">
         <div class="num">3</div>
         <h3>Оформляем и передаём</h3>
-        <p>Помогаем с документами и оформлением. Вы забираете машину и возвращаетесь к работе.</p>
+        <p>Собираем документы одним пакетом, оформляем сделку и передаём машины. Вы возвращаетесь к рейсам.</p>
       </div>
     </div>
-    <div class="after-steps reveal">Через несколько дней вопрос с транспортом закрыт — <b>и машина снова зарабатывает, а не стоит.</b></div>
-  </div>
-</section>
-
-<!-- ═══ ДЛЯ КОГО (это для меня) ═══ -->
-<section class="block">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="kicker">Это для вас, если</div>
-      <h2>Газель для вас — рабочий инструмент</h2>
-    </div>
-    <div class="grid grid-2">
-      <div class="seg reveal"><div class="ic"><svg class="icon"><use href="#i-truck"></use></svg></div><div><h3>Вы работаете на себя</h3><p>ИП или самозанятый, и одна машина — ваш основной источник дохода.</p></div></div>
-      <div class="seg reveal"><div class="ic"><svg class="icon"><use href="#i-box"></use></svg></div><div><h3>У вас небольшой парк</h3><p>2–5 машин, которые нужно вовремя обновлять и расширять под заказы.</p></div></div>
-      <div class="seg reveal"><div class="ic"><svg class="icon"><use href="#i-building"></use></svg></div><div><h3>Транспорт — часть бизнеса</h3><p>Компания, где простой машины — это напрямую потерянные деньги.</p></div></div>
-      <div class="seg reveal"><div class="ic"><svg class="icon"><use href="#i-tools"></use></svg></div><div><h3>Вы возите своё</h3><p>Стройка, доставка, торговля, сервис — машина нужна под конкретное дело.</p></div></div>
-    </div>
-
-    <!-- ОТЗЫВЫ: блок появится здесь, когда будут первые реальные отзывы клиентов.
-         Вёрстка готова — прислать 2–3 настоящие цитаты (результат / лёгкость работы / окупаемость),
-         имя, род деятельности и разрешение на публикацию. Выдуманные отзывы не размещаем. -->
-
+    <div class="after-steps reveal">Вопрос с транспортом закрыт — <b>парк работает, а не стоит в ожидании согласований.</b></div>
     <div class="cta-inline reveal">
-      <a href="#contact" class="btn btn-primary btn-lg">Это про меня — хочу подобрать <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
-      <div class="under-btn"><svg class="icon"><use href="#i-lock"></use></svg> Бесплатная консультация, без обязательств</div>
+      <a href="#contact" class="btn btn-primary btn-lg">Начать с расчёта <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
+      <div class="under-btn" style="color:var(--muted)"><svg class="icon"><use href="#i-lock"></use></svg> Бесплатно и без обязательств</div>
     </div>
   </div>
 </section>
 
 <!-- ═══ FAQ ═══ -->
-<section class="block soft" id="faq">
+<section class="block" id="faq">
   <div class="wrap">
     <div class="section-head reveal">
       <div class="kicker">Вопросы</div>
@@ -705,61 +652,81 @@
     <div class="faq reveal">
       <details>
         <summary>Сколько стоят ваши услуги? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Консультация и подбор вариантов для вас бесплатны — вы платите только за саму машину. Все условия проговариваем заранее, до того как вы что-то подписываете.</div>
+        <div class="answer">Расчёт и подбор для вас бесплатны. Вы видите стоимость самой сделки — машин, финансирования и страхования — до того, как что-то подписываете.</div>
       </details>
       <details>
-        <summary>Я ничего не покупаю прямо сейчас, просто присматриваюсь. Можно обратиться? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Да, это нормально и так делают многие. Расскажем, что есть по вашей задаче и на какой бюджет ориентироваться. Никто не будет вам названивать и давить.</div>
+        <summary>От скольких машин вы работаете? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Работаем и с одной единицей, и с партией. Но чем больше объём, тем гибче получаются условия — для парка от 2–3 машин разница уже заметна.</div>
       </details>
       <details>
-        <summary>Откуда машины? Это надёжно? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Мы работаем с проверенными поставщиками, а не с случайными продавцами по объявлениям. Все документы и условия вы видите до сделки.</div>
+        <summary>Насколько быстро можно получить решение по лизингу? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Мы готовим финансирование параллельно с подбором машин и работаем по минимальному пакету документов — это заметно быстрее, чем последовательный путь «сначала дилер, потом банк». Конкретный срок назовём по вашей ситуации.</div>
       </details>
       <details>
-        <summary>А если мне не подойдёт ни один вариант? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Значит, не подойдёт — вы ничем не обязаны и ничего не теряете. Мы либо поищем ещё, либо честно скажем, что под вашу задачу и бюджет сейчас предложить нечего.</div>
+        <summary>Что делать со старым парком? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Расскажите, что у вас на балансе — поможем закрыть вопрос с изношенной техникой в рамках обновления, чтобы она не висела мёртвым грузом.</div>
       </details>
       <details>
-        <summary>Сколько времени занимает подбор? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Зависит от задачи и срочности. Обычно первые варианты показываем в течение нескольких дней после разговора — конкретные сроки назовём, когда поймём, что именно вам нужно.</div>
+        <summary>Мы пока только планируем, бюджет не утверждён. Есть смысл обращаться? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Да — как раз на этом этапе расчёт полезнее всего: будет с чем идти к собственнику или на бюджетный комитет. Никто не будет давить и названивать.</div>
       </details>
       <details>
-        <summary>Что вы сделаете с моим номером телефона? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Только свяжемся по вашей заявке. Никаких рассылок и передачи номера третьим лицам.</div>
+        <summary>Обязательно оформлять страхование через вас? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Нет. Пакетом обычно выходит удобнее и быстрее, но вы вправе оставить страхование там, где вам привычнее — на подбор машин и финансирование это не влияет.</div>
+      </details>
+      <details>
+        <summary>Что вы сделаете с нашими контактами? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Свяжемся только по вашей заявке. Никаких рассылок и передачи контактов третьим лицам.</div>
       </details>
     </div>
   </div>
 </section>
 
 <!-- ═══ ФИНАЛЬНЫЙ CTA + ФОРМА ═══ -->
-<section class="block" id="contact">
+<section class="block soft" id="contact">
   <div class="wrap">
     <div class="cta reveal">
-      <h2>Расскажите, какая газель нужна — остальное сделаем мы</h2>
-      <p>Оставьте заявку: свяжемся, разберёмся в задаче и подберём подходящие варианты. Это бесплатно и ни к чему вас не обязывает.</p>
+      <h2>Расскажите про свой парк — посчитаем условия</h2>
+      <p>Оставьте заявку: свяжемся, уточним задачу и подготовим расчёт по машинам, финансированию и страхованию. Бесплатно и ни к чему не обязывает.</p>
 
       <!-- Заявки уходят через серверную функцию /api/lead в Telegram -->
       <form class="lead-form" id="lead-form">
         <p hidden><label>Не заполняйте это поле: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
         <div class="row">
-          <input type="text" name="name" placeholder="Ваше имя" required>
+          <input type="text" name="name" placeholder="Имя" required>
           <input type="tel" name="phone" placeholder="Телефон" required>
         </div>
-        <select name="timing" required>
-          <option value="" disabled selected>Когда нужна газель?</option>
-          <option>Уже сейчас</option>
-          <option>В ближайший месяц</option>
-          <option>В течение 2–3 месяцев</option>
-          <option>Пока просто интересуюсь</option>
+        <select name="segment" required>
+          <option value="" disabled selected>Что про вас?</option>
+          <option>Транспортная компания (2–5 машин)</option>
+          <option>Аренда / раскат транспорта</option>
+          <option>Корпоративный флот, дистрибуция</option>
+          <option>Другое</option>
         </select>
-        <button type="submit" class="btn btn-primary btn-lg"><svg class="icon"><use href="#i-check"></use></svg> Хочу подобрать газель</button>
-        <div class="form-note"><svg class="icon"><use href="#i-lock"></use></svg> Перезвоним в рабочее время. Без спама и передачи данных третьим лицам.</div>
+        <div class="row">
+          <select name="fleet" required>
+            <option value="" disabled selected>Сколько машин</option>
+            <option>1–2</option>
+            <option>3–5</option>
+            <option>6–10</option>
+            <option>Больше 10</option>
+          </select>
+          <select name="timing" required>
+            <option value="" disabled selected>Когда нужны</option>
+            <option>Уже сейчас</option>
+            <option>В ближайший месяц</option>
+            <option>В течение квартала</option>
+            <option>Пока изучаем</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg"><svg class="icon"><use href="#i-check"></use></svg> Получить расчёт по парку</button>
+        <div class="form-note"><svg class="icon"><use href="#i-lock"></use></svg> Свяжемся в рабочее время. Без спама и передачи данных третьим лицам.</div>
       </form>
 
       <div class="form-success" id="form-success" hidden>
         <div class="fs-ic"><svg class="icon"><use href="#i-check"></use></svg></div>
         <b>Спасибо! Заявка принята</b>
-        Свяжемся с вами в ближайшее время и поможем подобрать газель.
+        Свяжемся с вами в ближайшее время и подготовим расчёт по вашему парку.
       </div>
       <div class="form-note" id="form-err" hidden style="color:#FCA5A5; margin-top:16px;">
         <svg class="icon"><use href="#i-alert"></use></svg> Не удалось отправить заявку. Проверьте интернет и попробуйте ещё раз.
@@ -773,37 +740,35 @@
   <div class="wrap">
     <div class="foot">
       <div class="logo"><span class="mark" style="width:32px;height:32px;border-radius:9px"><svg class="icon" style="width:18px;height:18px"><use href="#i-truck"></use></svg></span>Газель&nbsp;Про</div>
-      <div>© 2026 · Газель Про — подбор газелей для бизнеса</div>
+      <div>© 2026 · Газель Про — обновление и расширение парка для бизнеса</div>
     </div>
     <div class="disclaimer">
       Данная страница создана в рамках учебной инициативы и используется для исследования и тестирования спроса.
       Все материалы, изображения и описания носят информационный характер, не являются рекламой конкретного товара
-      и <b>не являются публичной офертой</b> (ст. 437 ГК РФ). Условия, стоимость, характеристики и наличие
-      уточняются индивидуально. Оставляя заявку, вы соглашаетесь на обработку указанных вами контактных данных
-      для связи по вашему обращению.
+      или финансовой услуги и <b>не являются публичной офертой</b> (ст. 437 ГК РФ). Условия поставки, финансирования
+      и страхования, стоимость, характеристики и наличие уточняются индивидуально. Оставляя заявку, вы соглашаетесь
+      на обработку указанных вами контактных данных для связи по вашему обращению.
     </div>
   </div>
 </footer>
 
 <!-- ═══ MOBILE STICKY CTA ═══ -->
 <div class="mobile-cta">
-  <a href="#contact" class="btn btn-primary btn-block">Хочу подобрать газель <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
+  <a href="#contact" class="btn btn-primary btn-block">Рассчитать условия для парка <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
 </div>
 
 <script>
-  // sticky header state
   const header = document.getElementById('site-header');
   const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 8);
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  // soft reveal on scroll
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.grid').forEach(grid => {
-    [...grid.children].forEach((el, i) => { if (el.classList.contains('reveal')) el.style.transitionDelay = (i % 4 * 70) + 'ms'; });
+    [...grid.children].forEach((el, i) => { if (el.classList.contains('reveal')) el.style.transitionDelay = (i % 3 * 80) + 'ms'; });
   });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
@@ -812,7 +777,6 @@
   if (leadForm) {
     leadForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      // honeypot: если скрытое поле заполнено — это бот, тихо выходим
       if (leadForm.elements['bot-field'] && leadForm.elements['bot-field'].value) return;
 
       const btn = leadForm.querySelector('button[type=submit]');
@@ -825,6 +789,8 @@
       const payload = {
         name: fd.get('name') || '',
         phone: fd.get('phone') || '',
+        segment: fd.get('segment') || '',
+        fleet: fd.get('fleet') || '',
         timing: fd.get('timing') || ''
       };
 
@@ -836,13 +802,11 @@
         });
         const data = await resp.json().catch(function () { return {}; });
         if (!resp.ok || !data.ok) throw new Error('fail');
-        // Успех — показываем «Спасибо» ТОЛЬКО после реальной отправки
         leadForm.hidden = true;
         const ok = document.getElementById('form-success');
         ok.hidden = false;
         ok.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } catch (e2) {
-        // Заявка реально не ушла — показываем плашку ошибки, форму оставляем
         btn.disabled = false;
         btn.style.opacity = '1';
         if (err) err.hidden = false;
