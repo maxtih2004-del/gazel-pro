@@ -7,6 +7,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(111024604, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/111024604" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
 <style>
   :root {
     --blue:#0057E7; --blue-dark:#0046B8; --blue-pale:#F4F8FF;
@@ -782,6 +801,8 @@
       или финансовой услуги и <b>не являются публичной офертой</b> (ст. 437 ГК РФ). Условия поставки, финансирования
       и страхования, стоимость, характеристики и наличие уточняются индивидуально. Оставляя заявку, вы соглашаетесь
       на обработку указанных вами контактных данных для связи по вашему обращению.
+      Сайт использует файлы cookie и сервис Яндекс.Метрика для сбора обезличенной статистики посещений.
+      Продолжая пользоваться сайтом, вы соглашаетесь на это. Отключить сбор можно в настройках браузера.
     </div>
   </div>
 </footer>
@@ -804,6 +825,11 @@
     [...grid.children].forEach((el, i) => { if (el.classList.contains('reveal')) el.style.transitionDelay = (i % 3 * 80) + 'ms'; });
   });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // цель в Яндекс.Метрике (не падаем, если счётчик заблокирован адблоком)
+  function goal(name) {
+    try { if (typeof ym === 'function') ym(111024604, 'reachGoal', name); } catch (e) {}
+  }
 
   // отправка заявки через серверную функцию /api/lead (она шлёт в Telegram)
   async function sendLead(payload) {
@@ -836,6 +862,7 @@
           fleet: fd.get('fleet') || '',
           timing: fd.get('timing') || ''
         });
+        goal('lead_calc');
         leadForm.hidden = true;
         const ok = document.getElementById('form-success');
         ok.hidden = false;
@@ -865,6 +892,7 @@
       } catch (e2) {
         // материал отдаём в любом случае — человек своё уже сделал
       }
+      goal('lead_checklist');
       magnetForm.hidden = true;
       const ok = document.getElementById('magnet-ok');
       ok.hidden = false;
