@@ -321,6 +321,34 @@
   .reveal { opacity:0; transform:translateY(26px); transition:opacity .65s cubic-bezier(.2,.7,.3,1), transform .65s cubic-bezier(.2,.7,.3,1); }
   .reveal.in { opacity:1; transform:none; }
   @media (prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none} .pulse{animation:none} html{scroll-behavior:auto} .btn,.step,.seg-card,.benefit{transition:none} .hero-van,.hero-van .wheel-spin{animation:none} }
+
+  /* ─────────── мобильная адаптация (десктоп не затрагивается) ─────────── */
+  @media (max-width: 700px) {
+    /* 16px в полях: иначе iOS Safari зумит страницу при тапе по полю */
+    .lead-form input, .lead-form select, .magnet-form input { font-size: 16px; }
+
+    /* тач-цели не меньше 44px */
+    .nav .btn { min-height: 44px; padding: 12px 18px; }
+    .seg-card .s-cta a { min-height: 44px; }
+    .faq summary { padding: 20px 0; min-height: 56px; }
+
+    /* кнопки первого экрана — одинаковые, на всю ширину */
+    .hero-cta { flex-direction: column; align-items: stretch; }
+    .hero-cta .btn { width: 100%; justify-content: center; text-align: center; }
+
+    /* межбуквенное: на мелком кегле минус 1.4px читается тесно */
+    .hero h1 { letter-spacing: -.6px; }
+    .section-head h2, .problem h2, .cta h2, .magnet h2 { letter-spacing: -.5px; }
+
+    /* тексту больше места по ширине */
+    .faq .answer { max-width: 100%; font-size: 15px; }
+    .section-head p { font-size: 16.5px; }
+    .sym-list li { font-size: 16px; }
+
+    /* компактнее вертикаль, чтобы меньше скроллить до сути */
+    .section-head { margin-bottom: 34px; }
+    .hero-trust { gap: 10px 20px; margin-top: 28px; padding-top: 22px; }
+  }
 </style>
 </head>
 
