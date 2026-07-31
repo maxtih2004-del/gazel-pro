@@ -2,8 +2,8 @@
 <html lang="ru"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Новые «Газели» в парк: машины, лизинг и страховка одним пакетом · Газель Про</title>
-<meta name="description" content="Обновление и расширение парка «Газелей» для транспортных компаний, арендных парков и корпоративных флотов. Машины, финансирование и страхование в одном пакете документов.">
+<title>Первая Газель для работы на себя — с заказами на старте · Газель Про</title>
+<meta name="description" content="Покупка первой Газели для работы на себя: пул заказов на старте, честный расчёт окупаемости, прозрачная сделка без навязанных допов. И Trade-in старой Газели без занижения цены.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -31,14 +31,16 @@
     --blue:#0057E7; --blue-dark:#0046B8; --blue-pale:#F4F8FF;
     --ink:#0B1730; --ink-2:#1F2A44; --muted:#55648A; --muted-2:#8A97B3;
     --line:#DCE3EF; --line-2:#ECEFF6; --bg-soft:#F5F7FC;
-    --green:#1FAE6B; --green-dark:#0D7A48; --green-pale:#EDFBF4;
+    --money:#0D7A48; --money-mid:#1FAE6B; --money-pale:#EDFBF4;
+    --amber:#F3A53C; --amber-pale:#FFF7ED; --amber-dark:#B45309;
     --red:#E0455B; --red-pale:#FDF1F3;
     --shadow-sm:0 2px 8px rgba(11,23,48,.05);
     --shadow-md:0 18px 44px rgba(11,23,48,.10);
+    --shadow-lg:0 30px 70px rgba(11,23,48,.16);
     --shadow-blue:0 12px 30px rgba(0,87,231,.32);
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
   body {
     font-family:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
     color:var(--ink); background:#fff; line-height:1.55;
@@ -89,7 +91,7 @@
 
   /* ── hero ── */
   .hero {
-    position:relative; overflow:hidden; color:#fff; padding:72px 0 86px;
+    position:relative; overflow:hidden; color:#fff; padding:76px 0 88px;
     background:
       radial-gradient(1100px 560px at 88% -12%, rgba(0,87,231,.55), transparent 60%),
       radial-gradient(760px 440px at -5% 18%, rgba(59,130,246,.22), transparent 55%),
@@ -102,18 +104,18 @@
     -webkit-mask-image:radial-gradient(760px 460px at 78% 34%, #000, transparent 74%);
             mask-image:radial-gradient(760px 460px at 78% 34%, #000, transparent 74%);
   }
-  .hero .wrap { position:relative; z-index:2; display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center; }
+  .hero .wrap { position:relative; z-index:2; display:grid; grid-template-columns:1.08fr .92fr; gap:54px; align-items:center; }
   @media (max-width:940px) { .hero .wrap { grid-template-columns:1fr; gap:40px; } .hero { padding:54px 0 70px; } }
   .eyebrow {
     display:inline-flex; align-items:center; gap:9px; background:rgba(255,255,255,.07);
     border:1px solid rgba(255,255,255,.15); color:#CFE1FF; font-weight:700; font-size:13px;
     padding:8px 15px; border-radius:100px; margin-bottom:22px;
   }
-  .eyebrow .pulse { width:8px; height:8px; border-radius:50%; background:var(--green); box-shadow:0 0 0 0 rgba(31,174,107,.7); animation:pulse 2.4s infinite; }
+  .eyebrow .pulse { width:8px; height:8px; border-radius:50%; background:var(--money-mid); box-shadow:0 0 0 0 rgba(31,174,107,.7); animation:pulse 2.4s infinite; }
   @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(31,174,107,.6)} 70%{box-shadow:0 0 0 9px rgba(31,174,107,0)} 100%{box-shadow:0 0 0 0 rgba(31,174,107,0)} }
-  .hero h1 { font-size:clamp(32px,4.4vw,52px); line-height:1.08; font-weight:800; letter-spacing:-1.4px; }
+  .hero h1 { font-size:clamp(38px,5.6vw,66px); line-height:1.02; font-weight:800; letter-spacing:-2px; }
   .hero h1 .hl { color:#7DB0FF; }
-  .hero p.lead { margin-top:20px; font-size:clamp(17px,1.6vw,20px); color:rgba(255,255,255,.8); max-width:580px; }
+  .hero p.lead { margin-top:22px; font-size:clamp(17px,1.6vw,20px); color:rgba(255,255,255,.8); max-width:560px; }
   .hero-cta { margin-top:30px; display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
   .under-btn { margin-top:14px; font-size:14px; color:rgba(255,255,255,.6); display:flex; align-items:flex-start; gap:8px; }
   .under-btn .icon { width:15px; height:15px; flex:0 0 auto; margin-top:3px; }
@@ -124,29 +126,33 @@
 
   .hero-visual { position:relative; }
   .hero-photo {
-    position:relative; aspect-ratio:4/3.2; border-radius:22px; overflow:hidden;
+    position:relative; aspect-ratio:4/3.3; border-radius:22px; overflow:hidden;
     background:repeating-linear-gradient(135deg, rgba(255,255,255,.05) 0 2px, transparent 2px 13px), linear-gradient(160deg,#14264C,#0E1D3B);
     border:1px solid rgba(255,255,255,.12); box-shadow:0 40px 80px rgba(0,10,40,.5); display:grid; place-items:center;
   }
-  .hero-photo .hero-van { position:relative; z-index:2; width:86%; max-width:430px; height:auto; animation:vanFloat 5s ease-in-out infinite; }
+  .hero-photo .hero-van { position:relative; z-index:2; width:84%; max-width:410px; height:auto; animation:vanFloat 5s ease-in-out infinite; }
   .hero-photo .glow { position:absolute; inset:auto -20% -30% -20%; height:60%; background:radial-gradient(ellipse at center, rgba(0,87,231,.4), transparent 70%); filter:blur(20px); }
   @keyframes vanFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
   @keyframes wheelSpin { to { transform:rotate(360deg); } }
   .hero-van .wheel-spin { transform-box:fill-box; transform-origin:center; animation:wheelSpin 2.2s linear infinite; }
   .hero-badge {
-    position:absolute; left:-18px; bottom:26px; z-index:3; background:#fff; color:var(--ink);
-    border-radius:15px; padding:14px 18px; display:flex; align-items:center; gap:13px; box-shadow:var(--shadow-md);
+    position:absolute; z-index:3; background:#fff; color:var(--ink);
+    border-radius:15px; padding:13px 17px; display:flex; align-items:center; gap:12px; box-shadow:var(--shadow-lg);
   }
-  @media (max-width:480px){ .hero-badge { left:8px; } }
-  .hero-badge .hb-ic { width:40px; height:40px; border-radius:11px; background:var(--green-pale); color:var(--green-dark); display:grid; place-items:center; flex:0 0 auto; }
-  .hero-badge .hb-ic .icon { width:21px; height:21px; }
-  .hero-badge b { display:block; font-size:15px; font-weight:800; }
-  .hero-badge span { font-size:13px; color:var(--muted); }
+  .hero-badge.b1 { left:-16px; bottom:74px; }
+  .hero-badge.b2 { right:-10px; bottom:16px; }
+  @media (max-width:480px){ .hero-badge.b1 { left:4px; } .hero-badge.b2 { right:4px; } }
+  .hero-badge .hb-ic { width:38px; height:38px; border-radius:11px; display:grid; place-items:center; flex:0 0 auto; }
+  .hero-badge.b1 .hb-ic { background:var(--money-pale); color:var(--money); }
+  .hero-badge.b2 .hb-ic { background:var(--amber-pale); color:var(--amber-dark); }
+  .hero-badge .hb-ic .icon { width:20px; height:20px; }
+  .hero-badge b { display:block; font-size:14.5px; font-weight:800; }
+  .hero-badge span { font-size:12.5px; color:var(--muted); }
 
   /* ── sections ── */
   section.block { padding:88px 0; }
   @media (max-width:640px){ section.block { padding:58px 0; } }
-  .section-head { max-width:800px; margin:0 auto 50px; text-align:center; }
+  .section-head { max-width:800px; margin:0 auto 48px; text-align:center; }
   .kicker { display:inline-flex; align-items:center; gap:8px; color:var(--blue); font-weight:800; font-size:13px; letter-spacing:1.4px; text-transform:uppercase; }
   .kicker::before, .kicker::after { content:""; width:22px; height:2px; border-radius:2px; background:var(--blue); opacity:.5; }
   .section-head h2 { font-size:clamp(27px,3.3vw,40px); font-weight:800; letter-spacing:-1px; margin-top:14px; line-height:1.12; }
@@ -161,40 +167,86 @@
 
   /* ── problem ── */
   .problem { display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center; }
-  @media (max-width:880px){ .problem { grid-template-columns:1fr; gap:34px; } }
+  @media (max-width:880px){ .problem { grid-template-columns:1fr; gap:32px; } }
   .problem h2 { font-size:clamp(26px,3.2vw,38px); font-weight:800; letter-spacing:-1px; margin-top:14px; line-height:1.14; }
   .sym-list { list-style:none; display:flex; flex-direction:column; gap:14px; }
   .sym-list li { display:flex; gap:14px; align-items:flex-start; font-size:16.5px; color:var(--ink-2); }
   .sym-list .bul { flex:0 0 auto; width:26px; height:26px; border-radius:8px; background:var(--red-pale); color:var(--red); display:grid; place-items:center; margin-top:1px; }
   .sym-list .bul .icon { width:15px; height:15px; stroke-width:2.4; }
-  .problem-note { margin-top:26px; padding:20px 22px; border-left:3px solid var(--blue); background:var(--blue-pale); border-radius:0 14px 14px 0; color:var(--ink-2); font-size:16px; }
+  .problem-note { margin-top:24px; padding:20px 22px; border-left:3px solid var(--blue); background:var(--blue-pale); border-radius:0 14px 14px 0; color:var(--ink-2); font-size:16px; }
 
-  /* ── segment cards ── */
-  .seg-card { position:relative; background:#fff; border:1px solid var(--line-2); border-radius:22px; padding:32px 28px; display:flex; flex-direction:column; transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease; overflow:hidden; }
-  .seg-card::before { content:""; position:absolute; left:0; top:0; height:4px; width:100%; background:linear-gradient(90deg,var(--blue),#3B82F6); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
-  .seg-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-md); border-color:var(--line); }
-  .seg-card:hover::before { transform:scaleX(1); }
-  .seg-card .s-ic { width:56px; height:56px; border-radius:16px; display:grid; place-items:center; background:linear-gradient(135deg,var(--blue),#3B82F6); color:#fff; box-shadow:0 10px 22px rgba(0,87,231,.26); margin-bottom:20px; }
-  .seg-card .s-ic .icon { width:27px; height:27px; stroke-width:2; }
-  .seg-card h3 { font-size:20px; font-weight:800; letter-spacing:-.3px; }
-  .seg-card .quote { margin-top:16px; padding:16px 18px; background:var(--bg-soft); border-radius:14px; color:var(--ink-2); font-size:15px; font-style:italic; }
-  .seg-card .val-label { margin-top:22px; font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--green-dark); }
-  .seg-card ul { list-style:none; margin-top:12px; display:flex; flex-direction:column; gap:11px; }
-  .seg-card ul li { display:flex; gap:11px; align-items:flex-start; font-size:15px; color:var(--ink-2); }
-  .seg-card ul li .tk { flex:0 0 auto; width:22px; height:22px; border-radius:7px; background:var(--green-pale); color:var(--green-dark); display:grid; place-items:center; margin-top:1px; }
-  .seg-card ul li .tk .icon { width:12px; height:12px; stroke-width:2.8; }
-  .seg-card .s-cta { margin-top:24px; padding-top:20px; border-top:1px solid var(--line-2); }
-  .seg-card .s-cta a { color:var(--blue); font-weight:700; font-size:15px; display:inline-flex; align-items:center; gap:8px; }
-  .seg-card .s-cta a .icon { width:16px; height:16px; transition:transform .2s ease; }
-  .seg-card .s-cta a:hover .icon { transform:translateX(4px); }
-
-  /* ── benefits ── */
+  /* ── benefits / solution ── */
   .benefit { background:#fff; border:1px solid var(--line-2); border-radius:20px; padding:30px 28px; transition:transform .2s ease, box-shadow .2s ease; }
   .benefit:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
   .benefit .b-ic { width:54px; height:54px; border-radius:15px; display:grid; place-items:center; margin-bottom:18px; background:var(--blue-pale); color:var(--blue); }
+  .benefit .b-ic.green { background:var(--money-pale); color:var(--money); }
+  .benefit .b-ic.amber { background:var(--amber-pale); color:var(--amber-dark); }
   .benefit .b-ic .icon { width:26px; height:26px; stroke-width:2; }
   .benefit h3 { font-size:19px; font-weight:800; letter-spacing:-.3px; }
   .benefit p { color:var(--muted); font-size:15px; margin-top:9px; }
+
+  /* ── КАЛЬКУЛЯТОР ── */
+  .calc { background:#fff; border:1px solid var(--line-2); border-radius:26px; box-shadow:var(--shadow-lg); overflow:hidden;
+          display:grid; grid-template-columns:1.05fr .95fr; }
+  @media (max-width:900px){ .calc { grid-template-columns:1fr; } }
+  .calc-in { padding:36px 34px; }
+  @media (max-width:600px){ .calc-in { padding:26px 20px; } }
+  .calc-in h3 { font-size:20px; font-weight:800; letter-spacing:-.4px; margin-bottom:4px; }
+  .calc-in .sub { font-size:14px; color:var(--muted); margin-bottom:22px; }
+  .fld { margin-bottom:20px; }
+  .fld .lbl { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:9px; }
+  .fld .lbl span { font-size:14.5px; font-weight:600; color:var(--ink-2); }
+  .fld .lbl b { font-size:16px; font-weight:800; color:var(--blue); font-variant-numeric:tabular-nums; white-space:nowrap; }
+  input[type=range]{ -webkit-appearance:none; appearance:none; width:100%; height:6px; border-radius:99px;
+    background:var(--line-2); outline:none; cursor:pointer; }
+  input[type=range]::-webkit-slider-thumb{ -webkit-appearance:none; width:22px; height:22px; border-radius:50%;
+    background:#fff; border:3px solid var(--blue); box-shadow:0 2px 8px rgba(11,23,48,.2); cursor:pointer; }
+  input[type=range]::-moz-range-thumb{ width:22px; height:22px; border-radius:50%; background:#fff;
+    border:3px solid var(--blue); box-shadow:0 2px 8px rgba(11,23,48,.2); cursor:pointer; border-width:3px; }
+  .segbtns { display:flex; gap:8px; flex-wrap:wrap; }
+  .segbtns button { font-family:inherit; font-size:14px; font-weight:700; padding:10px 18px; border-radius:10px;
+    border:1px solid var(--line); background:#fff; color:var(--muted); cursor:pointer; transition:all .15s ease; }
+  .segbtns button.on { background:var(--blue); border-color:var(--blue); color:#fff; }
+
+  .calc-out { background:linear-gradient(165deg,#0B1730,#12274F); color:#fff; padding:36px 34px; display:flex; flex-direction:column; justify-content:center; }
+  @media (max-width:600px){ .calc-out { padding:28px 20px; } }
+  .calc-out .row { display:flex; justify-content:space-between; align-items:center; padding:13px 0; border-bottom:1px solid rgba(255,255,255,.1); font-size:15px; }
+  .calc-out .row span { color:rgba(255,255,255,.7); }
+  .calc-out .row b { font-weight:800; font-variant-numeric:tabular-nums; }
+  .calc-out .row.pay b { color:#FFC98A; }
+  .calc-out .row.cost b { color:#FFA8B4; }
+  .calc-out .total { margin-top:22px; padding:22px; background:rgba(31,174,107,.14); border:1px solid rgba(31,174,107,.36); border-radius:18px; text-align:center; }
+  .calc-out .total.minus { background:rgba(224,69,91,.14); border-color:rgba(224,69,91,.4); }
+  .calc-out .total .t-lbl { font-size:13.5px; color:rgba(255,255,255,.75); font-weight:600; }
+  .calc-out .total .t-val { font-size:clamp(32px,4.4vw,44px); font-weight:800; letter-spacing:-1.4px; color:#6EE7A8; margin-top:4px; font-variant-numeric:tabular-nums; }
+  .calc-out .total.minus .t-val { color:#FF9AA8; }
+  .calc-out .total .t-note { font-size:12.5px; color:rgba(255,255,255,.6); margin-top:6px; }
+  .calc-out .cta-row { margin-top:22px; }
+  .calc-disc { font-size:12px; color:rgba(255,255,255,.45); margin-top:16px; line-height:1.55; }
+
+  /* ── scenario cards ── */
+  .scen { position:relative; background:#fff; border:1px solid var(--line-2); border-radius:22px; padding:34px 30px; display:flex; flex-direction:column; overflow:hidden; transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .scen::before { content:""; position:absolute; left:0; top:0; height:4px; width:100%; transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
+  .scen.a::before { background:linear-gradient(90deg,var(--blue),#3B82F6); }
+  .scen.b::before { background:linear-gradient(90deg,var(--amber),#F6C177); }
+  .scen:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); border-color:var(--line); }
+  .scen:hover::before { transform:scaleX(1); }
+  .scen .s-ic { width:56px; height:56px; border-radius:16px; display:grid; place-items:center; color:#fff; margin-bottom:18px; }
+  .scen.a .s-ic { background:linear-gradient(135deg,var(--blue),#3B82F6); box-shadow:0 10px 22px rgba(0,87,231,.26); }
+  .scen.b .s-ic { background:linear-gradient(135deg,var(--amber-dark),var(--amber)); box-shadow:0 10px 22px rgba(243,165,60,.3); }
+  .scen .s-ic .icon { width:27px; height:27px; stroke-width:2; }
+  .scen h3 { font-size:21px; font-weight:800; letter-spacing:-.4px; }
+  .scen .quote { margin-top:15px; padding:16px 18px; background:var(--bg-soft); border-radius:14px; color:var(--ink-2); font-size:15px; font-style:italic; }
+  .scen .val-label { margin-top:20px; font-size:12px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:var(--money); }
+  .scen ul { list-style:none; margin-top:12px; display:flex; flex-direction:column; gap:11px; }
+  .scen ul li { display:flex; gap:11px; align-items:flex-start; font-size:15px; color:var(--ink-2); }
+  .scen ul li .tk { flex:0 0 auto; width:22px; height:22px; border-radius:7px; background:var(--money-pale); color:var(--money); display:grid; place-items:center; margin-top:1px; }
+  .scen ul li .tk .icon { width:12px; height:12px; stroke-width:2.8; }
+  .scen .s-cta { margin-top:auto; padding-top:22px; }
+  .scen .s-cta a { display:inline-flex; align-items:center; gap:8px; font-weight:700; font-size:15px; min-height:44px; }
+  .scen.a .s-cta a { color:var(--blue); } .scen.b .s-cta a { color:var(--amber-dark); }
+  .scen .s-cta a .icon { width:16px; height:16px; transition:transform .2s ease; }
+  .scen .s-cta a:hover .icon { transform:translateX(4px); }
 
   /* ── steps ── */
   .step { position:relative; background:#fff; border:1px solid var(--line-2); border-radius:20px; padding:32px 28px; transition:transform .2s ease, box-shadow .2s ease; }
@@ -208,7 +260,7 @@
   @media (max-width:980px){ .step .connector { display:none; } }
   .step h3 { font-size:20px; font-weight:800; letter-spacing:-.3px; }
   .step p { color:var(--muted); margin-top:10px; font-size:15px; }
-  .after-steps { margin-top:34px; text-align:center; font-size:18px; color:var(--ink-2); font-weight:600; }
+  .after-steps { margin-top:32px; text-align:center; font-size:18px; color:var(--ink-2); font-weight:600; }
   .after-steps b { color:var(--blue); }
 
   /* ── comparison ── */
@@ -217,12 +269,11 @@
   .col { border-radius:22px; padding:34px 32px; }
   .col.bad { background:#fff; border:1px solid var(--line); }
   .col.good { background:radial-gradient(600px 300px at 80% 0%, rgba(0,87,231,.35), transparent 60%), linear-gradient(160deg,#0B1730,#12274F); color:#fff; box-shadow:0 28px 64px rgba(11,23,48,.3); position:relative; overflow:hidden; }
-  .col.good::after { content:"Наш подход"; position:absolute; top:20px; right:-34px; transform:rotate(45deg); background:var(--green); color:#fff; font-size:11px; font-weight:800; letter-spacing:.6px; padding:6px 40px; }
+  .col.good::after { content:"Наш подход"; position:absolute; top:20px; right:-34px; transform:rotate(45deg); background:var(--money-mid); color:#fff; font-size:11px; font-weight:800; letter-spacing:.6px; padding:6px 40px; }
   .col h3 { font-size:20px; font-weight:800; margin-bottom:10px; display:flex; align-items:center; gap:11px; letter-spacing:-.3px; }
   .col.bad h3 { color:var(--ink-2); }
   .col .col-sub { font-size:14px; margin-bottom:22px; }
-  .col.bad .col-sub { color:var(--muted-2); }
-  .col.good .col-sub { color:rgba(255,255,255,.6); }
+  .col.bad .col-sub { color:var(--muted-2); } .col.good .col-sub { color:rgba(255,255,255,.6); }
   .col h3 .h-ic { width:34px; height:34px; border-radius:10px; display:grid; place-items:center; flex:0 0 auto; }
   .col.bad h3 .h-ic { background:var(--red-pale); color:var(--red); }
   .col.good h3 .h-ic { background:rgba(110,168,255,.18); color:#86B4FF; }
@@ -231,16 +282,13 @@
   .col li { display:flex; gap:13px; align-items:flex-start; font-size:15.5px; }
   .col li .tick { flex:0 0 auto; width:24px; height:24px; border-radius:8px; display:grid; place-items:center; margin-top:1px; }
   .col li .tick .icon { width:13px; height:13px; stroke-width:2.6; }
-  .col.bad li { color:var(--muted); }
-  .col.bad .tick { background:var(--line-2); color:var(--muted-2); }
-  .col.bad li.plus .tick { background:var(--green-pale); color:var(--green-dark); }
-  .col.bad li.plus { color:var(--ink-2); }
-  .col.good li { color:rgba(255,255,255,.9); }
-  .col.good .tick { background:rgba(31,174,107,.22); color:#4ADE80; }
+  .col.bad li { color:var(--muted); } .col.bad .tick { background:var(--line-2); color:var(--muted-2); }
+  .col.bad li.plus .tick { background:var(--money-pale); color:var(--money); } .col.bad li.plus { color:var(--ink-2); }
+  .col.good li { color:rgba(255,255,255,.9); } .col.good .tick { background:rgba(31,174,107,.22); color:#4ADE80; }
 
   /* ── lead magnet ── */
   .magnet { display:grid; grid-template-columns:1.1fr .9fr; gap:44px; align-items:center; background:#fff; border:1px solid var(--line-2); border-radius:26px; padding:44px 42px; box-shadow:var(--shadow-md); }
-  @media (max-width:880px){ .magnet { grid-template-columns:1fr; gap:30px; padding:34px 26px; } }
+  @media (max-width:880px){ .magnet { grid-template-columns:1fr; gap:28px; padding:34px 24px; } }
   .magnet h2 { font-size:clamp(24px,2.9vw,34px); font-weight:800; letter-spacing:-.8px; line-height:1.15; margin-top:12px; }
   .magnet p.m-lead { color:var(--muted); font-size:16.5px; margin-top:14px; }
   .magnet ul { list-style:none; margin-top:20px; display:flex; flex-direction:column; gap:10px; }
@@ -252,7 +300,7 @@
   .magnet-form input:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(0,87,231,.15); }
   .magnet-form input::placeholder { color:var(--muted-2); }
   .magnet-form .m-note { color:var(--muted-2); font-size:12.5px; text-align:center; margin-top:2px; }
-  .magnet-ok { background:var(--green-pale); border:1px solid rgba(31,174,107,.35); border-radius:18px; padding:26px 22px; text-align:center; }
+  .magnet-ok { background:var(--money-pale); border:1px solid rgba(31,174,107,.35); border-radius:18px; padding:26px 22px; text-align:center; }
   .magnet-ok b { display:block; font-size:18px; font-weight:800; margin-bottom:6px; }
   .magnet-ok p { color:var(--muted); font-size:14.5px; margin-bottom:16px; }
 
@@ -267,7 +315,7 @@
   .faq details[open] summary .chev { transform:rotate(180deg); }
   .faq .answer { padding:0 0 22px; color:var(--muted); font-size:15.5px; max-width:92%; }
 
-  .cta-inline { margin-top:46px; text-align:center; }
+  .cta-inline { margin-top:44px; text-align:center; }
   .cta-inline .under-btn { justify-content:center; color:var(--muted); margin-top:12px; }
 
   /* ── final CTA ── */
@@ -296,6 +344,10 @@
   .lead-form input:focus, .lead-form select:focus { box-shadow:0 0 0 3px rgba(0,87,231,.45); }
   .lead-form input::placeholder { color:var(--muted-2); }
   .lead-form button { width:100%; justify-content:center; margin-top:4px; }
+  .calc-chip { display:none; align-items:center; gap:9px; background:rgba(31,174,107,.16); border:1px solid rgba(31,174,107,.35);
+    color:#BFF3D6; border-radius:12px; padding:11px 14px; font-size:13.5px; text-align:left; }
+  .calc-chip.on { display:flex; }
+  .calc-chip .icon { width:16px; height:16px; flex:0 0 auto; }
   .form-note { margin-top:8px; color:var(--muted-2); font-size:13px; display:flex; align-items:center; justify-content:center; gap:8px; text-align:center; }
   .form-note .icon { width:14px; height:14px; flex:0 0 auto; }
   .form-success { max-width:480px; margin:30px auto 0; background:rgba(31,174,107,.14); border:1px solid rgba(31,174,107,.4); color:rgba(255,255,255,.85); border-radius:18px; padding:30px 26px; position:relative; z-index:2; }
@@ -307,7 +359,7 @@
   footer { background:var(--ink); color:rgba(255,255,255,.55); padding:40px 0 34px; }
   .foot { display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap; font-size:14px; }
   footer .logo { font-size:18px; }
-  .disclaimer { margin-top:26px; padding-top:22px; border-top:1px solid rgba(255,255,255,.1); font-size:12.5px; line-height:1.6; color:rgba(255,255,255,.42); max-width:900px; }
+  .disclaimer { margin-top:26px; padding-top:22px; border-top:1px solid rgba(255,255,255,.1); font-size:12.5px; line-height:1.6; color:rgba(255,255,255,.42); max-width:940px; }
 
   /* ── mobile sticky CTA ── */
   .mobile-cta {
@@ -320,34 +372,37 @@
 
   .reveal { opacity:0; transform:translateY(26px); transition:opacity .65s cubic-bezier(.2,.7,.3,1), transform .65s cubic-bezier(.2,.7,.3,1); }
   .reveal.in { opacity:1; transform:none; }
-  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none} .pulse{animation:none} html{scroll-behavior:auto} .btn,.step,.seg-card,.benefit{transition:none} .hero-van,.hero-van .wheel-spin{animation:none} }
+  @media (prefers-reduced-motion:reduce){ .reveal{opacity:1;transform:none;transition:none} .pulse{animation:none} html{scroll-behavior:auto} .btn,.step,.scen,.benefit{transition:none} .hero-van,.hero-van .wheel-spin{animation:none} }
 
   /* ─────────── мобильная адаптация (десктоп не затрагивается) ─────────── */
   @media (max-width: 700px) {
     /* 16px в полях: иначе iOS Safari зумит страницу при тапе по полю */
-    .lead-form input, .lead-form select, .magnet-form input { font-size: 16px; }
+    .lead-form input, .lead-form select, .magnet-form input { font-size:16px; }
 
     /* тач-цели не меньше 44px */
-    .nav .btn { min-height: 44px; padding: 12px 18px; }
-    .seg-card .s-cta a { min-height: 44px; }
-    .faq summary { padding: 20px 0; min-height: 56px; }
+    .nav .btn { min-height:44px; padding:12px 18px; }
+    .scen .s-cta a { min-height:44px; }
+    .faq summary { padding:20px 0; min-height:56px; }
+    .segbtns button { min-height:44px; }
 
     /* кнопки первого экрана — одинаковые, на всю ширину */
-    .hero-cta { flex-direction: column; align-items: stretch; }
-    .hero-cta .btn { width: 100%; justify-content: center; text-align: center; }
+    .hero-cta { flex-direction:column; align-items:stretch; }
+    .hero-cta .btn { width:100%; justify-content:center; text-align:center; }
 
-    /* межбуквенное: на мелком кегле минус 1.4px читается тесно */
-    .hero h1 { letter-spacing: -.6px; }
-    .section-head h2, .problem h2, .cta h2, .magnet h2 { letter-spacing: -.5px; }
+    /* межбуквенное: на мелком кегле минус 2px читается тесно */
+    .hero h1 { letter-spacing:-1px; }
+    .section-head h2, .problem h2, .cta h2, .magnet h2 { letter-spacing:-.5px; }
 
     /* тексту больше места по ширине */
-    .faq .answer { max-width: 100%; font-size: 15px; }
-    .section-head p { font-size: 16.5px; }
-    .sym-list li { font-size: 16px; }
+    .faq .answer { max-width:100%; font-size:15px; }
+    .section-head p { font-size:16.5px; }
+    .sym-list li { font-size:16px; }
 
-    /* компактнее вертикаль, чтобы меньше скроллить до сути */
-    .section-head { margin-bottom: 34px; }
-    .hero-trust { gap: 10px 20px; margin-top: 28px; padding-top: 22px; }
+    /* компактнее вертикаль */
+    .section-head { margin-bottom:34px; }
+    .hero-trust { gap:10px 20px; margin-top:28px; padding-top:22px; }
+    .hero-badge { padding:11px 14px; }
+    .hero-badge b { font-size:13.5px; } .hero-badge span { font-size:12px; }
   }
 </style>
 </head>
@@ -368,16 +423,15 @@
     <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"></path></symbol>
     <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l9 16H3z"></path><path d="M12 9v5M12 17v.5"></path></symbol>
     <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 6h11v9H3z"></path><path d="M14 9h4l3 3v3h-7z"></path><circle cx="7" cy="18" r="1.8"></circle><circle cx="17" cy="18" r="1.8"></circle></symbol>
-    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M4 9a8 8 0 0114-3l2 2"></path><path d="M20 4v4h-4"></path><path d="M20 15a8 8 0 01-14 3l-2-2"></path><path d="M4 20v-4h4"></path></symbol>
-    <symbol id="i-building" viewBox="0 0 24 24"><path d="M5 21V5a2 2 0 012-2h6a2 2 0 012 2v16"></path><path d="M15 10h3a2 2 0 012 2v9"></path><path d="M8 7h2M8 11h2M8 15h2"></path></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"></path><path d="M4 7.5l8 4.5 8-4.5M12 12v9"></path></symbol>
     <symbol id="i-wallet" viewBox="0 0 24 24"><path d="M3 7a2 2 0 012-2h12v4"></path><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2H5"></path><circle cx="17" cy="14" r="1.2"></circle></symbol>
-    <symbol id="i-timer" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"></circle><path d="M12 9v4l2.5 1.5M9 2h6"></path></symbol>
+    <symbol id="i-calc" viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 7h8"></path><path d="M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"></path></symbol>
+    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h13l-3-3"></path><path d="M20 16H7l3 3"></path></symbol>
+    <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2.5"></circle><circle cx="18" cy="5" r="2.5"></circle><path d="M8.5 19H15a3.5 3.5 0 000-7H9a3.5 3.5 0 010-7h6.5"></path></symbol>
     <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0116 0v2"></path><path d="M4 14h3v5H5.5A1.5 1.5 0 014 17.5zM20 14h-3v5h1.5a1.5 1.5 0 001.5-1.5z"></path></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"></rect><path d="M8 10V7a4 4 0 018 0v3"></path></symbol>
-    <symbol id="i-window" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M3 9h18"></path><path d="M8 14h8"></path></symbol>
-    <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h13l-3-3"></path><path d="M20 16H7l3 3"></path></symbol>
-    <symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5L5 19"></path><circle cx="7.5" cy="7.5" r="2.5"></circle><circle cx="16.5" cy="16.5" r="2.5"></circle></symbol>
     <symbol id="i-list" viewBox="0 0 24 24"><path d="M9 6h12M9 12h12M9 18h12"></path><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"></path></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"></path></symbol>
   </defs>
 </svg>
 
@@ -387,11 +441,11 @@
     <a href="#" class="logo"><span class="mark"><svg class="icon"><use href="#i-truck"></use></svg></span>Газель&nbsp;Про</a>
     <nav class="nav-links" aria-label="Основная навигация">
       <a href="#problem">Проблема</a>
-      <a href="#segments">Кому подходит</a>
-      <a href="#benefits">Что получаете</a>
+      <a href="#calc">Расчёт</a>
+      <a href="#scenarios">Ситуации</a>
       <a href="#magnet">Чек-лист</a>
       <a href="#faq">Вопросы</a>
-      <a href="#contact" class="btn btn-primary">Рассчитать</a>
+      <a href="#contact" class="btn btn-primary">Оставить заявку</a>
     </nav>
   </div>
 </header>
@@ -400,18 +454,18 @@
 <section class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <span class="eyebrow"><span class="pulse"></span> Обновление и расширение парка</span>
-      <h1>Новые «Газели» в парк: машины, лизинг и страховка <span class="hl">одним пакетом</span></h1>
-      <p class="lead">Пока банк рассматривает заявку, а дилер торгуется за допы, ваши машины не выезжают. Мы собираем сделку целиком и по одному комплекту документов.</p>
+      <span class="eyebrow"><span class="pulse"></span> Для тех, кто берёт первую Газель под работу</span>
+      <h1>Машина будет.<br><span class="hl">А заказы?</span></h1>
+      <p class="lead">Купить Газель — половина дела. Страшнее другое: первый месяц без работы, а платёж по кредиту уже пришёл. Мы даём машину вместе с пулом заказов на старте и честным расчётом, когда она себя отобьёт.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary btn-lg">Рассчитать условия для парка <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
-        <a href="#magnet" class="btn btn-ghost btn-lg">Забрать чек-лист</a>
+        <a href="#calc" class="btn btn-primary btn-lg">Посчитать свою Газель <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
+        <a href="#scenarios" class="btn btn-ghost btn-lg">У меня уже есть Газель</a>
       </div>
-      <div class="under-btn"><svg class="icon"><use href="#i-lock"></use></svg> Расчёт бесплатный. Позвоним, уточним задачу, вернёмся с цифрами.</div>
+      <div class="under-btn"><svg class="icon"><use href="#i-lock"></use></svg> Расчёт за минуту, ничего заполнять не нужно</div>
       <div class="hero-trust">
-        <div class="item"><span class="ic"><svg class="icon"><use href="#i-window"></use></svg></span> Одно окно вместо трёх переговоров</div>
-        <div class="item"><span class="ic"><svg class="icon"><use href="#i-doc"></use></svg></span> Один комплект документов</div>
-        <div class="item"><span class="ic"><svg class="icon"><use href="#i-percent"></use></svg></span> Условия под ваш объём</div>
+        <div class="item"><span class="ic"><svg class="icon"><use href="#i-route"></use></svg></span> Заказы с партнёрских платформ</div>
+        <div class="item"><span class="ic"><svg class="icon"><use href="#i-chart"></use></svg></span> Понятная окупаемость</div>
+        <div class="item"><span class="ic"><svg class="icon"><use href="#i-shield"></use></svg></span> Сделка без навязанных допов</div>
       </div>
     </div>
     <div class="hero-visual">
@@ -458,9 +512,13 @@
           </g>
         </svg>
       </div>
-      <div class="hero-badge">
-        <span class="hb-ic"><svg class="icon"><use href="#i-window"></use></svg></span>
-        <div><b>Одно окно</b><span>вместо трёх переговоров</span></div>
+      <div class="hero-badge b1">
+        <span class="hb-ic"><svg class="icon"><use href="#i-route"></use></svg></span>
+        <div><b>Заказы на старте</b><span>первые месяцы не простаиваете</span></div>
+      </div>
+      <div class="hero-badge b2">
+        <span class="hb-ic"><svg class="icon"><use href="#i-swap"></use></svg></span>
+        <div><b>Trade-in по-честному</b><span>без занижения цены</span></div>
       </div>
     </div>
   </div>
@@ -471,20 +529,20 @@
   <div class="wrap">
     <div class="problem">
       <div class="reveal">
-        <div class="kicker">Знакомо?</div>
-        <h2>Машины нужны вчера. Согласования идут неделями.</h2>
-        <p style="color:var(--muted);font-size:17px;margin-top:16px;">Сложность обновления парка редко в самих машинах. Она в согласованиях, деньгах и бумагах.</p>
+        <div class="kicker">Знакомый страх</div>
+        <h2>Платёж приходит каждый месяц. А заказы — как получится.</h2>
+        <p style="color:var(--muted);font-size:17px;margin-top:16px;">Когда берёшь первую машину под работу, считаешь не цену. Считаешь, дотянешь ли до следующего платежа.</p>
         <div class="problem-note">
-          Так устроен рынок: транспорт, финансирование и страхование живут в трёх разных местах. Сводить их приходится вам.
+          Дело не в вас и не в машине. Просто транспорт продают отдельно, а работу для него искать приходится самому — с нуля и в одиночку.
         </div>
       </div>
       <ul class="sym-list reveal">
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Заявку на лизинг рассматривают неделями. Заказы столько не ждут.</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Дилер добавляет допы, без которых «машину не отдадут».</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Изношенный парк ест деньги: ремонты, простои, эвакуатор.</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Иностранные фургоны ушли, замены нет, логистика буксует.</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Страхование парка — ещё один круг переговоров и ещё один пакет бумаг.</li>
-        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> На партию типовые условия не гнутся: обычный посредник разводит руками.</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Взял кредит, а первые недели машина стоит во дворе</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> На биржах новичку без рейтинга достаются худшие рейсы</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Непонятно, сколько реально останется в кармане после топлива и платежа</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> В салоне навязывают допы, без которых «машину не отдадут»</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> Старую Газель оценивают так, будто она вообще ничего не стоит</li>
+        <li><span class="bul"><svg class="icon"><use href="#i-x"></use></svg></span> И главное — не с кем посоветоваться: решение на 2,5 млн принимаешь один</li>
       </ul>
     </div>
   </div>
@@ -494,198 +552,206 @@
 <section class="block soft">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="kicker">Как мы работаем</div>
-      <h2>Собираем сделку целиком</h2>
-      <p>Вы называете задачу. Мы приносим готовый пакет: подходящие машины, финансирование и полис в одном расчёте.</p>
+      <div class="kicker">Что мы делаем</div>
+      <h2>Даём машину вместе с работой для неё</h2>
+      <p>Смысл не в том, чтобы продать вам Газель. Смысл в том, чтобы через месяц она возила заказы, а не стояла у подъезда.</p>
     </div>
     <div class="grid grid-3">
       <div class="benefit reveal">
-        <div class="b-ic"><svg class="icon"><use href="#i-truck"></use></svg></div>
-        <h3>Подбираем машины</h3>
-        <p>Под ваши маршруты, грузы и режим работы. От одной единицы до партии.</p>
+        <div class="b-ic green"><svg class="icon"><use href="#i-route"></use></svg></div>
+        <h3>Пул заказов на старте</h3>
+        <p>Подключаем к партнёрским логистическим платформам, чтобы первые месяцы работа была сразу, без раскачки и набора рейтинга с нуля.</p>
       </div>
       <div class="benefit reveal">
-        <div class="b-ic"><svg class="icon"><use href="#i-wallet"></use></svg></div>
-        <h3>Готовим финансирование</h3>
-        <p>Параллельно с подбором, по минимальному комплекту документов.</p>
+        <div class="b-ic"><svg class="icon"><use href="#i-chart"></use></svg></div>
+        <h3>Честный расчёт до покупки</h3>
+        <p>Показываем платёж, расходы и сколько останется в месяц. Вы видите экономику до подписания, а не после.</p>
       </div>
       <div class="benefit reveal">
-        <div class="b-ic"><svg class="icon"><use href="#i-shield"></use></svg></div>
-        <h3>Оформляем страхование</h3>
-        <p>В том же пакете. Второй круг переговоров не понадобится.</p>
+        <div class="b-ic amber"><svg class="icon"><use href="#i-swap"></use></svg></div>
+        <h3>Trade-in без занижения</h3>
+        <p>Оценка старой Газели по фото и онлайн — без поездок по салонам и «ой, у вас же тут коррозия» в последний момент.</p>
       </div>
-    </div>
-    <div class="cta-inline reveal">
-      <a href="#contact" class="btn btn-primary btn-lg">Рассчитать условия для парка <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
-      <div class="under-btn" style="color:var(--muted)"><svg class="icon"><use href="#i-lock"></use></svg> Ни к чему не обязывает. Можно просто узнать цифры.</div>
     </div>
   </div>
 </section>
 
-<!-- ═══ СЕГМЕНТЫ ═══ -->
-<section class="block" id="segments">
+<!-- ═══ КАЛЬКУЛЯТОР ═══ -->
+<section class="block" id="calc">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="kicker">Кому подходит</div>
-      <h2>Найдите свою ситуацию</h2>
-      <p>К нам приходят компании, для которых транспорт — рабочий инструмент. Вот три частых случая.</p>
+      <div class="kicker">Прозрачная экономика</div>
+      <h2>Посчитайте, что останется в кармане</h2>
+      <p>Подвигайте ползунки под свою ситуацию. Никаких полей заполнять не нужно — расчёт считается сразу.</p>
     </div>
-    <div class="grid grid-3">
 
-      <div class="seg-card reveal">
+    <div class="calc reveal">
+      <div class="calc-in">
+        <h3>Ваши вводные</h3>
+        <div class="sub">Поставьте цифры, близкие к вашим</div>
+
+        <div class="fld">
+          <div class="lbl"><span>Стоимость машины</span><b id="v-price">2 500 000 ₽</b></div>
+          <input type="range" id="r-price" min="1500000" max="3500000" step="50000" value="2500000">
+        </div>
+
+        <div class="fld">
+          <div class="lbl"><span>Первоначальный взнос</span><b id="v-down">20% · 500 000 ₽</b></div>
+          <input type="range" id="r-down" min="0" max="50" step="5" value="20">
+        </div>
+
+        <div class="fld">
+          <div class="lbl"><span>Срок</span><b id="v-term">5 лет</b></div>
+          <div class="segbtns" id="terms">
+            <button data-y="3">3 года</button>
+            <button data-y="4">4 года</button>
+            <button data-y="5" class="on">5 лет</button>
+          </div>
+        </div>
+
+        <div class="fld">
+          <div class="lbl"><span>Ставка, % годовых</span><b id="v-rate">20%</b></div>
+          <input type="range" id="r-rate" min="8" max="32" step="1" value="20">
+        </div>
+
+        <div class="fld">
+          <div class="lbl"><span>Доход с рейсов в месяц</span><b id="v-income">220 000 ₽</b></div>
+          <input type="range" id="r-income" min="80000" max="450000" step="10000" value="220000">
+        </div>
+
+        <div class="fld" style="margin-bottom:0">
+          <div class="lbl"><span>Топливо, ремонт, прочее</span><b id="v-cost">35% дохода</b></div>
+          <input type="range" id="r-cost" min="15" max="60" step="1" value="35">
+        </div>
+      </div>
+
+      <div class="calc-out">
+        <div class="row pay"><span>Платёж по кредиту</span><b id="o-pay">—</b></div>
+        <div class="row cost"><span>Расходы на работу</span><b id="o-cost">—</b></div>
+        <div class="row"><span>Доход с рейсов</span><b id="o-income">—</b></div>
+        <div class="total" id="o-total-box">
+          <div class="t-lbl">Остаётся в месяц</div>
+          <div class="t-val" id="o-total">—</div>
+          <div class="t-note" id="o-note">после платежа и расходов</div>
+        </div>
+        <div class="cta-row">
+          <a href="#contact" class="btn btn-primary btn-block" id="calc-cta">Хочу такой расчёт по своей машине <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
+        </div>
+        <div class="calc-disc">
+          Расчёт ориентировочный и нужен для прикидки. Не является офертой, предложением кредита или финансовой рекомендацией. Точные условия определяет банк или лизинговая компания.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ДВЕ СИТУАЦИИ ═══ -->
+<section class="block soft" id="scenarios">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Две ситуации</div>
+      <h2>С чем к нам приходят</h2>
+      <p>Задачи разные, а вопрос один: как выйти на сделку и не остаться в минусе.</p>
+    </div>
+    <div class="grid grid-2">
+
+      <div class="scen a reveal">
         <div class="s-ic"><svg class="icon"><use href="#i-truck"></use></svg></div>
-        <h3>Транспортная компания, 2–5 машин</h3>
-        <div class="quote">«Парк изношен, обновлять надо срочно. Но банки одобряют лизинг неделями, а дилеры навязывают дорогие кредиты и допы».</div>
+        <h3>Беру первую Газель под работу</h3>
+        <div class="quote">«Хочу работать на себя, но боюсь: возьму кредит, а заказов не будет. Чем тогда платить?»</div>
         <div class="val-label">Что предлагаем</div>
         <ul>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Решение по лизингу без месяца ожидания</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Минимальный комплект документов</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Страхование парка в том же пакете</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Цена без навязанных допов</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Пул заказов на первые месяцы работы</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Расчёт окупаемости до покупки, а не догадки</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Подбор машины под ваш тип перевозок</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Сделка без навязанных допов и скрытых платежей</li>
         </ul>
-        <div class="s-cta"><a href="#contact">Это про нас, рассчитайте <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
+        <div class="s-cta"><a href="#contact">Это про меня <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
       </div>
 
-      <div class="seg-card reveal">
-        <div class="s-ic"><svg class="icon"><use href="#i-refresh"></use></svg></div>
-        <h3>Аренда и раскат техники</h3>
-        <div class="quote">«Клиенты убивают машины за год. Купить новые партией без переплаты и с нормальной страховкой сложно, обычные посредники гибких условий не дают».</div>
+      <div class="scen b reveal">
+        <div class="s-ic"><svg class="icon"><use href="#i-swap"></use></svg></div>
+        <h3>Меняю старую Газель на новую</h3>
+        <div class="quote">«Машине больше семи лет, ремонты чаще рейсов. Но в салоне оценивают так, что менять становится невыгодно».</div>
         <div class="val-label">Что предлагаем</div>
         <ul>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Условия на покупку партии машин</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Полис с учётом интенсивной эксплуатации</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Помощь с выкупом изношенной техники</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Гибкость под быструю оборачиваемость парка</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Оценка по фото онлайн — без поездок по салонам</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Цена без занижения в последний момент</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Повышенная скидка на новую машину в зачёт старой</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Быстрое оформление, без недели беготни</li>
         </ul>
-        <div class="s-cta"><a href="#contact">Это про нас, рассчитайте <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
-      </div>
-
-      <div class="seg-card reveal">
-        <div class="s-ic"><svg class="icon"><use href="#i-building"></use></svg></div>
-        <h3>Корпоративный флот дистрибьютора</h3>
-        <div class="quote">«Иностранные фургоны ушли, логистика встала. Обслуживание остатков парка дорожает, а единого окна для покупки и страхования флота нет».</div>
-        <div class="val-label">Что предлагаем</div>
-        <ul>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Единый договор на обновление флота</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Условия за объём при закупке партии</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Решения для непрерывности логистики</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Покрытие рисков по всему парку</li>
-        </ul>
-        <div class="s-cta"><a href="#contact">Это про нас, рассчитайте <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
+        <div class="s-cta"><a href="#contact">Это про меня <svg class="icon"><use href="#i-arrow"></use></svg></a></div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ═══ ПРЕИМУЩЕСТВА ═══ -->
-<section class="block soft" id="benefits">
+<!-- ═══ КАК ЭТО РАБОТАЕТ ═══ -->
+<section class="block" id="how">
   <div class="wrap">
     <div class="section-head reveal">
-      <div class="kicker">Что вы получаете</div>
-      <h2>Парк на линии и закрытый вопрос</h2>
-      <p>Что меняется, когда машины, деньги и страховка собираются в одну сделку.</p>
-    </div>
-    <div class="grid grid-3">
-      <div class="benefit reveal">
-        <div class="b-ic"><svg class="icon"><use href="#i-timer"></use></svg></div>
-        <h3>Машины выходят на линию раньше</h3>
-        <p>Финансирование готовим параллельно с подбором. Экономия измеряется неделями.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="b-ic"><svg class="icon"><use href="#i-doc"></use></svg></div>
-        <h3>Один комплект документов</h3>
-        <p>Собираете бумаги один раз. Остальное берём на себя.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="b-ic"><svg class="icon"><use href="#i-percent"></use></svg></div>
-        <h3>Условия под объём</h3>
-        <p>Партию считают по другим правилам. Чем больше машин, тем гибче разговор.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="b-ic"><svg class="icon"><use href="#i-wallet"></use></svg></div>
-        <h3>Цена без сюрпризов</h3>
-        <p>Все составляющие сделки видно до подписания. Допы не всплывают в договоре.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="b-ic"><svg class="icon"><use href="#i-swap"></use></svg></div>
-        <h3>Старый парк не повиснет</h3>
-        <p>Поможем закрыть вопрос с изношенной техникой при обновлении.</p>
-      </div>
-      <div class="benefit reveal">
-        <div class="b-ic"><svg class="icon"><use href="#i-headset"></use></svg></div>
-        <h3>Один ответственный контакт</h3>
-        <p>Сделку ведёт один человек. Пересказывать задачу трижды не придётся.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ СРАВНЕНИЕ ═══ -->
-<section class="block" id="why">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="kicker">Чем мы отличаемся</div>
-      <h2>Два пути к новому парку</h2>
-      <p>Собрать всё самостоятельно реально, и иногда это оправдано. Вот честная разница.</p>
-    </div>
-    <div class="compare">
-      <div class="col bad reveal">
-        <h3><span class="h-ic"><svg class="icon"><use href="#i-search"></use></svg></span>Дилер, банк и страховая по отдельности</h3>
-        <div class="col-sub">Классический путь</div>
-        <ul>
-          <li class="plus"><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Полный контроль над выбором каждого контрагента</li>
-          <li class="plus"><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> С каждым можно торговаться отдельно</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Три переговорных процесса и три пакета документов</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Финансирование ждёт своей очереди, машины стоят</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Дилер продаёт то, что стоит у него, и добавляет допы</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> На стыках всё рассыпается, сводить приходится вам</li>
-        </ul>
-      </div>
-      <div class="col good reveal">
-        <h3><span class="h-ic"><svg class="icon"><use href="#i-window"></use></svg></span>Одно окно с «Газель&nbsp;Про»</h3>
-        <div class="col-sub">Сделка собирается целиком</div>
-        <ul>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Машины, финансирование и полис в одном расчёте</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Один комплект документов вместо трёх</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Деньги готовятся, пока идёт подбор машин</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Машины подбираем под вашу работу и маршруты</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Условия гнутся под объём и режим эксплуатации</li>
-          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Один ответственный за всю сделку</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ ПЛАН ДЕЙСТВИЙ ═══ -->
-<section class="block soft" id="how">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="kicker">План действий</div>
-      <h2>Три шага до новых машин</h2>
-      <p>Никаких сложных схем. Вот что будет происходить дальше.</p>
+      <div class="kicker">Как это работает</div>
+      <h2>Три шага до своей машины</h2>
+      <p>Без сложных схем. Вот что будет дальше.</p>
     </div>
     <div class="grid grid-3 steps">
       <div class="step reveal">
         <div class="num">1</div>
         <span class="connector"><svg class="icon"><use href="#i-arrow-r"></use></svg></span>
         <h3>Оставляете заявку</h3>
-        <p>Минута времени: контакт, профиль компании и сколько машин нужно. Дальше звоним и уточняем задачу.</p>
+        <p>Минута времени: имя, телефон и ваша ситуация. Перезваниваем и разбираем задачу.</p>
       </div>
       <div class="step reveal">
         <div class="num">2</div>
         <span class="connector"><svg class="icon"><use href="#i-arrow-r"></use></svg></span>
-        <h3>Получаете расчёт</h3>
-        <p>Подбираем машины, считаем финансирование и страхование. Показываем одним документом.</p>
+        <h3>Считаем вашу экономику</h3>
+        <p>Подбираем машину, показываем платёж и что останется в месяц с учётом заказов. Оцениваем старую, если есть.</p>
       </div>
       <div class="step reveal">
         <div class="num">3</div>
-        <h3>Забираете машины</h3>
-        <p>Оформляем сделку по одному комплекту документов и передаём транспорт. Вы возвращаетесь к рейсам.</p>
+        <h3>Выходите на работу</h3>
+        <p>Помогаем оформить сделку и подключаем к заказам, чтобы машина начала зарабатывать сразу.</p>
       </div>
     </div>
-    <div class="after-steps reveal">Вопрос с транспортом закрыт: <b>парк на линии и зарабатывает.</b></div>
+    <div class="after-steps reveal">Через несколько недель — своя машина и работа для неё, <b>а не кредит и пустой кузов.</b></div>
+  </div>
+</section>
+
+<!-- ═══ СРАВНЕНИЕ ═══ -->
+<section class="block soft" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Чем отличается</div>
+      <h2>Два пути к первой машине</h2>
+      <p>Купить самому реально, и так делают многие. Вот честная разница.</p>
+    </div>
+    <div class="compare">
+      <div class="col bad reveal">
+        <h3><span class="h-ic"><svg class="icon"><use href="#i-search"></use></svg></span>Салон + кредит + биржи самому</h3>
+        <div class="col-sub">Обычный путь</div>
+        <ul>
+          <li class="plus"><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Полная свобода: выбираете всё сами</li>
+          <li class="plus"><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Можно поторговаться с каждым отдельно</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Машина есть, а работу для неё ищете с нуля</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Экономику узнаёте на практике, когда уже платите</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Менеджеру важно продать сегодня и добавить допы</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-x"></use></svg></span> Старую машину оценят по-своему, спорить не с кем</li>
+        </ul>
+      </div>
+      <div class="col good reveal">
+        <h3><span class="h-ic"><svg class="icon"><use href="#i-route"></use></svg></span>С «Газель&nbsp;Про»</h3>
+        <div class="col-sub">Машина и работа для неё вместе</div>
+        <ul>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Заказы подключаем на старте, простой сведён к минимуму</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Экономику видите до сделки, а не после</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Подбор под ваш тип перевозок и маршруты</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Условия проговариваем заранее, допы не всплывают</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Trade-in по прозрачной оценке</li>
+          <li><span class="tick"><svg class="icon"><use href="#i-check"></use></svg></span> Есть с кем посоветоваться перед решением на 2,5 млн</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -695,13 +761,13 @@
     <div class="magnet reveal">
       <div>
         <div class="kicker">Бесплатно</div>
-        <h2>Чек-лист: 12 пунктов перед обновлением парка</h2>
-        <p class="m-lead">Собрали места, где чаще всего теряют деньги при покупке партии транспорта. Забирайте — пригодится, даже если работать будете не с нами.</p>
+        <h2>Чек-лист: 12 пунктов перед покупкой Газели</h2>
+        <p class="m-lead">Собрали места, где чаще всего теряют деньги при покупке рабочей машины. Забирайте — пригодится, даже если работать будете не с нами.</p>
         <ul>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Какие допы дилера можно убрать из счёта</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Как сравнивать лизинг по переплате, а ставку оставить в стороне</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Что спросить про страховку, если машины идут в наём</li>
-          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Когда обсуждать оценку старой техники, чтобы её не срезали</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Какие допы в салоне можно убрать из счёта</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Как сравнивать кредит и лизинг по итоговой переплате</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Когда обсуждать оценку старой машины, чтобы её не срезали</li>
+          <li><span class="tk"><svg class="icon"><use href="#i-check"></use></svg></span> Что спросить про страховку, если машина работает каждый день</li>
         </ul>
       </div>
       <div>
@@ -714,7 +780,7 @@
         </form>
         <div class="magnet-ok" id="magnet-ok" hidden>
           <b>Готово, чек-лист открыт</b>
-          <p>Сохраните страницу в закладки или распечатайте — пригодится на переговорах.</p>
+          <p>Сохраните в закладки или распечатайте — пригодится в салоне.</p>
           <a class="btn btn-primary btn-block" href="/checklist.html" target="_blank" rel="noopener">Открыть чек-лист <svg class="icon"><use href="#i-arrow"></use></svg></a>
         </div>
       </div>
@@ -732,32 +798,28 @@
     </div>
     <div class="faq reveal">
       <details>
+        <summary>Что значит «заказы на старте»? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Мы подключаем вас к партнёрским логистическим платформам, где есть регулярный поток рейсов, чтобы не начинать с нуля и не собирать рейтинг месяцами. Конкретный объём и условия проговариваем при разговоре — они зависят от вашего города, типа кузова и графика.</div>
+      </details>
+      <details>
         <summary>Сколько стоят ваши услуги? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Расчёт и подбор бесплатны. Стоимость самой сделки — машин, финансирования и страхования — вы видите до того, как что-то подписываете.</div>
+        <div class="answer">Расчёт и консультация бесплатны. Стоимость машины и условия финансирования вы видите до того, как что-то подписываете.</div>
       </details>
       <details>
-        <summary>От скольких машин работаете? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Возьмёмся и за одну единицу, и за партию. Но чем больше объём, тем гибче условия: от 2–3 машин разница уже заметна.</div>
+        <summary>У меня нет опыта работы на себя. Мне подойдёт? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Как раз для этого случая и делалось. Разберём вашу экономику по цифрам: сколько платёж, сколько уйдёт на топливо и обслуживание, что реально останется. Если по расчёту не сходится — честно скажем, а не будем уговаривать.</div>
       </details>
       <details>
-        <summary>Как быстро будет решение по лизингу? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Финансирование готовим параллельно с подбором машин и по минимальному комплекту документов. Это заметно быстрее последовательного пути «сначала дилер, потом банк». Конкретный срок назовём по вашей ситуации.</div>
+        <summary>Моей Газели больше семи лет. Возьмёте в зачёт? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Пришлите фото — сделаем предварительную оценку онлайн, без поездок по салонам. Цену называем сразу и не пересматриваем задним числом.</div>
       </details>
       <details>
-        <summary>Что делать со старым парком? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Расскажите, что у вас на балансе. Поможем закрыть вопрос с изношенной техникой в рамках обновления, чтобы она не висела мёртвым грузом.</div>
+        <summary>Я пока просто прицениваюсь. Можно обратиться? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Да, и это нормально. Расчёт как раз помогает решить, стоит ли вообще ввязываться. Названивать и давить никто не будет.</div>
       </details>
       <details>
-        <summary>Бюджет ещё не утверждён. Есть смысл обращаться? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Как раз на этом этапе расчёт полезнее всего: будет с чем идти к собственнику или на бюджетный комитет. Давить и названивать никто не станет.</div>
-      </details>
-      <details>
-        <summary>Обязательно оформлять страхование через вас? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Нет. Пакетом обычно выходит быстрее и удобнее, но вы вправе оставить страхование там, где привыкли. На подбор машин и финансирование это не влияет.</div>
-      </details>
-      <details>
-        <summary>Что вы сделаете с нашими контактами? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
-        <div class="answer">Свяжемся только по вашей заявке. Рассылок нет, контакты третьим лицам не передаём.</div>
+        <summary>Что вы сделаете с моим номером? <span class="chev"><svg class="icon"><use href="#i-chevron-d"></use></svg></span></summary>
+        <div class="answer">Свяжемся только по вашей заявке. Рассылок нет, номер третьим лицам не передаём.</div>
       </details>
     </div>
   </div>
@@ -767,8 +829,8 @@
 <section class="block" id="contact">
   <div class="wrap">
     <div class="cta reveal">
-      <h2>Расскажите про парк — вернёмся с цифрами</h2>
-      <p>Оставьте заявку. Свяжемся, уточним задачу и подготовим расчёт по машинам, финансированию и страхованию. Бесплатно и без обязательств.</p>
+      <h2>Узнайте свои цифры до того, как подпишете кредит</h2>
+      <p>Оставьте заявку — перезвоним, разберём вашу ситуацию и посчитаем экономику с учётом заказов. Бесплатно и ни к чему не обязывает.</p>
 
       <!-- Заявки уходят через серверную функцию /api/lead в Telegram -->
       <form class="lead-form" id="lead-form">
@@ -778,36 +840,31 @@
           <input type="tel" name="phone" placeholder="Телефон" required>
         </div>
         <select name="segment" required>
-          <option value="" disabled selected>Чем занимается компания</option>
-          <option>Перевозки, свой парк 2–5 машин</option>
-          <option>Аренда и раскат техники</option>
-          <option>Дистрибуция, корпоративный парк</option>
-          <option>Другое</option>
+          <option value="" disabled selected>Ваша ситуация</option>
+          <option>Беру первую Газель под работу</option>
+          <option>Меняю старую Газель на новую</option>
+          <option>Уже работаю, хочу вторую машину</option>
+          <option>Пока прицениваюсь</option>
         </select>
-        <div class="row">
-          <select name="fleet" required>
-            <option value="" disabled selected>Сколько машин нужно</option>
-            <option>1–2</option>
-            <option>3–5</option>
-            <option>6–10</option>
-            <option>Больше 10</option>
-          </select>
-          <select name="timing" required>
-            <option value="" disabled selected>Когда нужны машины</option>
-            <option>Уже сейчас</option>
-            <option>В ближайший месяц</option>
-            <option>В течение квартала</option>
-            <option>Пока изучаем</option>
-          </select>
+        <select name="timing" required>
+          <option value="" disabled selected>Когда планируете</option>
+          <option>Уже сейчас</option>
+          <option>В ближайший месяц</option>
+          <option>В течение 2–3 месяцев</option>
+          <option>Пока изучаю</option>
+        </select>
+        <div class="calc-chip" id="calc-chip">
+          <svg class="icon"><use href="#i-calc"></use></svg>
+          <span id="calc-chip-text">Приложим ваш расчёт из калькулятора</span>
         </div>
-        <button type="submit" class="btn btn-primary btn-lg"><svg class="icon"><use href="#i-check"></use></svg> Получить расчёт по парку</button>
-        <div class="form-note"><svg class="icon"><use href="#i-lock"></use></svg> Свяжемся в рабочее время. Без спама и передачи данных третьим лицам.</div>
+        <button type="submit" class="btn btn-primary btn-lg"><svg class="icon"><use href="#i-check"></use></svg> Получить расчёт</button>
+        <div class="form-note"><svg class="icon"><use href="#i-lock"></use></svg> Перезвоним в рабочее время. Без спама и передачи данных третьим лицам.</div>
       </form>
 
       <div class="form-success" id="form-success" hidden>
         <div class="fs-ic"><svg class="icon"><use href="#i-check"></use></svg></div>
         <b>Заявка принята</b>
-        Свяжемся в ближайшее время и подготовим расчёт по вашему парку.
+        Перезвоним в ближайшее время и разберём вашу ситуацию по цифрам.
       </div>
       <div class="form-note" id="form-err" hidden style="color:#FCA5A5; margin-top:16px;">
         <svg class="icon"><use href="#i-alert"></use></svg> Не удалось отправить заявку. Проверьте интернет и попробуйте ещё раз.
@@ -821,23 +878,23 @@
   <div class="wrap">
     <div class="foot">
       <div class="logo"><span class="mark" style="width:32px;height:32px;border-radius:9px"><svg class="icon" style="width:18px;height:18px"><use href="#i-truck"></use></svg></span>Газель&nbsp;Про</div>
-      <div>© 2026 · Газель Про — обновление и расширение парка для бизнеса</div>
+      <div>© 2026 · Газель Про — покупка коммерческого транспорта для работы</div>
     </div>
     <div class="disclaimer">
-      Данная страница создана в рамках учебной инициативы и используется для исследования и тестирования спроса.
-      Все материалы, изображения и описания носят информационный характер, не являются рекламой конкретного товара
-      или финансовой услуги и <b>не являются публичной офертой</b> (ст. 437 ГК РФ). Условия поставки, финансирования
-      и страхования, стоимость, характеристики и наличие уточняются индивидуально. Оставляя заявку, вы соглашаетесь
-      на обработку указанных вами контактных данных для связи по вашему обращению.
+      Страница создана в рамках учебной инициативы и используется для исследования и тестирования спроса.
+      Все материалы носят информационный характер, не являются рекламой конкретного товара, финансовой услуги
+      или индивидуальной финансовой рекомендацией и <b>не являются публичной офертой</b> (ст. 437 ГК РФ).
+      Расчёт в калькуляторе ориентировочный: фактические условия покупки, кредита, лизинга, страхования,
+      оценки Trade-in и подключения к заказам определяются договором с соответствующей организацией и могут отличаться.
+      Оставляя заявку, вы соглашаетесь на обработку указанных вами контактных данных для связи по вашему обращению.
       Сайт использует файлы cookie и сервис Яндекс.Метрика для сбора обезличенной статистики посещений.
-      Продолжая пользоваться сайтом, вы соглашаетесь на это. Отключить сбор можно в настройках браузера.
     </div>
   </div>
 </footer>
 
 <!-- ═══ MOBILE STICKY CTA ═══ -->
 <div class="mobile-cta">
-  <a href="#contact" class="btn btn-primary btn-block">Рассчитать условия для парка <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
+  <a href="#calc" class="btn btn-primary btn-block">Посчитать свою Газель <svg class="icon arrow"><use href="#i-arrow"></use></svg></a>
 </div>
 
 <script>
@@ -859,18 +916,82 @@
     try { if (typeof ym === 'function') ym(111024604, 'reachGoal', name); } catch (e) {}
   }
 
-  // отправка заявки через серверную функцию /api/lead (она шлёт в Telegram)
+  /* ═══ КАЛЬКУЛЯТОР ═══ */
+  const el = id => document.getElementById(id);
+  const fmt = n => Math.round(n).toLocaleString('ru-RU') + ' ₽';
+  let years = 5, calcSummary = '';
+
+  function calc() {
+    const price  = +el('r-price').value;
+    const downP  = +el('r-down').value;
+    const rate   = +el('r-rate').value;
+    const income = +el('r-income').value;
+    const costP  = +el('r-cost').value;
+
+    const down = price * downP / 100;
+    const body = price - down;
+    const i = rate / 100 / 12;
+    const n = years * 12;
+    const pay = i > 0 ? body * i / (1 - Math.pow(1 + i, -n)) : body / n;
+    const cost = income * costP / 100;
+    const left = income - cost - pay;
+
+    el('v-price').textContent  = fmt(price);
+    el('v-down').textContent   = downP + '% · ' + fmt(down);
+    el('v-rate').textContent   = rate + '%';
+    el('v-income').textContent = fmt(income);
+    el('v-cost').textContent   = costP + '% дохода';
+    el('v-term').textContent   = years + (years === 3 ? ' года' : ' лет');
+
+    el('o-pay').textContent    = fmt(pay);
+    el('o-cost').textContent   = fmt(cost);
+    el('o-income').textContent = fmt(income);
+    el('o-total').textContent  = fmt(left);
+
+    const box = el('o-total-box');
+    box.classList.toggle('minus', left < 0);
+    el('o-note').textContent = left < 0
+      ? 'при этих вводных машина не окупается — давайте пересчитаем вместе'
+      : 'после платежа и расходов';
+
+    calcSummary = 'Машина ' + fmt(price) + ' · взнос ' + downP + '% · ' + years + ' лет · ставка ' + rate + '%\n' +
+      'Доход ' + fmt(income) + '/мес · расходы ' + costP + '%\n' +
+      '→ платёж ' + fmt(pay) + ' · остаётся ' + fmt(left) + '/мес';
+
+    const chip = el('calc-chip');
+    if (chip) {
+      chip.classList.add('on');
+      el('calc-chip-text').textContent = 'Приложим ваш расчёт: остаётся ' + fmt(left) + '/мес';
+    }
+  }
+
+  ['r-price','r-down','r-rate','r-income','r-cost'].forEach(id => el(id).addEventListener('input', calc));
+  document.querySelectorAll('#terms button').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('#terms button').forEach(x => x.classList.remove('on'));
+    b.classList.add('on'); years = +b.dataset.y; calc();
+  }));
+  calc();
+
+  // отметим в Метрике, что человек реально трогал калькулятор
+  let calcTouched = false;
+  document.querySelectorAll('#calc input[type=range], #terms button').forEach(x =>
+    x.addEventListener('change', () => { if (!calcTouched) { calcTouched = true; goal('calc_used'); } })
+  );
+
+  /* ═══ ОТПРАВКА ЗАЯВОК ═══ */
+  // источник перехода (в т.ч. персональные ссылки с utm-метками)
+  const srcParams = window.location.search ? window.location.search.replace(/^\?/, '') : 'прямой заход';
+
   async function sendLead(payload) {
     const resp = await fetch('/api/lead', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(Object.assign({ source: srcParams }, payload))
     });
     const data = await resp.json().catch(function () { return {}; });
     if (!resp.ok || !data.ok) throw new Error('fail');
   }
 
-  // основная форма — расчёт по парку
   const leadForm = document.getElementById('lead-form');
   if (leadForm) {
     leadForm.addEventListener('submit', async (e) => {
@@ -883,12 +1004,12 @@
       const fd = new FormData(leadForm);
       try {
         await sendLead({
-          type: 'Расчёт по парку',
+          type: 'Расчёт',
           name: fd.get('name') || '',
           phone: fd.get('phone') || '',
           segment: fd.get('segment') || '',
-          fleet: fd.get('fleet') || '',
-          timing: fd.get('timing') || ''
+          timing: fd.get('timing') || '',
+          calc: calcSummary
         });
         goal('lead_calc');
         leadForm.hidden = true;
@@ -902,7 +1023,6 @@
     });
   }
 
-  // форма лид-магнита — чек-лист
   const magnetForm = document.getElementById('magnet-form');
   if (magnetForm) {
     magnetForm.addEventListener('submit', async (e) => {
@@ -912,14 +1032,8 @@
       btn.disabled = true; btn.style.opacity = '.7';
       const fd = new FormData(magnetForm);
       try {
-        await sendLead({
-          type: 'Чек-лист',
-          name: fd.get('name') || '',
-          phone: fd.get('phone') || ''
-        });
-      } catch (e2) {
-        // материал отдаём в любом случае — человек своё уже сделал
-      }
+        await sendLead({ type: 'Чек-лист', name: fd.get('name') || '', phone: fd.get('phone') || '' });
+      } catch (e2) { /* материал отдаём в любом случае */ }
       goal('lead_checklist');
       magnetForm.hidden = true;
       const ok = document.getElementById('magnet-ok');

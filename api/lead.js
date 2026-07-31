@@ -30,6 +30,8 @@ module.exports = async (req, res) => {
     const segment = String(body.segment || '').slice(0, 120);
     const fleet   = String(body.fleet   || '').slice(0, 60);
     const timing  = String(body.timing  || '').slice(0, 100);
+    const calc    = String(body.calc    || '').slice(0, 300);
+    const source  = String(body.source  || '').slice(0, 200);
 
     const isChecklist = type === 'Чек-лист';
 
@@ -38,9 +40,11 @@ module.exports = async (req, res) => {
       '👤 Имя: ' + name + '\n' +
       '📞 Телефон: ' + phone;
 
-    if (segment) text += '\n🏢 Профиль: ' + segment;
+    if (segment) text += '\n🎯 Ситуация: ' + segment;
     if (fleet)   text += '\n🚐 Машин: ' + fleet;
-    if (timing)  text += '\n🗓 Когда нужны: ' + timing;
+    if (timing)  text += '\n🗓 Когда: ' + timing;
+    if (calc)    text += '\n\n🧮 Его расчёт:\n' + calc;
+    if (source)  text += '\n\n🔗 Источник: ' + source;
 
     const tg = await fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
       method: 'POST',
