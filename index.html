@@ -126,28 +126,28 @@
 
   .hero-visual { position:relative; }
   .hero-photo {
-    position:relative; aspect-ratio:4/3.3; border-radius:22px; overflow:hidden;
+    position:relative; aspect-ratio:4/2.9; border-radius:22px; overflow:hidden;
     background:repeating-linear-gradient(135deg, rgba(255,255,255,.05) 0 2px, transparent 2px 13px), linear-gradient(160deg,#14264C,#0E1D3B);
     border:1px solid rgba(255,255,255,.12); box-shadow:0 40px 80px rgba(0,10,40,.5); display:grid; place-items:center;
   }
-  .hero-photo .hero-van { position:relative; z-index:2; width:84%; max-width:410px; height:auto; animation:vanFloat 5s ease-in-out infinite; }
+  .hero-photo .hero-van { position:relative; z-index:2; width:92%; max-width:480px; height:auto; animation:vanFloat 5s ease-in-out infinite; }
   .hero-photo .glow { position:absolute; inset:auto -20% -30% -20%; height:60%; background:radial-gradient(ellipse at center, rgba(0,87,231,.4), transparent 70%); filter:blur(20px); }
   @keyframes vanFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
   @keyframes wheelSpin { to { transform:rotate(360deg); } }
   .hero-van .wheel-spin { transform-box:fill-box; transform-origin:center; animation:wheelSpin 2.2s linear infinite; }
-  .hero-badge {
-    position:absolute; z-index:3; background:#fff; color:var(--ink);
-    border-radius:15px; padding:13px 17px; display:flex; align-items:center; gap:12px; box-shadow:var(--shadow-lg);
+  /* факты под картинкой — картинку больше не загораживают */
+  .hero-facts { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px; }
+  @media (max-width:520px){ .hero-facts { grid-template-columns:1fr; } }
+  .hero-facts .fact {
+    display:flex; align-items:center; gap:12px; padding:13px 15px; border-radius:14px;
+    background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14);
   }
-  .hero-badge.b1 { left:-16px; bottom:74px; }
-  .hero-badge.b2 { right:-10px; bottom:16px; }
-  @media (max-width:480px){ .hero-badge.b1 { left:4px; } .hero-badge.b2 { right:4px; } }
-  .hero-badge .hb-ic { width:38px; height:38px; border-radius:11px; display:grid; place-items:center; flex:0 0 auto; }
-  .hero-badge.b1 .hb-ic { background:var(--money-pale); color:var(--money); }
-  .hero-badge.b2 .hb-ic { background:var(--amber-pale); color:var(--amber-dark); }
-  .hero-badge .hb-ic .icon { width:20px; height:20px; }
-  .hero-badge b { display:block; font-size:14.5px; font-weight:800; }
-  .hero-badge span { font-size:12.5px; color:var(--muted); }
+  .hero-facts .hb-ic { width:36px; height:36px; border-radius:10px; display:grid; place-items:center; flex:0 0 auto; }
+  .hero-facts .fact:nth-child(1) .hb-ic { background:rgba(31,174,107,.18); color:#6EE7A8; }
+  .hero-facts .fact:nth-child(2) .hb-ic { background:rgba(243,165,60,.18); color:#F6C177; }
+  .hero-facts .hb-ic .icon { width:19px; height:19px; }
+  .hero-facts b { display:block; font-size:14px; font-weight:800; color:#fff; line-height:1.25; }
+  .hero-facts span { font-size:12.5px; color:rgba(255,255,255,.62); }
 
   /* ── sections ── */
   section.block { padding:88px 0; }
@@ -477,54 +477,131 @@
     <div class="hero-visual">
       <div class="hero-photo">
         <div class="glow"></div>
-        <svg class="hero-van" viewBox="0 0 440 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иллюстрация грузового фургона">
-          <g stroke="#5E86C8" stroke-width="5" stroke-linecap="round" opacity=".5">
-            <path d="M8 150h40"></path><path d="M0 176h30"></path><path d="M14 202h34"></path>
+        <!-- Собственная иллюстрация развозного фургона. Без логотипов, надписей и марочных знаков. -->
+        <svg class="hero-van" viewBox="0 0 540 262" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Иллюстрация развозного фургона с будкой">
+          <defs>
+            <linearGradient id="gCab" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#D9E2F0"/>
+            </linearGradient>
+            <linearGradient id="gBox" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#EDF1F7"/><stop offset="1" stop-color="#C2CBDA"/>
+            </linearGradient>
+            <linearGradient id="gGlass" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#A9CBF8"/><stop offset="1" stop-color="#5E86C8"/>
+            </linearGradient>
+            <linearGradient id="gRim" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#E4EAF4"/><stop offset="1" stop-color="#A9B6CC"/>
+            </linearGradient>
+            <linearGradient id="gLamp" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#FFF6D6"/><stop offset="1" stop-color="#FFD36B"/>
+            </linearGradient>
+            <clipPath id="clipBox">
+              <path d="M56 44 L306 44 L306 184 L182 184 A32 32 0 0 1 118 184 L48 184 L48 52 Q48 44 56 44 Z"/>
+            </clipPath>
+          </defs>
+
+          <!-- линии движения -->
+          <g stroke="#5E86C8" stroke-width="5" stroke-linecap="round" opacity=".45">
+            <path d="M6 120h34"/><path d="M0 148h26"/><path d="M10 176h30"/>
           </g>
-          <ellipse cx="230" cy="252" rx="182" ry="15" fill="#05102a" opacity=".55"></ellipse>
-          <path d="M70 214 L70 118 Q70 108 80 108 L258 108 L300 122 L392 150 Q402 153 402 164 L402 214 Z" fill="#EDF3FF" stroke="#C7D6F2" stroke-width="2"></path>
-          <path d="M70 214 L70 190 L402 190 L402 214 Z" fill="#0057E7"></path>
-          <path d="M70 190 L402 190" stroke="#0046B8" stroke-width="2"></path>
-          <path d="M80 108 L258 108 L300 122 L80 122 Z" fill="#DCE7FA"></path>
-          <path d="M118 122 L118 190" stroke="#C7D6F2" stroke-width="2.5"></path>
-          <rect x="106" y="150" width="8" height="16" rx="2" fill="#B4C6E6"></rect>
-          <circle cx="176" cy="152" r="21" fill="#fff" stroke="#0057E7" stroke-width="2.5"></circle>
-          <g transform="translate(165,144)" fill="none" stroke="#0057E7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M0 6h11v9H0z"></path><path d="M11 9h4l3 3v3h-7z"></path>
-            <circle cx="4" cy="18" r="1.8"></circle><circle cx="14" cy="18" r="1.8"></circle>
-          </g>
-          <path d="M300 128 L328 150 L300 150 Z" fill="#8FB6F2"></path>
-          <rect x="266" y="130" width="28" height="20" rx="4" fill="#8FB6F2"></rect>
-          <path d="M280 130 L280 150" stroke="#EDF3FF" stroke-width="2"></path>
-          <rect x="388" y="168" width="14" height="12" rx="3" fill="#FFE49B"></rect>
-          <rect x="360" y="206" width="46" height="10" rx="4" fill="#1F2A44"></rect>
-          <g>
-            <circle cx="138" cy="214" r="34" fill="#141F38"></circle>
-            <circle cx="138" cy="214" r="33" fill="none" stroke="#2C3A5C" stroke-width="3"></circle>
-            <circle cx="138" cy="214" r="17" fill="#D5E0F3"></circle>
-            <g class="wheel-spin" style="transform-box:fill-box;transform-origin:center">
-              <g transform="translate(138 214)" stroke="#9DB2D6" stroke-width="3" stroke-linecap="round"><path d="M0 -13 V13 M-13 0 H13 M-9 -9 L9 9 M-9 9 L9 -9"></path></g>
+
+          <!-- тень -->
+          <ellipse cx="278" cy="233" rx="228" ry="13" fill="#05102a" opacity=".5"/>
+
+          <!-- рама между колёсами -->
+          <path d="M120 176 L440 176 L440 188 L120 188 Z" fill="#25304A"/>
+
+          <!-- БУДКА (выше кабины, с козырьком вперёд) -->
+          <path d="M56 44 L306 44 L306 184 L182 184 A32 32 0 0 1 118 184 L48 184 L48 52 Q48 44 56 44 Z"
+                fill="url(#gBox)" stroke="#AEB9CA" stroke-width="1.5"/>
+          <path d="M306 46 L326 52 L326 66 L306 66 Z" fill="#C9D2E0" stroke="#AEB9CA" stroke-width="1.5"/>
+
+          <g clip-path="url(#clipBox)">
+            <!-- рёбра панелей будки -->
+            <g stroke="#B7C1D2" stroke-width="1.6" opacity=".65">
+              <path d="M78 44V184M106 44V184M134 44V184M162 44V184M190 44V184M218 44V184M246 44V184M274 44V184"/>
             </g>
-            <circle cx="138" cy="214" r="5.5" fill="#0057E7"></circle>
+            <!-- фирменная полоса -->
+            <path d="M40 116 L316 116 L316 132 L40 132 Z" fill="#0057E7" opacity=".9"/>
+            <path d="M40 132 L316 132 L316 137 L40 137 Z" fill="#0046B8" opacity=".55"/>
+            <!-- задняя кромка и низ -->
+            <path d="M64 44V184" stroke="#9EAABC" stroke-width="2"/>
+            <path d="M48 168 L306 168" stroke="#AEB9CA" stroke-width="1.5"/>
+          </g>
+
+          <!-- КАБИНА: короткий покатый капот, наклонное лобовое -->
+          <path d="M306 88 L418 88 Q433 88 440 98 L457 122 Q473 124 485 131 Q501 140 504 155 L504 184 L440 184 A32 32 0 0 1 376 184 L306 184 Z"
+                fill="url(#gCab)" stroke="#C2CDDE" stroke-width="1.5"/>
+
+          <!-- лобовое стекло -->
+          <path d="M421 96 L437 100 L455 121 L433 121 Z" fill="url(#gGlass)"/>
+          <!-- стекло двери с характерным вырезом снизу спереди -->
+          <path d="M330 102 L414 102 L414 140 L344 140 Q330 140 330 132 Z" fill="url(#gGlass)"/>
+          <path d="M400 102 V140" stroke="#EDF3FF" stroke-width="2" opacity=".8"/>
+
+          <!-- дверь -->
+          <path d="M318 94 V180" stroke="#C2CDDE" stroke-width="2"/>
+          <path d="M424 94 V158" stroke="#C2CDDE" stroke-width="2"/>
+          <rect x="394" y="150" width="20" height="6" rx="3" fill="#B4C1D6"/>
+          <!-- подножка -->
+          <path d="M338 184 L406 184 L406 193 L338 193 Z" fill="#2A3550"/>
+
+          <!-- зеркало на кронштейне -->
+          <path d="M424 106 L437 98" stroke="#2A3550" stroke-width="3" stroke-linecap="round"/>
+          <rect x="432" y="84" width="16" height="24" rx="5" fill="#2A3550"/>
+
+          <!-- фара «стрелой» назад -->
+          <path d="M474 130 L498 137 Q504 139 504 145 L504 151 L478 144 Q471 142 471 136 Z"
+                fill="url(#gLamp)" stroke="#E3B75C" stroke-width="1.2"/>
+
+          <!-- решётка и бампер -->
+          <path d="M486 154 L506 154 Q512 154 512 161 L512 189 L484 189 L484 161 Q484 154 486 154 Z" fill="#2A3550"/>
+          <g stroke="#465172" stroke-width="2" stroke-linecap="round">
+            <path d="M490 161h18M490 168h18"/>
+          </g>
+
+          <!-- накладки на арках -->
+          <path d="M372 184 A36 36 0 0 0 444 184" fill="none" stroke="#1F2A44" stroke-width="7" stroke-linecap="round"/>
+          <path d="M114 184 A36 36 0 0 0 186 184" fill="none" stroke="#1F2A44" stroke-width="7" stroke-linecap="round"/>
+
+          <!-- КОЛЁСА -->
+          <g>
+            <circle cx="150" cy="196" r="33" fill="#171F30"/>
+            <circle cx="150" cy="196" r="32" fill="none" stroke="#2C3A5C" stroke-width="2.5"/>
+            <circle cx="150" cy="196" r="24" fill="#232D45"/>
+            <circle cx="150" cy="196" r="17" fill="url(#gRim)"/>
+            <g class="wheel-spin" style="transform-box:fill-box;transform-origin:center">
+              <g transform="translate(150 196)" fill="#8C9BB6">
+                <circle cx="0" cy="-10.5" r="3.4"/><circle cx="10" cy="-3.2" r="3.4"/>
+                <circle cx="6.2" cy="8.5" r="3.4"/><circle cx="-6.2" cy="8.5" r="3.4"/><circle cx="-10" cy="-3.2" r="3.4"/>
+              </g>
+            </g>
+            <circle cx="150" cy="196" r="5.4" fill="#0057E7"/>
           </g>
           <g>
-            <circle cx="330" cy="214" r="34" fill="#141F38"></circle>
-            <circle cx="330" cy="214" r="33" fill="none" stroke="#2C3A5C" stroke-width="3"></circle>
-            <circle cx="330" cy="214" r="17" fill="#D5E0F3"></circle>
+            <circle cx="408" cy="196" r="33" fill="#171F30"/>
+            <circle cx="408" cy="196" r="32" fill="none" stroke="#2C3A5C" stroke-width="2.5"/>
+            <circle cx="408" cy="196" r="24" fill="#232D45"/>
+            <circle cx="408" cy="196" r="17" fill="url(#gRim)"/>
             <g class="wheel-spin" style="transform-box:fill-box;transform-origin:center">
-              <g transform="translate(330 214)" stroke="#9DB2D6" stroke-width="3" stroke-linecap="round"><path d="M0 -13 V13 M-13 0 H13 M-9 -9 L9 9 M-9 9 L9 -9"></path></g>
+              <g transform="translate(408 196)" fill="#8C9BB6">
+                <circle cx="0" cy="-10.5" r="3.4"/><circle cx="10" cy="-3.2" r="3.4"/>
+                <circle cx="6.2" cy="8.5" r="3.4"/><circle cx="-6.2" cy="8.5" r="3.4"/><circle cx="-10" cy="-3.2" r="3.4"/>
+              </g>
             </g>
-            <circle cx="330" cy="214" r="5.5" fill="#0057E7"></circle>
+            <circle cx="408" cy="196" r="5.4" fill="#0057E7"/>
           </g>
         </svg>
       </div>
-      <div class="hero-badge b1">
-        <span class="hb-ic"><svg class="icon"><use href="#i-route"></use></svg></span>
-        <div><b>Заказы на старте</b><span>первые месяцы не простаиваете</span></div>
-      </div>
-      <div class="hero-badge b2">
-        <span class="hb-ic"><svg class="icon"><use href="#i-swap"></use></svg></span>
-        <div><b>Trade-in по-честному</b><span>без занижения цены</span></div>
+      <div class="hero-facts">
+        <div class="fact">
+          <span class="hb-ic"><svg class="icon"><use href="#i-route"></use></svg></span>
+          <div><b>Заказы на старте</b><span>первые месяцы не простаиваете</span></div>
+        </div>
+        <div class="fact">
+          <span class="hb-ic"><svg class="icon"><use href="#i-swap"></use></svg></span>
+          <div><b>Trade-in по-честному</b><span>без занижения цены</span></div>
+        </div>
       </div>
     </div>
   </div>
