@@ -369,6 +369,14 @@
     color:#BFF3D6; border-radius:12px; padding:11px 14px; font-size:13.5px; text-align:left; }
   .calc-chip.on { display:flex; }
   .calc-chip .icon { width:16px; height:16px; flex:0 0 auto; }
+  /* согласие на обработку ПД (152-ФЗ): активное действие пользователя */
+  .consent { display:flex; gap:10px; align-items:flex-start; text-align:left; cursor:pointer;
+             font-size:13px; line-height:1.45; color:rgba(255,255,255,.72); margin-top:2px; }
+  .consent input { width:19px; height:19px; flex:0 0 auto; margin-top:1px; accent-color:var(--blue); cursor:pointer; }
+  .consent a { color:#7DB0FF; text-decoration:underline; }
+  .magnet-form .consent { color:var(--muted); font-size:12.5px; }
+  .magnet-form .consent a { color:var(--blue); }
+
   .form-note { margin-top:8px; color:var(--muted-2); font-size:13px; display:flex; align-items:center; justify-content:center; gap:8px; text-align:center; }
   .form-note .icon { width:14px; height:14px; flex:0 0 auto; }
   .form-success { max-width:480px; margin:30px auto 0; background:rgba(31,174,107,.14); border:1px solid rgba(31,174,107,.4); color:rgba(255,255,255,.85); border-radius:18px; padding:30px 26px; position:relative; z-index:2; }
@@ -879,6 +887,10 @@
           <p hidden><label>Не заполняйте: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
           <input type="text" name="name" placeholder="Имя" required>
           <input type="tel" name="phone" placeholder="Телефон" required>
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span>Даю согласие на обработку персональных данных и ознакомлен с <a href="/privacy.html" target="_blank" rel="noopener">политикой обработки данных</a></span>
+          </label>
           <button type="submit" class="btn btn-primary btn-block"><svg class="icon"><use href="#i-list"></use></svg> Получить чек-лист</button>
           <div class="m-note">Откроется сразу. Позвоним только если попросите.</div>
         </form>
@@ -961,6 +973,10 @@
           <svg class="icon"><use href="#i-calc"></use></svg>
           <span id="calc-chip-text">Приложим ваш расчёт из калькулятора</span>
         </div>
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          <span>Даю согласие на обработку персональных данных и ознакомлен с <a href="/privacy.html" target="_blank" rel="noopener">политикой обработки данных</a></span>
+        </label>
         <button type="submit" class="btn btn-primary btn-lg"><svg class="icon"><use href="#i-check"></use></svg> Получить расчёт</button>
         <div class="form-note"><svg class="icon"><use href="#i-lock"></use></svg> Перезвоним в рабочее время. Без спама и передачи данных третьим лицам.</div>
       </form>
@@ -990,8 +1006,10 @@
       или индивидуальной финансовой рекомендацией и <b>не являются публичной офертой</b> (ст. 437 ГК РФ).
       Расчёт в калькуляторе ориентировочный: фактические условия покупки, кредита, лизинга, страхования,
       оценки Trade-in и подключения к заказам определяются договором с соответствующей организацией и могут отличаться.
-      Оставляя заявку, вы соглашаетесь на обработку указанных вами контактных данных для связи по вашему обращению.
-      Сайт использует файлы cookie и сервис Яндекс.Метрика для сбора обезличенной статистики посещений.
+      Персональные данные обрабатываются на основании вашего согласия, которое вы даёте отметкой в форме, —
+      подробности в <a href="/privacy.html" style="color:rgba(255,255,255,.72);text-decoration:underline">политике обработки персональных данных</a>.
+      Согласие можно отозвать в любой момент. Сайт использует файлы cookie и сервис Яндекс.Метрика
+      для сбора обезличенной статистики посещений.
     </div>
   </div>
 </footer>
@@ -1113,7 +1131,8 @@
           phone: fd.get('phone') || '',
           segment: fd.get('segment') || '',
           timing: fd.get('timing') || '',
-          calc: calcSummary
+          calc: calcSummary,
+          consent: !!fd.get('consent')
         });
         goal('lead_calc');
         leadForm.hidden = true;
@@ -1136,7 +1155,7 @@
       btn.disabled = true; btn.style.opacity = '.7';
       const fd = new FormData(magnetForm);
       try {
-        await sendLead({ type: 'Чек-лист', name: fd.get('name') || '', phone: fd.get('phone') || '' });
+        await sendLead({ type: 'Чек-лист', name: fd.get('name') || '', phone: fd.get('phone') || '', consent: !!fd.get('consent') });
       } catch (e2) { /* материал отдаём в любом случае */ }
       goal('lead_checklist');
       magnetForm.hidden = true;

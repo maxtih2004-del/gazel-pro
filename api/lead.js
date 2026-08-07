@@ -46,6 +46,14 @@ module.exports = async (req, res) => {
     if (calc)    text += '\n\n🧮 Его расчёт:\n' + calc;
     if (source)  text += '\n\n🔗 Источник: ' + source;
 
+    // фиксируем факт и время согласия на обработку ПД (152-ФЗ)
+    if (body.consent === true) {
+      const ts = new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' });
+      text += '\n✅ Согласие на обработку ПД получено ' + ts + ' (МСК)';
+    } else {
+      text += '\n⚠️ Согласие на обработку ПД НЕ отмечено';
+    }
+
     const tg = await fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
