@@ -11,6 +11,13 @@ module.exports = async (req, res) => {
     return;
   }
 
+  // принимаем заявки только со своего сайта (и с локального превью)
+  const origin = String(req.headers.origin || '');
+  if (origin !== 'https://gazel-pro.vercel.app' && !/^http:\/\/localhost(:\d+)?$/.test(origin)) {
+    res.status(403).json({ ok: false, error: 'forbidden' });
+    return;
+  }
+
   try {
     let body = req.body;
     if (typeof body === 'string') {

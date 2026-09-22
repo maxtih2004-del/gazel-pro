@@ -11,6 +11,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#f1f1ee">
 
+<link rel="canonical" href="https://gazel-pro.vercel.app/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Газель Про">
 <meta property="og:locale" content="ru_RU">
@@ -242,7 +243,7 @@
   .inp+.inp{margin-top:18px}
   .inp label{display:block;font-size:15px;font-weight:600;margin-bottom:8px}
   .inp input{width:100%;font:inherit;font-size:17px;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;outline:none;transition:border-color .15s,box-shadow .15s}
-  .inp input::placeholder{color:#8b8a83}
+  .inp input::placeholder{color:#76756e}
   .inp input:focus{border-color:var(--ink);box-shadow:0 0 0 4px rgba(238,198,90,.45)}
   .inp input[aria-invalid=true]{border-color:var(--err)}
   .agree{display:flex;gap:12px;align-items:flex-start;margin-top:20px;font-size:14.5px;color:var(--ink2);line-height:1.45;cursor:pointer}
@@ -376,7 +377,7 @@
             <span class="kind"><svg class="i"><use href="#i-users-three"/></svg>Парк от 2 до 5 машин</span>
             <h3>Небольшие перевозчики</h3>
             <p class="pain">Заказов больше, чем машин, а оформление забирает время у владельца.</p>
-            <div class="win"><div>Добавить машину без недели на бумаги и в следующий раз сделать так же.</div></div>
+            <div class="win"><div>Добавить машину, не тратя неделю на бумаги.</div></div>
           </div>
         </article>
       </div>
@@ -386,11 +387,11 @@
       <div class="cost">
         <div class="rv">
           <h2>Во что обходится поиск машины</h2>
-          <p class="lead">Пока вы ездите по салонам, банкам и страховым, машина не зарабатывает. Подвиньте ползунки под себя.</p>
+          <p class="lead">Пока вы ездите по салонам, банкам и страховым, вы не возите заказы. Подвиньте ползунки под себя.</p>
         </div>
         <div class="calc rv" id="calc">
           <div class="fld">
-            <div class="top"><label for="r-day">Сколько машина приносит в день</label><output id="o-day" for="r-day">8 000 ₽</output></div>
+            <div class="top"><label for="r-day">Сколько вы зарабатываете за рабочий день</label><output id="o-day" for="r-day">8 000 ₽</output></div>
             <input type="range" id="r-day" min="2000" max="30000" step="500" value="8000">
           </div>
           <div class="fld">
@@ -400,7 +401,7 @@
           <div class="res">
             <div>
               <div class="num" id="o-sum" aria-live="polite">40 000 ₽</div>
-              <div class="cap">столько приносят заказы, которые вы пропустите, пока покупаете</div>
+              <div class="cap">столько вы не заработаете, если эти дни уйдут на салоны и банки</div>
             </div>
             <a class="tlink" href="#podbor" data-goal="cta_calc">Подобрать Газель<svg class="i"><use href="#i-arrow-right"/></svg></a>
           </div>
@@ -415,13 +416,13 @@
         <div class="stop">
           <div class="ic"><svg class="i"><use href="#i-calendar-check"/></svg></div>
           <h3>Есть повод</h3>
-          <p>Полис скоро заканчивается, машине больше семи лет или не хватает машин под заказы.</p>
+          <p>Скоро продлевать страховку, машине больше семи лет или не хватает машин под заказы.</p>
         </div>
         <div class="arrow" aria-hidden="true"><svg class="i ar"><use href="#i-arrow-right"/></svg><svg class="i ad"><use href="#i-arrow-down"/></svg></div>
         <div class="stop">
           <div class="ic"><svg class="i"><use href="#i-truck"/></svg></div>
           <h3>Подбираем машину</h3>
-          <p>Скажите, что возите. Подберём кузов и модификацию и сразу назовём сроки.</p>
+          <p>Скажите, что возите. Подскажем, какой кузов и модификация подойдут под ваши грузы.</p>
         </div>
         <div class="arrow" aria-hidden="true"><svg class="i ar"><use href="#i-arrow-right"/></svg><svg class="i ad"><use href="#i-arrow-down"/></svg></div>
         <div class="stop">
@@ -440,7 +441,7 @@
           <tbody>
             <tr><td>Поездки</td><td class="old">Салон, банк и страховая, каждый отдельно</td><td class="us">Одна заявка, дальше созваниваемся</td></tr>
             <tr><td>Лизинг</td><td class="old">Условия узнаёте в каждой компании сами</td><td class="us">Поможем сравнить варианты. Ставку и решение даёт лизинговая компания</td></tr>
-            <tr><td>Модификация</td><td class="old">Выбор из того, что стоит на площадке</td><td class="us">Подбираем под задачу, сроки заводского заказа называем заранее</td></tr>
+            <tr><td>Модификация</td><td class="old">Выбор из того, что стоит на площадке</td><td class="us">Подбираем под задачу и подсказываем, какие сроки поставки уточнить до решения</td></tr>
             <tr><td>Вопросы</td><td class="old">В каждом месте свой менеджер</td><td class="us">Один человек на связи</td></tr>
           </tbody>
         </table>
@@ -450,8 +451,8 @@
     <section id="voprosy">
       <h2 class="rv">Частые вопросы</h2>
       <div class="faq">
-        <div class="rv"><h3>Это правда можно оформить онлайн?</h3><p>Пока нет. Мы проверяем, насколько это нужно водителям. Оставьте заявку: перезвоним и расскажем, что уже можно сделать удалённо в вашем городе.</p></div>
-        <div class="rv"><h3>Какие модификации есть?</h3><p>Подбираем под вашу задачу. Если нужной версии нет в наличии, её заказывают на заводе. Сроки назовём до того, как вы что-то решите.</p></div>
+        <div class="rv"><h3>Это правда можно оформить онлайн?</h3><p>Пока нет. Мы проверяем, нужно ли оно водителям. Оставьте заявку: перезвоним и расскажем, что уже сейчас можно сделать удалённо.</p></div>
+        <div class="rv"><h3>Какие модификации есть?</h3><p>Подбираем под вашу задачу. Если нужной версии нет в наличии, её заказывают на заводе. Подскажем, какие сроки спросить у продавца до решения.</p></div>
         <div class="rv"><h3>Сколько стоит машина и лизинг?</h3><p>Цену называет продавец, условия лизинга даёт лизинговая компания. Мы поможем их сравнить. Цену ниже рынка не обещаем.</p></div>
         <div class="rv"><h3>Что будет с моим номером?</h3><p>Он нужен только для звонка по вашей заявке. Мы его не продаём и не делаем рассылок.</p></div>
       </div>
@@ -485,7 +486,7 @@
             <fieldset data-name="reason">
               <legend>Почему думаете о новой машине</legend>
               <div class="chips">
-                <label class="chip"><input type="radio" name="reason" value="Полис скоро заканчивается"><span>Полис скоро заканчивается</span></label>
+                <label class="chip"><input type="radio" name="reason" value="Скоро продлевать страховку"><span>Скоро продлевать страховку</span></label>
                 <label class="chip"><input type="radio" name="reason" value="Машине больше 7 лет"><span>Машине больше 7 лет</span></label>
                 <label class="chip"><input type="radio" name="reason" value="Нужна ещё одна"><span>Нужна ещё одна</span></label>
                 <label class="chip"><input type="radio" name="reason" value="Просто смотрю"><span>Просто смотрю</span></label>
@@ -516,7 +517,7 @@
           <form id="step2" novalidate hidden>
             <div class="steps"><span>Куда перезвонить</span><span class="bar" aria-hidden="true"><i style="width:100%"></i></span></div>
             <button type="button" class="back" id="backBtn"><svg class="i"><use href="#i-arrow-left"/></svg>Изменить ответы</button>
-            <div class="honest"><b>Онлайн-оформление мы только запускаем.</b>Оставьте телефон: перезвоним в рабочее время и расскажем, что можно сделать уже сейчас.</div>
+            <div class="honest"><b>Онлайн-оформления пока нет.</b>Мы проверяем, нужно ли оно. Оставьте телефон: перезвоним в рабочее время и расскажем, что можно сделать уже сейчас.</div>
             <p hidden><label>Не заполняйте: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
             <div class="inp">
               <label for="f-name">Как к вам обращаться</label>
@@ -531,13 +532,13 @@
             <div class="submit">
               <button type="submit" class="btn" id="sendBtn">Отправить заявку<span class="dot"><svg class="i"><use href="#i-arrow-right"/></svg></span></button>
             </div>
-            <div class="ferr" id="netErr" role="alert" hidden><svg class="i"><use href="#i-warning-circle"/></svg>Не получилось отправить. Проверьте интернет и попробуйте ещё раз.</div>
+            <div class="ferr neterr" id="netErr" role="alert" hidden><svg class="i"><use href="#i-warning-circle"/></svg>Не получилось отправить. Проверьте интернет и попробуйте ещё раз.</div>
           </form>
 
           <div class="done" id="done" hidden tabindex="-1">
             <div class="ok"><svg class="i"><use href="#i-check"/></svg></div>
             <h3>Заявка у нас</h3>
-            <p>Перезвоним в рабочее время. Скажем честно: это тест спроса, и онлайн-оформление мы только запускаем. Расскажем, что можно сделать уже сейчас.</p>
+            <p>Перезвоним в рабочее время. Это тест спроса: онлайн-оформления пока нет, мы проверяем, нужно ли оно. Расскажем, что можно сделать уже сейчас.</p>
             <a class="tlink" href="/checklist.html" target="_blank" rel="noopener">Пока ждёте, откройте чек-лист<svg class="i"><use href="#i-list-checks"/></svg></a>
           </div>
         </div>
@@ -570,14 +571,15 @@
               <label for="m-phone">Телефон</label>
               <input id="m-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 900 000-00-00" class="ym-disable-keys ym-hide-content" required>
             </div>
-            <label class="agree"><input type="checkbox" name="consent" required><span>Даю <a href="/consent.html" target="_blank" rel="noopener">согласие на обработку персональных данных</a>: имя и телефон, чтобы прислать чек-лист и связаться по нему</span></label>
+            <label class="agree"><input type="checkbox" name="consent" required><span>Даю <a href="/consent.html" target="_blank" rel="noopener">согласие на обработку персональных данных</a>: имя и телефон, чтобы открыть чек-лист и чтобы со мной связались по подбору машины</span></label>
             <p class="legal-links"><a href="/privacy.html" target="_blank" rel="noopener">Политика обработки данных</a></p>
             <div class="submit">
               <button type="submit" class="btn">Получить чек-лист<span class="dot"><svg class="i"><use href="#i-list-checks"/></svg></span></button>
-              <span class="micro">Откроется сразу</span>
+              <span class="micro">Ссылка появится сразу после отправки</span>
             </div>
+            <div class="ferr neterr" id="magErr" role="alert" hidden><svg class="i"><use href="#i-warning-circle"/></svg>Не получилось отправить. Проверьте интернет и попробуйте ещё раз.</div>
           </form>
-          <div class="got" id="magOk" hidden>
+          <div class="got" id="magOk" hidden tabindex="-1">
             <a class="btn" href="/checklist.html" target="_blank" rel="noopener">Открыть чек-лист<span class="dot"><svg class="i"><use href="#i-arrow-right"/></svg></span></a>
           </div>
         </div>
@@ -594,10 +596,9 @@
       <div class="links">
         <a href="/privacy.html">Политика обработки данных</a>
         <a href="/consent.html">Согласие на обработку данных</a>
-        <a href="/checklist.html">Чек-лист</a>
       </div>
     </div>
-    <p class="disc">«Газель Про» это учебный проект для исследования спроса. Мы не продаём автомобили и не оказываем финансовых, лизинговых или страховых услуг. Информация на сайте не является публичной офертой (ст. 437 ГК РФ). Условия покупки, финансирования и страхования определяют продавец, банк, лизинговая компания и страховщик. Проект не связан с правообладателем товарного знака «ГАЗель». Оператор персональных данных: <!--OPERATOR-->[ФИО оператора], [e-mail для обращений]<!--/OPERATOR-->. Сайт использует cookie и Яндекс.Метрику. Фото: Wikimedia Commons, автор Retired electrician, CC0.</p>
+    <p class="disc">«Газель Про» создан как учебный проект для исследования спроса. Мы не продаём автомобили и не оказываем финансовых, лизинговых или страховых услуг. Информация на сайте не является публичной офертой (ст. 437 ГК РФ). Условия покупки, финансирования и страхования определяют продавец, банк, лизинговая компания и страховщик. Проект не связан с правообладателем товарного знака «ГАЗель». Оператор персональных данных: <!--OP-NAME-->[ФИО оператора]<!--/OP-NAME-->, <!--OP-MAIL-->[e-mail для обращений]<!--/OP-MAIL-->. Сайт использует cookie и Яндекс.Метрику. Фото: Wikimedia Commons, автор Retired electrician, CC0.</p>
   </div>
 </footer>
 
@@ -650,18 +651,20 @@
     return fetch('/api/lead', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(Object.assign({source:src}, payload)) })
       .then(function(r){ return r.json().catch(function(){return {};}).then(function(d){ if(!r.ok || !d.ok) throw new Error('fail'); return d; }); });
   }
+  var errN = 0;
   function fieldErr(el, text){
     var box = el.closest('fieldset,.inp,.agree'); if(!box) return;
-    var e = box.querySelector('.ferr');
-    if(!text){ if(e) e.remove(); if(el.setAttribute) el.removeAttribute('aria-invalid'); return; }
-    if(!e){ e = document.createElement('div'); e.className='ferr'; e.setAttribute('role','alert'); box.appendChild(e); }
+    var target = box.tagName === 'FIELDSET' ? box : el;
+    var e = box.querySelector('.ferr:not(.neterr)');
+    if(!text){ if(e) e.remove(); target.removeAttribute('aria-invalid'); target.removeAttribute('aria-describedby'); return; }
+    if(!e){ e = document.createElement('div'); e.className='ferr'; e.id = 'err' + (++errN); e.setAttribute('role','alert'); box.appendChild(e); }
     e.innerHTML = '<svg class="i"><use href="#i-warning-circle"/></svg>' + text;
-    if(el.setAttribute) el.setAttribute('aria-invalid','true');
+    target.setAttribute('aria-invalid','true'); target.setAttribute('aria-describedby', e.id);
   }
   function phoneOk(v){ return v.replace(/\D/g,'').length >= 10; }
 
   // шаг 1
-  var s1 = $('step1'), s2 = $('step2'), answers = {};
+  var s1 = $('step1'), s2 = $('step2'), answers = {}, sentStep1 = '';
   s1.addEventListener('change', function(e){ if(e.target.name) fieldErr(e.target, ''); });
   s1.addEventListener('submit', function(e){
     e.preventDefault();
@@ -673,8 +676,12 @@
       else { answers[n] = c.value; }
     });
     if(!ok){ first.scrollIntoView({behavior:'smooth', block:'center'}); return; }
-    goal('step1', {fleet:answers.fleet, reason:answers.reason, body:answers.body, how:answers.how});
-    send({ type:'Шаг 1', fleet:answers.fleet, reason:answers.reason, body:answers.body, how:answers.how }).catch(function(){});
+    var key = [answers.fleet, answers.reason, answers.body, answers.how].join('|');
+    if(key !== sentStep1){
+      sentStep1 = key;
+      goal('step1', {fleet:answers.fleet, reason:answers.reason, body:answers.body, how:answers.how});
+      send({ type:'Шаг 1', fleet:answers.fleet, reason:answers.reason, body:answers.body, how:answers.how }).catch(function(){});
+    }
     s1.hidden = true; s2.hidden = false; s2.classList.add('step-anim');
     $('formCard').scrollIntoView({behavior:'smooth', block:'start'});
     setTimeout(function(){ $('f-name').focus({preventScroll:true}); }, 350);
@@ -712,9 +719,10 @@
     if(!phoneOk(phone.value)){ fieldErr(phone,'Проверьте номер'); bad = bad||phone; }
     if(!cons.checked){ fieldErr(cons,'Нужно согласие'); bad = bad||cons; }
     if(bad){ bad.focus(); return; }
-    var btn = mg.querySelector('button'); btn.disabled = true;
-    send({ type:'Чек-лист', name:name.value.trim(), phone:phone.value.trim(), consent:true }).catch(function(){})
-      .then(function(){ goal('lead_checklist'); mg.hidden = true; $('magOk').hidden = false; window.open('/checklist.html','_blank','noopener'); });
+    var btn = mg.querySelector('button'); btn.disabled = true; $('magErr').hidden = true;
+    send({ type:'Чек-лист', name:name.value.trim(), phone:phone.value.trim(), consent:true })
+      .then(function(){ goal('lead_checklist'); mg.hidden = true; var ok = $('magOk'); ok.hidden = false; ok.focus({preventScroll:true}); })
+      .catch(function(){ btn.disabled = false; $('magErr').hidden = false; });
   });
 })();
 </script>
