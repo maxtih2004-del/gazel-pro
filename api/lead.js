@@ -24,34 +24,41 @@ module.exports = async (req, res) => {
       return;
     }
 
-    const type    = String(body.type    || 'Заявка').slice(0, 60);
-    const name    = String(body.name    || '—').slice(0, 200);
-    const phone   = String(body.phone   || '—').slice(0, 100);
-    const segment = String(body.segment || '').slice(0, 120);
-    const fleet   = String(body.fleet   || '').slice(0, 60);
-    const timing  = String(body.timing  || '').slice(0, 100);
-    const calc    = String(body.calc    || '').slice(0, 300);
-    const source  = String(body.source  || '').slice(0, 200);
+    const clip = (v, n) => String(v || '').slice(0, n);
+    const type   = clip(body.type || 'Заявка', 60);
+    const name   = clip(body.name, 200)  || '—';
+    const phone  = clip(body.phone, 100) || '—';
+    const fleet  = clip(body.fleet, 60);
+    const reason = clip(body.reason, 120);
+    const kuzov  = clip(body.body, 60);
+    const how    = clip(body.how, 80);
+    const source = clip(body.source, 200);
 
-    const isChecklist = type === 'Чек-лист';
-
-    let text =
-      (isChecklist ? '📋 Скачали чек-лист' : '🚚 Заявка на расчёт') + ' — Газель Про\n\n' +
-      '👤 Имя: ' + name + '\n' +
-      '📞 Телефон: ' + phone;
-
-    if (segment) text += '\n🎯 Ситуация: ' + segment;
-    if (fleet)   text += '\n🚐 Машин: ' + fleet;
-    if (timing)  text += '\n🗓 Когда: ' + timing;
-    if (calc)    text += '\n\n🧮 Его расчёт:\n' + calc;
-    if (source)  text += '\n\n🔗 Источник: ' + source;
-
-    // фиксируем факт и время согласия на обработку ПД (152-ФЗ)
-    if (body.consent === true) {
-      const ts = new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' });
-      text += '\n✅ Согласие на обработку ПД получено ' + ts + ' (МСК)';
+    const isStep1 = type === 'Шаг 1';
+    let text;
+    if (isStep1) {
+      // первый шаг формы: только ответы, без персональных данных
+      text = '👣 Ответили на вопросы (шаг 1) — Газель Про';
     } else {
-      text += '\n⚠️ Согласие на обработку ПД НЕ отмечено';
+      text = (type === 'Чек-лист' ? '📋 Скачали чек-лист' : '🚚 Заявка на подбор') + ' — Газель Про\n\n' +
+             '👤 Имя: ' + name + '\n' +
+             '📞 Телефон: ' + phone;
+    }
+
+    if (fleet)  text += '\n🚐 Машин сейчас: ' + fleet;
+    if (reason) text += '\n🎯 Повод: ' + reason;
+    if (kuzov)  text += '\n📦 Кузов: ' + kuzov;
+    if (how)    text += '\n🧭 Как оформлять: ' + how;
+    if (source) text += '\n\n🔗 Источник: ' + source;
+
+    // фиксируем факт и время согласия на обработку ПД (152-ФЗ); на шаге 1 ПД нет
+    if (!isStep1) {
+      if (body.consent === true) {
+        const ts = new Date().toLocaleString('ru-RU', { timeZone: 'Europe/Moscow' });
+        text += '\n✅ Согласие на обработку ПД получено ' + ts + ' (МСК)';
+      } else {
+        text += '\n⚠️ Согласие на обработку ПД НЕ отмечено';
+      }
     }
 
     const tg = await fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
